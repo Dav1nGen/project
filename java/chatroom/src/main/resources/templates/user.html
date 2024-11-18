@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+</head>
+<body>
+<h1>User Management</h1>
+<form id="updateForm" th:action="@{/updateUser}" th:object="${user}" method="post">
+    <label for="userId">User ID:</label>
+    <input type="text" id="userId" name="id" th:value="*{id}" required><br><br>
+    <label for="userName">New Name:</label>
+    <input type="text" id="userName" name="name" th:value="*{name}" required><br><br>
+    <button type="submit">Update</button>
+</form>
+
+<div th:text="${message}"></div>
+</body>
+</html>

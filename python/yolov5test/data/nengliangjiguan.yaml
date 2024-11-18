@@ -1,0 +1,12 @@
+path: ../yolov5test/nengliangjiguan
+train: images/train2017
+val: images/val2017
+test:  # test images (optional)
+
+names:
+  0: blue R
+  1: blue Unactivated
+  2: blue Activated
+  3: red R
+  4: red Unactivated
+  5: red Activated
