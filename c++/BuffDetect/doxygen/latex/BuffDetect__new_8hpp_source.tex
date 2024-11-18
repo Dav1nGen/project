@@ -1,0 +1,297 @@
+\doxysection{Buff\+Detect\+\_\+new.\+hpp}
+\hypertarget{BuffDetect__new_8hpp_source}{}\label{BuffDetect__new_8hpp_source}\index{/home/davi/project/c++/BuffDetect/include/BuffDetect\_new.hpp@{/home/davi/project/c++/BuffDetect/include/BuffDetect\_new.hpp}}
+\mbox{\hyperlink{BuffDetect__new_8hpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ BUFFDETECT\_BUFFDETECT\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ BUFFDETECT\_BUFFDETECT\_H\_}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ STL}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <eigen3/Eigen/Dense>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <opencv4/opencv2/core/eigen.hpp>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <opencv4/opencv2/highgui.hpp>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <opencv4/opencv2/core.hpp>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{BuffDetect__new_8hpp_a8d1937d06941b40fb166020866c1fc44}{compare\_radius}}(\textcolor{keyword}{const}\ cv::Point3d\ \&p1,\ \textcolor{keyword}{const}\ cv::Point3d\ \&p2)}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ p1.z\ <\ p2.z;}
+\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{BuffDetect__new_8hpp_a283fef6e65b4947b13ea679a8c8579bd}{compare\_contours\_len}}(\textcolor{keyword}{const}\ std::vector<cv::Point>\ \&c1,\ \textcolor{keyword}{const}\ std::vector<cv::Point>\ \&c2)}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{double}\ l1\ =\ cv::arcLength(c1,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{double}\ l2\ =\ cv::arcLength(c2,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{return}\ l1\ <\ l2;}
+\DoxyCodeLine{00035\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{BuffDetect__new_8hpp_aca38ebb1b0c1cf259fb4eb55e878ad36}{GetLineAngle}}(cv::Vec4f\ line)\ \textcolor{comment}{//\ 起点xy\ 终点xy}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ cv::Point\ p1(line[0],\ line[1]);}
+\DoxyCodeLine{00041\ \ \ \ \ cv::Point\ p2(line[2],\ line[3]);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ 0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ angle\_\ =\ atan2(p1.y\ -\/\ p2.y,\ p1.x\ -\/\ p2.x);}
+\DoxyCodeLine{00046\ \ \ \ \ angle\ =\ (angle\_\ *\ 180)\ /\ CV\_PI;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{if}\ (angle\_\ >=\ -\/CV\_PI\ \&\&\ angle\_\ <\ 0)}
+\DoxyCodeLine{00048\ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ angle\ =\ 180\ +\ (180\ +\ angle);}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{return}\ angle;}
+\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBuff}{Buff}}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ uint\ color;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ RED==2,BLUE==3}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<cv::Point3f>\ objectPoints\ =\ \{\{-\/186,\ 183,\ 0\},\ \{-\/186,\ -\/190,\ 0\},\ \{186,\ 183,\ 0\},\ \{186,\ -\/190,\ 0\}\};\ \textcolor{comment}{//\ 物体世界坐标系的坐标点(左上，左下，右上，右下)}}
+\DoxyCodeLine{00060\ \ \ \ \ std::vector<cv::Point2f>\ imagePoints\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 物体在像素坐标系上的坐标点(左下，左上,右上，右下)}}
+\DoxyCodeLine{00061\ \ \ \ \ std::vector<cv::Point2f>\ imagePoints;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 物体在像素坐标系上的不变坐标点(左上，左下,右上，右下)}}
+\DoxyCodeLine{00062\ \ \ \ \ cv::Mat\ rvec;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 旋转向量}}
+\DoxyCodeLine{00063\ \ \ \ \ cv::Mat\ tvec;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 平移向量}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{float}\ radius\_armor\_center\ =\ cv::norm(this-\/>energy\_organ\_center\ -\/\ this-\/>armor\_center);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 能量机关中心到装甲板中心的半径}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{float}\ radius\_energy\_organ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 能量机关完整半径}}
+\DoxyCodeLine{00066\ \ \ \ \ cv::Point2f\ energy\_organ\_center;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 能量机关圆心坐标}}
+\DoxyCodeLine{00067\ \ \ \ \ cv::Point2f\ armor\_center\ =\ cv::Point2f(-\/1,\ -\/1);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 待击打装甲板中心坐标}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{double}\ angle\_Energy\_organ\_center2armor\_center;\ \textcolor{comment}{//\ 能量机关中心只指向装甲板中心的向量的角度}}
+\DoxyCodeLine{00070\ \ \ \ \ cv::Mat\ src;}
+\DoxyCodeLine{00071\ \ \ \ \ cv::Mat\ processed\_img;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 经过ImageProcess()函数处理过得图像}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ if\_find\_contours\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ 是否找到轮廓}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ predict}}
+\DoxyCodeLine{00076\ \ \ \ \ std::vector<std::vector<cv::Point2f>>\ \mbox{\hyperlink{classBuff_a199f8f7074b76f0dc6c0b59c3ae7ebe5}{judge\_points}};\ \textcolor{comment}{//\ 判断大小能量机关所需的数据点}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classBuff_a9351fd4ef74bbaf10cbe071db79c355c}{angular\_velocity}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 能量机关转动的角速度}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classBuff_a86b1aac5d395485978ff2b79dadaa407}{FPS}};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classBuff_aa002fdf49da1b13f9401a9a1ea8f7de2}{small\_energy}}\ =\ 20\ *\ CV\_PI\ /\ 60;\ \textcolor{comment}{//\ 小能量机关角速度(rad/s)}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ cv::Point2d\ \mbox{\hyperlink{classBuff_a12b9f7b0038bb424d9cf4d2591dfa71d}{armor\_roi\_position}};\ \textcolor{comment}{//\ 装甲板中心点在ROI中的坐标}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ cv::Point2f\ \mbox{\hyperlink{classBuff_af4f36cb762bb56b3902758414d0dcb07}{GetArmorCenter}}()}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ armor\_center;}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ std::vector<cv::Point2f>\ \mbox{\hyperlink{classBuff_a78b37bf2996c20d6cb8e4aa1a4ac8af7}{GetImagePoints}}()}
+\DoxyCodeLine{00089\ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ imagePoints;}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ 总处理函数}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBuff_a7b4d26b65edb5d4e81c375c16cb5c54e}{Process}}(cv::Mat\ src)}
+\DoxyCodeLine{00095\ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBuff_a32338520494c8a482663492297df8051}{ImageProcess}}(src);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>if\_find\_contours)}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBuff_ab5127d52c3b9cf17da41b97833a1c3cf}{FindCenter}}();}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBuff_af77fc71c6e31cf0c2cebd3b1ecac5d4a}{AngleSolve}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this-\/>Predict();}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//\ 是否找到待击打装甲板中心}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBuff_abaede8a88df5df7268b4d7c83f7afbb6}{IfFindBuff}}()}
+\DoxyCodeLine{00107\ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>armor\_center.x\ ==\ -\/1\ \&\&\ this-\/>armor\_center.y\ ==\ -\/1\ ?\ false\ :\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{classBuff_a8d1e9a43abff0e939089390f58a432ba}{Buff}}(uint\ init\_color)}
+\DoxyCodeLine{00112\ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ color\ =\ init\_color;}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBuff_a32338520494c8a482663492297df8051}{ImageProcess}}(cv::Mat\ src)}
+\DoxyCodeLine{00124\ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ cv::resize(src,\ src,\ cv::Size(2*src.cols\ /\ 3,\ 2*src.rows\ /\ 3));}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ this-\/>src\ =\ src;}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ std::vector<cv::Mat>\ channels;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ cv::Mat\ channel\_img;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ cv::Mat\ threshold\_img;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ cv::Mat\ test\ =\ cv::Mat::zeros(src.size(),\ CV\_8UC3);}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ cv::split(src,\ channels);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>color\ ==\ 2)}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ cv::subtract(channels[2],\ channels[0],\ channel\_img);\ \textcolor{comment}{//\ 识别红}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ cv::subtract(channel\_img,\ channels[1],\ channel\_img);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ cv::threshold(channel\_img,\ threshold\_img,\ 100,\ 255,\ cv::THRESH\_BINARY);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>color\ ==\ 3)}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ cv::subtract(channels[0],\ channels[2],\ channel\_img);\ \textcolor{comment}{//\ 识别蓝}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ cv::subtract(channel\_img,\ channels[1],\ channel\_img);}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ cv::threshold(channel\_img,\ threshold\_img,\ 120,\ 255,\ cv::THRESH\_BINARY);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ std::vector<std::vector<cv::Point>>\ contours;}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ cv::findContours(threshold\_img,\ contours,\ cv::RETR\_EXTERNAL,\ cv::CHAIN\_APPROX\_SIMPLE);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (contours.size()\ >\ 1)}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>if\_find\_contours\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ this-\/>processed\_img\ =\ threshold\_img;}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBuff_ab5127d52c3b9cf17da41b97833a1c3cf}{FindCenter}}()}
+\DoxyCodeLine{00162\ \ \ \ \ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ std::vector<cv::Point3f>\ armor\_data;\ \textcolor{comment}{//\ center.x\ center.y\ raduis}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ cv::Mat\ processed\_img\ =this-\/>processed\_img.clone();}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cv::Mat\ element\_1\ =\ cv::getStructuringElement(cv::MORPH\_RECT,\ cv::Size(2,\ 2));}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ cv::Mat\ element\_2\ =\ cv::getStructuringElement(cv::MORPH\_RECT,\ cv::Size(1,\ 1));}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cv::morphologyEx(processed\_img,\ processed\_img,\ cv::MORPH\_CLOSE,\ element\_1);}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ cv::morphologyEx(processed\_img,\ processed\_img,\ cv::MORPH\_OPEN,\ element\_2);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ cv::imshow(\textcolor{stringliteral}{"{}test"{}},processed\_img);}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ std::vector<std::vector<cv::Point>>\ contours;}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ cv::findContours(processed\_img,\ contours,\ cv::RETR\_EXTERNAL,\ cv::CHAIN\_APPROX\_SIMPLE);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 凸包检测}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ std::vector<std::vector<cv::Point>>\ hull(contours.size());}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ contours.size();\ i++)}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 寻找凸包}}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ cv::convexHull(cv::Mat(contours[i]),\ hull[i],\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ contours.size();\ i++)}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ cv::fillConvexPoly(this-\/>processed\_img,\ hull[i],\ cv::Scalar(255,\ 255,\ 255),\ cv::LINE\_AA,\ 0);}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ std::vector<std::vector<cv::Point>>\ contours\_;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ cv::findContours(this-\/>processed\_img,\ contours\_,\ cv::RETR\_EXTERNAL,\ cv::CHAIN\_APPROX\_SIMPLE);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ cv::Mat\ black\_img\ =\ cv::Mat::zeros(this-\/>processed\_img.size(),\ CV\_8UC1);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ cv::drawContours(black\_img,\ contours\_,\ -\/1,\ cv::Scalar(255,\ 255,\ 255),\ 1,\ 8);}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ contours\_.begin();\ it\ !=\ contours\_.end();)}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ minArea=200;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ area\ =\ contourArea(*it);}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (area\ <\ minArea)}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ it\ =\ contours\_.erase(it);}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++it;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 确保已完整识别到能量机关(轮廓最小个数为2)}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (contours\_.size()\ >\ 1)}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ std::sort(contours\_.begin(),\ contours\_.end(),\ \mbox{\hyperlink{BuffDetect__new_8hpp_a283fef6e65b4947b13ea679a8c8579bd}{compare\_contours\_len}});\ \textcolor{comment}{//\ 根据轮廓长度对轮廓进行排序}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<contours\_.size()<<\textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&contours\ :\ contours\_)}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cv::Point2f\ center;}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ radius;}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minEnclosingCircle(contours,\ center,\ radius);}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cv::Point3f\ temp\ =\ cv::Point3f(center.x,\ center.y,\ radius);}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ armor\_data.push\_back(temp);}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 根据半径大小对识别的轮廓进行排序。（半径最小为R标，半径第二小为待击打装甲板）}}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ std::sort(armor\_data.begin(),\ armor\_data.end(),\ \mbox{\hyperlink{BuffDetect__new_8hpp_a8d1937d06941b40fb166020866c1fc44}{compare\_radius}});}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ cv::circle(black\_img,\ cv::Point(armor\_data[0].x,\ armor\_data[0].y),\ 5,\ cv::Scalar(255,\ 255,\ 255),\ 1,\ 8,\ 0);\ \textcolor{comment}{//\ 画出能量机关的中心坐标}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ cv::circle(black\_img,\ cv::Point(armor\_data[1].x,\ armor\_data[1].y),\ 5,\ cv::Scalar(255,\ 255,\ 255),\ 1,\ 8,\ 0);\ \textcolor{comment}{//\ 画出待击打装甲板的中心坐标}}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>energy\_organ\_center.x\ =\ armor\_data[0].x;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>energy\_organ\_center.y\ =\ armor\_data[0].y;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>armor\_center.x\ =\ armor\_data[1].x;}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>armor\_center.y\ =\ armor\_data[1].y;}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ cv::RotatedRect\ rotrect;}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ cv::Point2f\ rect\_points[4];\ \textcolor{comment}{//\ point[0]左下:x最小\ point[1]左上:y最小\ point[2]右上:x最大\ point[3]右下:y最大}}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ cv::Mat\ boxPoints2f,\ boxPointsCov;}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 获取最小外接矩形点阵}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ rotrect\ =\ cv::minAreaRect(contours\_[1]);}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ rotrect.points(rect\_points);}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ cv::boxPoints(rotrect,\ boxPoints2f);}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ boxPoints2f.assignTo(boxPointsCov,\ CV\_32S);}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 绘制旋转矩形及其顶点}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ cv::polylines(black\_img,\ boxPointsCov,\ \textcolor{keyword}{true},\ cv::Scalar(255,\ 255,\ 255),\ 2);}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ cv::circle(black\_img,\ rect\_points[0],\ 5,\ cv::Scalar(255,\ 255,\ 255),\ 1,\ 8,\ 0);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<cv::Point2f>\ imagePoint\_temp;}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ imagePoint\_temp.push\_back(rect\_points[0]);\ \textcolor{comment}{//\ 左下}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ imagePoint\_temp.push\_back(rect\_points[1]);\ \textcolor{comment}{//\ 左上}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ imagePoint\_temp.push\_back(rect\_points[2]);\ \textcolor{comment}{//\ 右上}}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ imagePoint\_temp.push\_back(rect\_points[3]);\ \textcolor{comment}{//\ 右下}}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints\_\ =\ imagePoint\_temp;}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ cv::imshow(\textcolor{stringliteral}{"{}2"{}},\ black\_img);}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ cv::Vec4f\ line(this-\/>energy\_organ\_center.x,\ this-\/>energy\_organ\_center.y,\ this-\/>armor\_center.x,\ this-\/>armor\_center.y);}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ cv::Point\ point(this-\/>energy\_organ\_center.x,\ this-\/>energy\_organ\_center.y);}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ cv::Point\ point\_(this-\/>armor\_center.x,\ this-\/>armor\_center.y);}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ angle\ =\ \mbox{\hyperlink{BuffDetect__new_8hpp_aca38ebb1b0c1cf259fb4eb55e878ad36}{GetLineAngle}}(line);}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>angle\_Energy\_organ\_center2armor\_center\ =\ angle;}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00263\ \ \ \ \ \}}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBuff_af77fc71c6e31cf0c2cebd3b1ecac5d4a}{AngleSolve}}()}
+\DoxyCodeLine{00266\ \ \ \ \ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>angle\_Energy\_organ\_center2armor\_center\ >=\ 0\ \&\&\ this-\/>angle\_Energy\_organ\_center2armor\_center\ <\ 90)}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[0]);}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[3]);}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[1]);}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[2]);}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>angle\_Energy\_organ\_center2armor\_center\ >=\ 90\ \&\&\ this-\/>angle\_Energy\_organ\_center2armor\_center\ <\ 180)}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[1]);}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[0]);}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[2]);}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[3]);}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>angle\_Energy\_organ\_center2armor\_center\ >=\ 180\ \&\&\ this-\/>angle\_Energy\_organ\_center2armor\_center\ <\ 270)}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[2]);}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[1]);}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[3]);}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[0]);}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>angle\_Energy\_organ\_center2armor\_center\ >=\ 270\ \&\&\ this-\/>angle\_Energy\_organ\_center2armor\_center\ <=\ 360)}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[3]);}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[2]);}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[0]);}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>imagePoints.push\_back(this-\/>imagePoints\_[1]);}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00297\ \ \ \ \ \}}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00308\ \ \ \ \ cv::Point2f\ \mbox{\hyperlink{classBuff_a2cfd3f99a1ca3cc5c7796a8e22e4c752}{Predict}}()}
+\DoxyCodeLine{00309\ \ \ \ \ \{}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ roi\_x\ =\ this-\/>energy\_organ\_center.x\ -\/\ this-\/>radius\_energy\_organ;}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ roi\_y\ =\ this-\/>energy\_organ\_center.y\ -\/\ this-\/>radius\_energy\_organ;}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ width\ =\ 2\ *\ this-\/>radius\_energy\_organ;}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ height\ =\ 2\ *\ this-\/>radius\_energy\_organ;}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ cv::Rect\ buff\_roi(roi\_x,\ roi\_y,\ width,\ height);}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ this-\/>armor\_roi\_position.x\ =\ this-\/>armor\_center.x\ -\/\ roi\_x;}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ this-\/>armor\_roi\_position.y\ =\ this-\/>armor\_center.y\ -\/\ roi\_y;}
+\DoxyCodeLine{00318\ \ \ \ \ \}}
+\DoxyCodeLine{00319\ \};}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BUFFDETECT\_BUFFDETECT\_H\_}}
+
+\end{DoxyCode}

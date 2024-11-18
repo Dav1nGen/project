@@ -1,0 +1,135 @@
+\doxysection{GX\+\_\+\+DEVICE\+\_\+\+BASE\+\_\+\+INFO结构体 参考}
+\hypertarget{structGX__DEVICE__BASE__INFO}{}\label{structGX__DEVICE__BASE__INFO}\index{GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}}
+
+
+{\ttfamily \#include $<$Gx\+IAPI.\+h$>$}
+
+
+
+GX\+\_\+\+DEVICE\+\_\+\+BASE\+\_\+\+INFO 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{structGX__DEVICE__BASE__INFO__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structGX__DEVICE__BASE__INFO_a0eee167874453acd9f768316e6f78c6a}{sz\+Vendor\+Name}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em vendor name, 32 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__BASE__INFO_aa0b7a05b912774c5ea4bd07d52900bde}{sz\+Model\+Name}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em model name, 32 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__BASE__INFO_a67955eb17b59eec9155f1d0679503bbf}{sz\+SN}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em device serial number, 32 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__BASE__INFO_a6b2f5885735484be93dce4e646954e49}{sz\+Display\+Name}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_a158e075ff932e46219aaf735299589eb}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+128\+\_\+\+BYTE}}+4\mbox{]}
+\begin{DoxyCompactList}\small\item\em device display name, 128+4 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__BASE__INFO_a87a69d31a28e7b71b99ce4d357244014}{sz\+Device\+ID}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_a9a99d2c8528848c0520bbf7b760666ae}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+64\+\_\+\+BYTE}}+4\mbox{]}
+\begin{DoxyCompactList}\small\item\em the unique identifier of the device, 64+4 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__BASE__INFO_a0a43e3523fba8be1e4d50207c3d2531e}{sz\+User\+ID}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_a9a99d2c8528848c0520bbf7b760666ae}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+64\+\_\+\+BYTE}}+4\mbox{]}
+\begin{DoxyCompactList}\small\item\em user-\/defined name, 64+4 bytes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{GxIAPI_8h_a6ba093d3c75836da9ba3d8c59d573d06}{GX\+\_\+\+ACCESS\+\_\+\+STATUS\+\_\+\+CMD}} \mbox{\hyperlink{structGX__DEVICE__BASE__INFO_af3278fd31d72a9e829fbd7adf1d7f1b8}{access\+Status}}
+\begin{DoxyCompactList}\small\item\em access status that is currently supported by the device. Refer to GX\+\_\+\+ACCESS\+\_\+\+STATUS, 4 bytes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{GxIAPI_8h_aa64d1ac6a14f4554e6ae728487eef748}{GX\+\_\+\+DEVICE\+\_\+\+CLASS}} \mbox{\hyperlink{structGX__DEVICE__BASE__INFO_a127cfbd591f4ffbc825f9e4a6a92555c}{device\+Class}}
+\begin{DoxyCompactList}\small\item\em device type, such as USB2.\+0, GEV, 4 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__BASE__INFO_a7c72f0ee0f3a17ab6e72a00f091690fe}{reserved}} \mbox{[}300\mbox{]}
+\begin{DoxyCompactList}\small\item\em reserved, 300 bytes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{structGX__DEVICE__BASE__INFO_af3278fd31d72a9e829fbd7adf1d7f1b8}\label{structGX__DEVICE__BASE__INFO_af3278fd31d72a9e829fbd7adf1d7f1b8} 
+\index{GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}!accessStatus@{accessStatus}}
+\index{accessStatus@{accessStatus}!GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}}
+\doxysubsubsection{\texorpdfstring{accessStatus}{accessStatus}}
+{\footnotesize\ttfamily \mbox{\hyperlink{GxIAPI_8h_a6ba093d3c75836da9ba3d8c59d573d06}{GX\+\_\+\+ACCESS\+\_\+\+STATUS\+\_\+\+CMD}} GX\+\_\+\+DEVICE\+\_\+\+BASE\+\_\+\+INFO\+::access\+Status}
+
+
+
+access status that is currently supported by the device. Refer to GX\+\_\+\+ACCESS\+\_\+\+STATUS, 4 bytes 
+
+\Hypertarget{structGX__DEVICE__BASE__INFO_a127cfbd591f4ffbc825f9e4a6a92555c}\label{structGX__DEVICE__BASE__INFO_a127cfbd591f4ffbc825f9e4a6a92555c} 
+\index{GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}!deviceClass@{deviceClass}}
+\index{deviceClass@{deviceClass}!GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}}
+\doxysubsubsection{\texorpdfstring{deviceClass}{deviceClass}}
+{\footnotesize\ttfamily \mbox{\hyperlink{GxIAPI_8h_aa64d1ac6a14f4554e6ae728487eef748}{GX\+\_\+\+DEVICE\+\_\+\+CLASS}} GX\+\_\+\+DEVICE\+\_\+\+BASE\+\_\+\+INFO\+::device\+Class}
+
+
+
+device type, such as USB2.\+0, GEV, 4 bytes 
+
+\Hypertarget{structGX__DEVICE__BASE__INFO_a7c72f0ee0f3a17ab6e72a00f091690fe}\label{structGX__DEVICE__BASE__INFO_a7c72f0ee0f3a17ab6e72a00f091690fe} 
+\index{GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}!reserved@{reserved}}
+\index{reserved@{reserved}!GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+BASE\+\_\+\+INFO\+::reserved\mbox{[}300\mbox{]}}
+
+
+
+reserved, 300 bytes 
+
+\Hypertarget{structGX__DEVICE__BASE__INFO_a87a69d31a28e7b71b99ce4d357244014}\label{structGX__DEVICE__BASE__INFO_a87a69d31a28e7b71b99ce4d357244014} 
+\index{GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}!szDeviceID@{szDeviceID}}
+\index{szDeviceID@{szDeviceID}!GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}}
+\doxysubsubsection{\texorpdfstring{szDeviceID}{szDeviceID}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+BASE\+\_\+\+INFO\+::sz\+Device\+ID\mbox{[}\mbox{\hyperlink{GxIAPI_8h_a9a99d2c8528848c0520bbf7b760666ae}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+64\+\_\+\+BYTE}}+4\mbox{]}}
+
+
+
+the unique identifier of the device, 64+4 bytes 
+
+\Hypertarget{structGX__DEVICE__BASE__INFO_a6b2f5885735484be93dce4e646954e49}\label{structGX__DEVICE__BASE__INFO_a6b2f5885735484be93dce4e646954e49} 
+\index{GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}!szDisplayName@{szDisplayName}}
+\index{szDisplayName@{szDisplayName}!GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}}
+\doxysubsubsection{\texorpdfstring{szDisplayName}{szDisplayName}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+BASE\+\_\+\+INFO\+::sz\+Display\+Name\mbox{[}\mbox{\hyperlink{GxIAPI_8h_a158e075ff932e46219aaf735299589eb}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+128\+\_\+\+BYTE}}+4\mbox{]}}
+
+
+
+device display name, 128+4 bytes 
+
+\Hypertarget{structGX__DEVICE__BASE__INFO_aa0b7a05b912774c5ea4bd07d52900bde}\label{structGX__DEVICE__BASE__INFO_aa0b7a05b912774c5ea4bd07d52900bde} 
+\index{GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}!szModelName@{szModelName}}
+\index{szModelName@{szModelName}!GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}}
+\doxysubsubsection{\texorpdfstring{szModelName}{szModelName}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+BASE\+\_\+\+INFO\+::sz\+Model\+Name\mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}}
+
+
+
+model name, 32 bytes 
+
+\Hypertarget{structGX__DEVICE__BASE__INFO_a67955eb17b59eec9155f1d0679503bbf}\label{structGX__DEVICE__BASE__INFO_a67955eb17b59eec9155f1d0679503bbf} 
+\index{GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}!szSN@{szSN}}
+\index{szSN@{szSN}!GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}}
+\doxysubsubsection{\texorpdfstring{szSN}{szSN}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+BASE\+\_\+\+INFO\+::sz\+SN\mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}}
+
+
+
+device serial number, 32 bytes 
+
+\Hypertarget{structGX__DEVICE__BASE__INFO_a0a43e3523fba8be1e4d50207c3d2531e}\label{structGX__DEVICE__BASE__INFO_a0a43e3523fba8be1e4d50207c3d2531e} 
+\index{GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}!szUserID@{szUserID}}
+\index{szUserID@{szUserID}!GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}}
+\doxysubsubsection{\texorpdfstring{szUserID}{szUserID}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+BASE\+\_\+\+INFO\+::sz\+User\+ID\mbox{[}\mbox{\hyperlink{GxIAPI_8h_a9a99d2c8528848c0520bbf7b760666ae}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+64\+\_\+\+BYTE}}+4\mbox{]}}
+
+
+
+user-\/defined name, 64+4 bytes 
+
+\Hypertarget{structGX__DEVICE__BASE__INFO_a0eee167874453acd9f768316e6f78c6a}\label{structGX__DEVICE__BASE__INFO_a0eee167874453acd9f768316e6f78c6a} 
+\index{GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}!szVendorName@{szVendorName}}
+\index{szVendorName@{szVendorName}!GX\_DEVICE\_BASE\_INFO@{GX\_DEVICE\_BASE\_INFO}}
+\doxysubsubsection{\texorpdfstring{szVendorName}{szVendorName}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+BASE\+\_\+\+INFO\+::sz\+Vendor\+Name\mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}}
+
+
+
+vendor name, 32 bytes 
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/home/davi/project/c++/\+Buff\+Detect/general/\+Gx\+Camera/include/\mbox{\hyperlink{GxIAPI_8h}{Gx\+IAPI.\+h}}\end{DoxyCompactItemize}

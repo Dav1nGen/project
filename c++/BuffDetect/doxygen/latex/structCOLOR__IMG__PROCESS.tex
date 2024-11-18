@@ -1,0 +1,139 @@
+\doxysection{COLOR\+\_\+\+IMG\+\_\+\+PROCESS结构体 参考}
+\hypertarget{structCOLOR__IMG__PROCESS}{}\label{structCOLOR__IMG__PROCESS}\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+
+
+Raw8 Image process struct  
+
+
+
+
+{\ttfamily \#include $<$Dx\+Image\+Proc.\+h$>$}
+
+
+
+COLOR\+\_\+\+IMG\+\_\+\+PROCESS 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{structCOLOR__IMG__PROCESS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a52f8defff4bc02cfb642d3ac4094c82f}{b\+Defective\+Pixel\+Correct}}
+\item 
+bool \mbox{\hyperlink{structCOLOR__IMG__PROCESS_aa03f98f877103b1df7a21665e8196cca}{b\+Denoise}}
+\item 
+bool \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a19b7a7cfc7182bdf094c6d9ed852e28a}{b\+Sharpness}}
+\item 
+bool \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a325feb24f3187f676b1f7e8033ee4d80}{b\+Accelerate}}
+\item 
+\mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{Vx\+Int16}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structCOLOR__IMG__PROCESS_aa43bbab77e2ea3804950a6990d537f21}{parr\+CC}}
+\item 
+\mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}} \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a8cb9e2c83fca473f1eebfe61f903c82c}{n\+CCBuf\+Length}}
+\item 
+float \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a94242186dbb2dd179f4b6188ced251f5}{f\+Sharp\+Factor}}
+\item 
+\mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a47d4a7a6914831dd869d4beb6ba5f788}{p\+Pro\+Lut}}
+\item 
+\mbox{\hyperlink{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973}{Vx\+Uint16}} \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a8b87d7281fa3435bfc3597059b56b200}{n\+Lut\+Length}}
+\item 
+\mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}} \mbox{\hyperlink{structCOLOR__IMG__PROCESS_ab710f436a1df5a7510f1df492e5afe8a}{cv\+Type}}
+\item 
+\mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}} \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a64fc25f3349af663aad4833e2afabb36}{em\+Lay\+Out}}
+\item 
+bool \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a02b17bdf8eb205d6ba6bc73d685f7074}{b\+Flip}}
+\item 
+\mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}} \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a3cc0c5f531dd001db9207004aa17ccee}{arr\+Reserved}} \mbox{[}32\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Raw8 Image process struct 
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{structCOLOR__IMG__PROCESS_a3cc0c5f531dd001db9207004aa17ccee}\label{structCOLOR__IMG__PROCESS_a3cc0c5f531dd001db9207004aa17ccee} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!arrReserved@{arrReserved}}
+\index{arrReserved@{arrReserved}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{arrReserved}{arrReserved}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}} COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::arr\+Reserved\mbox{[}32\mbox{]}}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_a325feb24f3187f676b1f7e8033ee4d80}\label{structCOLOR__IMG__PROCESS_a325feb24f3187f676b1f7e8033ee4d80} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!bAccelerate@{bAccelerate}}
+\index{bAccelerate@{bAccelerate}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{bAccelerate}{bAccelerate}}
+{\footnotesize\ttfamily bool COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::b\+Accelerate}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_a52f8defff4bc02cfb642d3ac4094c82f}\label{structCOLOR__IMG__PROCESS_a52f8defff4bc02cfb642d3ac4094c82f} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!bDefectivePixelCorrect@{bDefectivePixelCorrect}}
+\index{bDefectivePixelCorrect@{bDefectivePixelCorrect}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{bDefectivePixelCorrect}{bDefectivePixelCorrect}}
+{\footnotesize\ttfamily bool COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::b\+Defective\+Pixel\+Correct}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_aa03f98f877103b1df7a21665e8196cca}\label{structCOLOR__IMG__PROCESS_aa03f98f877103b1df7a21665e8196cca} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!bDenoise@{bDenoise}}
+\index{bDenoise@{bDenoise}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{bDenoise}{bDenoise}}
+{\footnotesize\ttfamily bool COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::b\+Denoise}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_a02b17bdf8eb205d6ba6bc73d685f7074}\label{structCOLOR__IMG__PROCESS_a02b17bdf8eb205d6ba6bc73d685f7074} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!bFlip@{bFlip}}
+\index{bFlip@{bFlip}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{bFlip}{bFlip}}
+{\footnotesize\ttfamily bool COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::b\+Flip}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_a19b7a7cfc7182bdf094c6d9ed852e28a}\label{structCOLOR__IMG__PROCESS_a19b7a7cfc7182bdf094c6d9ed852e28a} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!bSharpness@{bSharpness}}
+\index{bSharpness@{bSharpness}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{bSharpness}{bSharpness}}
+{\footnotesize\ttfamily bool COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::b\+Sharpness}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_ab710f436a1df5a7510f1df492e5afe8a}\label{structCOLOR__IMG__PROCESS_ab710f436a1df5a7510f1df492e5afe8a} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!cvType@{cvType}}
+\index{cvType@{cvType}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{cvType}{cvType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}} COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::cv\+Type}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_a64fc25f3349af663aad4833e2afabb36}\label{structCOLOR__IMG__PROCESS_a64fc25f3349af663aad4833e2afabb36} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!emLayOut@{emLayOut}}
+\index{emLayOut@{emLayOut}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{emLayOut}{emLayOut}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}} COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::em\+Lay\+Out}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_a94242186dbb2dd179f4b6188ced251f5}\label{structCOLOR__IMG__PROCESS_a94242186dbb2dd179f4b6188ced251f5} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!fSharpFactor@{fSharpFactor}}
+\index{fSharpFactor@{fSharpFactor}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{fSharpFactor}{fSharpFactor}}
+{\footnotesize\ttfamily float COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::f\+Sharp\+Factor}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_a8cb9e2c83fca473f1eebfe61f903c82c}\label{structCOLOR__IMG__PROCESS_a8cb9e2c83fca473f1eebfe61f903c82c} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!nCCBufLength@{nCCBufLength}}
+\index{nCCBufLength@{nCCBufLength}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{nCCBufLength}{nCCBufLength}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}} COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::n\+CCBuf\+Length}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_a8b87d7281fa3435bfc3597059b56b200}\label{structCOLOR__IMG__PROCESS_a8b87d7281fa3435bfc3597059b56b200} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!nLutLength@{nLutLength}}
+\index{nLutLength@{nLutLength}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{nLutLength}{nLutLength}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973}{Vx\+Uint16}} COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::n\+Lut\+Length}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_aa43bbab77e2ea3804950a6990d537f21}\label{structCOLOR__IMG__PROCESS_aa43bbab77e2ea3804950a6990d537f21} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!parrCC@{parrCC}}
+\index{parrCC@{parrCC}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{parrCC}{parrCC}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{Vx\+Int16}}\texorpdfstring{$\ast$}{*} COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::parr\+CC}
+
+\Hypertarget{structCOLOR__IMG__PROCESS_a47d4a7a6914831dd869d4beb6ba5f788}\label{structCOLOR__IMG__PROCESS_a47d4a7a6914831dd869d4beb6ba5f788} 
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!pProLut@{pProLut}}
+\index{pProLut@{pProLut}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\doxysubsubsection{\texorpdfstring{pProLut}{pProLut}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}}\texorpdfstring{$\ast$}{*} COLOR\+\_\+\+IMG\+\_\+\+PROCESS\+::p\+Pro\+Lut}
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/home/davi/project/c++/\+Buff\+Detect/general/\+Gx\+Camera/include/\mbox{\hyperlink{DxImageProc_8h}{Dx\+Image\+Proc.\+h}}\end{DoxyCompactItemize}

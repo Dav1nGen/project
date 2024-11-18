@@ -1,0 +1,171 @@
+\doxysection{GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM结构体 参考}
+\hypertarget{structGX__FRAME__CALLBACK__PARAM}{}\label{structGX__FRAME__CALLBACK__PARAM}\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+
+
+{\ttfamily \#include $<$Gx\+IAPI.\+h$>$}
+
+
+
+GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{structGX__FRAME__CALLBACK__PARAM__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_a6c664c4ef0e2625da089277e65dec482}{p\+User\+Param}}
+\begin{DoxyCompactList}\small\item\em User\textquotesingle{}s private data pointer \end{DoxyCompactList}\item 
+\mbox{\hyperlink{GxIAPI_8h_aad84105035741875c882b1a37b7a0033}{GX\+\_\+\+FRAME\+\_\+\+STATUS}} \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_a119b3b0323a22534e2d5b9fa5cbfea17}{status}}
+\begin{DoxyCompactList}\small\item\em The image state returned by the callback function. Please refer to GX\+\_\+\+FRAME\+\_\+\+STATUS \end{DoxyCompactList}\item 
+const void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_af5f59cf914da982eff0f911c7a1ca004}{p\+Img\+Buf}}
+\begin{DoxyCompactList}\small\item\em The image data address (After the frame information is enabled, the p\+Img\+Buf contains image data and frame information data) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_a39271b1e38d17ebe3d3868eb8dc98bdc}{n\+Img\+Size}}
+\begin{DoxyCompactList}\small\item\em Data size, in bytes (After the frame information is enabled, n\+Img\+Size is the sum of the size of the image data and the size of the frame information) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_a76ead0c9863fdf9aaae81a035ac85a94}{n\+Width}}
+\begin{DoxyCompactList}\small\item\em Image width \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_ab946d8ff1928f95449e2e601a39108ad}{n\+Height}}
+\begin{DoxyCompactList}\small\item\em Image height \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_a0ea9b0cadd476399123878526d9be2a7}{n\+Pixel\+Format}}
+\begin{DoxyCompactList}\small\item\em Pixel\+Format of image \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_aac0767b38ac3faceb23dfa2d7799e003}{n\+Frame\+ID}}
+\begin{DoxyCompactList}\small\item\em Frame identification of image \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_ae61b0fc8f557ffa985722cf6159b464f}{n\+Timestamp}}
+\begin{DoxyCompactList}\small\item\em Timestamp of image \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_a0cd3beb96875b11c5c9ee23e265a8d40}{n\+OffsetX}}
+\begin{DoxyCompactList}\small\item\em X-\/direction offset of the image \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_a001f6156ee327f409a5518d07f27516c}{n\+OffsetY}}
+\begin{DoxyCompactList}\small\item\em Y-\/direction offset of the image \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__CALLBACK__PARAM_a1263aff702db0a0c7eecc8d625b29858}{reserved}} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em 4 bytes,reserved \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_aac0767b38ac3faceb23dfa2d7799e003}\label{structGX__FRAME__CALLBACK__PARAM_aac0767b38ac3faceb23dfa2d7799e003} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!nFrameID@{nFrameID}}
+\index{nFrameID@{nFrameID}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{nFrameID}{nFrameID}}
+{\footnotesize\ttfamily uint64\+\_\+t GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::n\+Frame\+ID}
+
+
+
+Frame identification of image 
+
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_ab946d8ff1928f95449e2e601a39108ad}\label{structGX__FRAME__CALLBACK__PARAM_ab946d8ff1928f95449e2e601a39108ad} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!nHeight@{nHeight}}
+\index{nHeight@{nHeight}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{nHeight}{nHeight}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::n\+Height}
+
+
+
+Image height 
+
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_a39271b1e38d17ebe3d3868eb8dc98bdc}\label{structGX__FRAME__CALLBACK__PARAM_a39271b1e38d17ebe3d3868eb8dc98bdc} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!nImgSize@{nImgSize}}
+\index{nImgSize@{nImgSize}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{nImgSize}{nImgSize}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::n\+Img\+Size}
+
+
+
+Data size, in bytes (After the frame information is enabled, n\+Img\+Size is the sum of the size of the image data and the size of the frame information) 
+
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_a0cd3beb96875b11c5c9ee23e265a8d40}\label{structGX__FRAME__CALLBACK__PARAM_a0cd3beb96875b11c5c9ee23e265a8d40} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!nOffsetX@{nOffsetX}}
+\index{nOffsetX@{nOffsetX}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{nOffsetX}{nOffsetX}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::n\+OffsetX}
+
+
+
+X-\/direction offset of the image 
+
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_a001f6156ee327f409a5518d07f27516c}\label{structGX__FRAME__CALLBACK__PARAM_a001f6156ee327f409a5518d07f27516c} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!nOffsetY@{nOffsetY}}
+\index{nOffsetY@{nOffsetY}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{nOffsetY}{nOffsetY}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::n\+OffsetY}
+
+
+
+Y-\/direction offset of the image 
+
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_a0ea9b0cadd476399123878526d9be2a7}\label{structGX__FRAME__CALLBACK__PARAM_a0ea9b0cadd476399123878526d9be2a7} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!nPixelFormat@{nPixelFormat}}
+\index{nPixelFormat@{nPixelFormat}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{nPixelFormat}{nPixelFormat}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::n\+Pixel\+Format}
+
+
+
+Pixel\+Format of image 
+
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_ae61b0fc8f557ffa985722cf6159b464f}\label{structGX__FRAME__CALLBACK__PARAM_ae61b0fc8f557ffa985722cf6159b464f} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!nTimestamp@{nTimestamp}}
+\index{nTimestamp@{nTimestamp}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{nTimestamp}{nTimestamp}}
+{\footnotesize\ttfamily uint64\+\_\+t GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::n\+Timestamp}
+
+
+
+Timestamp of image 
+
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_a76ead0c9863fdf9aaae81a035ac85a94}\label{structGX__FRAME__CALLBACK__PARAM_a76ead0c9863fdf9aaae81a035ac85a94} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!nWidth@{nWidth}}
+\index{nWidth@{nWidth}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{nWidth}{nWidth}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::n\+Width}
+
+
+
+Image width 
+
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_af5f59cf914da982eff0f911c7a1ca004}\label{structGX__FRAME__CALLBACK__PARAM_af5f59cf914da982eff0f911c7a1ca004} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!pImgBuf@{pImgBuf}}
+\index{pImgBuf@{pImgBuf}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{pImgBuf}{pImgBuf}}
+{\footnotesize\ttfamily const void\texorpdfstring{$\ast$}{*} GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::p\+Img\+Buf}
+
+
+
+The image data address (After the frame information is enabled, the p\+Img\+Buf contains image data and frame information data) 
+
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_a6c664c4ef0e2625da089277e65dec482}\label{structGX__FRAME__CALLBACK__PARAM_a6c664c4ef0e2625da089277e65dec482} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!pUserParam@{pUserParam}}
+\index{pUserParam@{pUserParam}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{pUserParam}{pUserParam}}
+{\footnotesize\ttfamily void\texorpdfstring{$\ast$}{*} GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::p\+User\+Param}
+
+
+
+User\textquotesingle{}s private data pointer 
+
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_a1263aff702db0a0c7eecc8d625b29858}\label{structGX__FRAME__CALLBACK__PARAM_a1263aff702db0a0c7eecc8d625b29858} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!reserved@{reserved}}
+\index{reserved@{reserved}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::reserved\mbox{[}1\mbox{]}}
+
+
+
+4 bytes,reserved 
+
+\Hypertarget{structGX__FRAME__CALLBACK__PARAM_a119b3b0323a22534e2d5b9fa5cbfea17}\label{structGX__FRAME__CALLBACK__PARAM_a119b3b0323a22534e2d5b9fa5cbfea17} 
+\index{GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}!status@{status}}
+\index{status@{status}!GX\_FRAME\_CALLBACK\_PARAM@{GX\_FRAME\_CALLBACK\_PARAM}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{GxIAPI_8h_aad84105035741875c882b1a37b7a0033}{GX\+\_\+\+FRAME\+\_\+\+STATUS}} GX\+\_\+\+FRAME\+\_\+\+CALLBACK\+\_\+\+PARAM\+::status}
+
+
+
+The image state returned by the callback function. Please refer to GX\+\_\+\+FRAME\+\_\+\+STATUS 
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/home/davi/project/c++/\+Buff\+Detect/general/\+Gx\+Camera/include/\mbox{\hyperlink{GxIAPI_8h}{Gx\+IAPI.\+h}}\end{DoxyCompactItemize}

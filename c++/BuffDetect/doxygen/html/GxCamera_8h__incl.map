@@ -1,0 +1,19 @@
+<map id="/home/davi/project/c++/BuffDetect/general/GxCamera/GxCamera.h" name="/home/davi/project/c++/BuffDetect/general/GxCamera/GxCamera.h">
+<area shape="rect" id="Node000001" title="GxCamera class declare" alt="" coords="180,5,347,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,112,146,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,67,117,107,115,103,201,62"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="170,112,237,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="246,66,223,101,218,98,242,63"/>
+<area shape="rect" id="Node000004" href="$GxIAPI_8h.html" title=" " alt="" coords="261,112,389,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="285,63,310,97,305,101,281,66"/>
+<area shape="rect" id="Node000007" href="$DxImageProc_8h.html" title="Image Processing Library" alt="" coords="413,112,578,139"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="340,62,449,104,448,109,338,67"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="222,187,286,213"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="314,141,279,177,275,174,311,137"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="311,187,379,213"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="331,138,340,171,335,173,326,140"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="443,187,506,213"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="494,140,485,173,480,171,489,138"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="530,187,594,213"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="509,137,542,173,539,177,505,141"/>
+</map>

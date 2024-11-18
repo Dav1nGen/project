@@ -1,0 +1,235 @@
+\doxysection{Dx\+Image\+Proc.\+h}
+\hypertarget{DxImageProc_8h_source}{}\label{DxImageProc_8h_source}\index{/home/davi/project/c++/BuffDetect/general/GxCamera/include/DxImageProc.h@{/home/davi/project/c++/BuffDetect/general/GxCamera/include/DxImageProc.h}}
+\mbox{\hyperlink{DxImageProc_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ }}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#if\ !defined\ (\_DXIMAGEPROC\_H)\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ \_DXIMAGEPROC\_H\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifdef\ \_WIN32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}stdafx.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ DHDECL\ \_\_stdcall}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#else\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ \ DHDECL\ \_\_attribute\_\_((visibility("{}default"{})))}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_ac87c6dc543c60cfb0350e4ebb4655254}{VxInt8}};\ \ \ \ \ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{short}\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{VxInt16}};\ \ \ \ \ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}};\ \ \ \ \ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#ifdef\ \_WIN32\ }}
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \_\_int64\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{VxInt64}};\ \ \ \ \ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{VxInt64}};\ \ \ \ \ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \ \ \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{VxUint8}};\ \ \ \ \ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \ \mbox{\hyperlink{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973}{VxUint16}};\ \ \ \ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}};\ \ \ \ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \ \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21}{tagDX\_STATUS}}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a455d746c7a8480b5568609c314ebe4f8}{DX\_OK}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0,\ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a030a87958a49b108fb4070234074328d}{DX\_PARAMETER\_INVALID}}\ \ \ \ \ \ \ \ \ \ =\ -\/101,\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21ac412733620c7d166507cfea57e508781}{DX\_PARAMETER\_OUT\_OF\_BOUND}}\ \ \ \ \ =\ -\/102,\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a7ad8f683c0e8bb64de9f41f26ef78f97}{DX\_NOT\_ENOUGH\_SYSTEM\_MEMORY}}\ \ \ =\ -\/103,\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a403a69ee1fcafbf665f290cd36523823}{DX\_NOT\_FIND\_DEVICE}}\ \ \ \ \ \ \ \ \ \ \ \ =\ -\/104,\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21ad685b044bddeedcbc1a71c9ef47001ed}{DX\_STATUS\_NOT\_SUPPORTED}}\ \ \ \ \ \ \ =\ -\/105,}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21af6d34e7cd2bf5027efb4c8f29e038544}{DX\_CPU\_NOT\_SUPPORT\_ACCELERATE}}\ =\ -\/106\ \ }
+\DoxyCodeLine{00051\ \}\ \mbox{\hyperlink{DxImageProc_8h_a640a39da7ecf311154476a1cf9f674e3}{DX\_STATUS}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \ \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350}{tagDX\_PIXEL\_COLOR\_FILTER}}}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}}\ \ \ \ =\ 0,\ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ab05599415c328964c231560cd751f4d3}{BAYERRG}}\ =\ 1,\ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ae7ebab116c3130884aaf5d0168ce2214}{BAYERGB}}\ =\ 2,\ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350aa71e628554c8678919b505547501c175}{BAYERGR}}\ =\ 3,\ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350aec44e0244d26e5f4a09d640bb9228e30}{BAYERBG}}\ =\ 4\ \ \ \ }
+\DoxyCodeLine{00061\ \}\ \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\_PIXEL\_COLOR\_FILTER}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28}{tagDX\_BAYER\_CONVERT\_TYPE}}}
+\DoxyCodeLine{00065\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28ac84388ebeefecd120741da0fef012e96}{RAW2RGB\_NEIGHBOUR}}\ \ =\ 0,\ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28a981281bcac6722e78166945c1fce5a29}{RAW2RGB\_ADAPTIVE}}\ \ \ =\ 1,\ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28ad5e57880035ae57aa827060a939d8f79}{RAW2RGB\_NEIGHBOUR3}}\ =\ 2\ \ \ \ }
+\DoxyCodeLine{00069\ \}\ \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\_BAYER\_CONVERT\_TYPE}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bb}{tagDX\_VALID\_BIT}}}
+\DoxyCodeLine{00073\ \{\ }
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba21d4c851c5569748f517a4daa331d45f}{DX\_BIT\_0\_7}}\ \ \ \ \ \ \ \ =\ 0,\ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba9da89be4706b08a073819280719cb987}{DX\_BIT\_1\_8}}\ \ \ \ \ \ \ \ =\ 1,\ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba1e33d57b50653e6834710d2f4dd77929}{DX\_BIT\_2\_9}}\ \ \ \ \ \ \ \ =\ 2,\ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bbad344bb2f7b0585feedf9f5f010e8d38f}{DX\_BIT\_3\_10}}\ \ \ \ \ \ =\ 3,\ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba48ac71952ae967b909acd5c630f064f4}{DX\_BIT\_4\_11}}\ \ \ \ \ \ =\ 4\ \ \ \ \ }
+\DoxyCodeLine{00079\ \}\ \mbox{\hyperlink{DxImageProc_8h_a829a8775cc522c0d3ffefbcad05686cd}{DX\_VALID\_BIT}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83ed}{tagDX\_ACTUAL\_BITS}}}
+\DoxyCodeLine{00083\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda45280026da721103bc4a4bc9d539f958}{DX\_ACTUAL\_BITS\_10}}\ =\ 10,\ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda12aec5c49d97735d82bd47d9d1ba877e}{DX\_ACTUAL\_BITS\_12}}\ =\ 12,\ \ \ \ }
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda4dfc5261b982fbf28c709429b81e5a1e}{DX\_ACTUAL\_BITS\_14}}\ =\ 14,\ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83edad08b09f7787e0aff2643edc9c2b994db}{DX\_ACTUAL\_BITS\_16}}\ =\ 16\ \ \ \ \ }
+\DoxyCodeLine{00088\ \}\ \mbox{\hyperlink{DxImageProc_8h_a843824c2d44a7ca3b00c307631f4f2a1}{DX\_ACTUAL\_BITS}};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705}{DX\_IMAGE\_MIRROR\_MODE}}}
+\DoxyCodeLine{00092\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705afa0aa79d610cb5d3f95fbe13f51bbbde}{HORIZONTAL\_MIRROR}}\ =\ 0,\ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705a0717afdea081c6220fac321aeac9fbc2}{VERTICAL\_MIRROR}}\ \ \ =\ 1\ \ \ \ \ }
+\DoxyCodeLine{00095\ \}\mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705}{DX\_IMAGE\_MIRROR\_MODE}};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\_RGB\_CHANNEL\_ORDER}}}
+\DoxyCodeLine{00099\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106facb593cdf97ab194689e707ddef2f9b5f}{DX\_ORDER\_RGB}}\ =\ 0,}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106faa3e1709bd8205fb2c3db13358d734007}{DX\_ORDER\_BGR}}\ =\ 1}
+\DoxyCodeLine{00102\ \}\mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\_RGB\_CHANNEL\_ORDER}};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{typedef}\ \ \textcolor{keyword}{struct\ \ }\mbox{\hyperlink{structMONO__IMG__PROCESS}{MONO\_IMG\_PROCESS}}}
+\DoxyCodeLine{00106\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structMONO__IMG__PROCESS_a09d41ec2d6f70abdc65f2426cdafd796}{bDefectivePixelCorrect}};\ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structMONO__IMG__PROCESS_a6eb9fe5ffbbaf6d63bdc05ee0899924a}{bSharpness}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structMONO__IMG__PROCESS_a59f53dce46dad534a1e02852e8bf3352}{bAccelerate}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structMONO__IMG__PROCESS_af8248284b2d19e76a22f7347c8d2ddc5}{fSharpFactor}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{VxUint8}}\ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{structMONO__IMG__PROCESS_acf7f27e39775cd23e93d4097f1158cbe}{pProLut}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973}{VxUint16}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structMONO__IMG__PROCESS_ac257717655681ca9f97dac668a476e96}{nLutLength}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{VxUint8}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structMONO__IMG__PROCESS_a3c91495d4b4378981e69d235d575d163}{arrReserved}}[32];\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \}\ \mbox{\hyperlink{DxImageProc_8h_a0d2bc0ece4716e473bf5158c36bb420c}{MONO\_IMG\_PROCESS}};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{typedef}\ \ \textcolor{keyword}{struct\ \ }\mbox{\hyperlink{structCOLOR__IMG__PROCESS}{COLOR\_IMG\_PROCESS}}}
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a52f8defff4bc02cfb642d3ac4094c82f}{bDefectivePixelCorrect}};\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCOLOR__IMG__PROCESS_aa03f98f877103b1df7a21665e8196cca}{bDenoise}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a19b7a7cfc7182bdf094c6d9ed852e28a}{bSharpness}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a325feb24f3187f676b1f7e8033ee4d80}{bAccelerate}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{VxInt16}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{structCOLOR__IMG__PROCESS_aa43bbab77e2ea3804950a6990d537f21}{parrCC}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{VxUint8}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a8cb9e2c83fca473f1eebfe61f903c82c}{nCCBufLength}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a94242186dbb2dd179f4b6188ced251f5}{fSharpFactor}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{VxUint8}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{structCOLOR__IMG__PROCESS_a47d4a7a6914831dd869d4beb6ba5f788}{pProLut}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973}{VxUint16}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a8b87d7281fa3435bfc3597059b56b200}{nLutLength}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\_BAYER\_CONVERT\_TYPE}}\ \ \mbox{\hyperlink{structCOLOR__IMG__PROCESS_ab710f436a1df5a7510f1df492e5afe8a}{cvType}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\_PIXEL\_COLOR\_FILTER}}\ \ \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a64fc25f3349af663aad4833e2afabb36}{emLayOut}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a02b17bdf8eb205d6ba6bc73d685f7074}{bFlip}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{VxUint8}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCOLOR__IMG__PROCESS_a3cc0c5f531dd001db9207004aa17ccee}{arrReserved}}[32];\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00132\ \}\ \mbox{\hyperlink{DxImageProc_8h_a41667409fb949a2a4033ba27df9708a0}{COLOR\_IMG\_PROCESS}};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00147\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00148\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a5f348d7923ab6d77c4b4c71001c916b8}{DxRaw8toRGB24}}(\textcolor{keywordtype}{void}\ *pInputBuffer,\ \textcolor{keywordtype}{void}\ *pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\_BAYER\_CONVERT\_TYPE}}\ cvtype,\ \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\_PIXEL\_COLOR\_FILTER}}\ nBayerType,\ \textcolor{keywordtype}{bool}\ bFlip);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00164\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00165\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a5826252b82ac0ae2d0cfdf1183878f21}{DxRaw8toRGB24Ex}}(\textcolor{keywordtype}{void}\ *pInputBuffer,\ \textcolor{keywordtype}{void}\ *pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\_BAYER\_CONVERT\_TYPE}}\ cvtype,\ \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\_PIXEL\_COLOR\_FILTER}}\ nBayerType,\ \textcolor{keywordtype}{bool}\ bFlip,\ \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\_RGB\_CHANNEL\_ORDER}}\ emChannelOrder);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00177\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00178\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a21a070a61fd7f20c0fd60763f1027599}{DxRaw12PackedToRaw16}}(\textcolor{keywordtype}{void}*\ pInputBuffer,\ \textcolor{keywordtype}{void}*\ pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00190\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00191\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a9b9ffe639b51b4cca8cd13fdd0cb9884}{DxRaw10PackedToRaw16}}(\textcolor{keywordtype}{void}*\ pInputBuffer,\ \textcolor{keywordtype}{void}*\ pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00203\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00204\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_aa7774971b119e9498a6e8e5ac7b29315}{DxRotate90CW8B}}(\textcolor{keywordtype}{void}*\ pInputBuffer,\ \textcolor{keywordtype}{void}*\ pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight);}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00216\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00217\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_ae23324341fa417a05af91f5a629c0bf2}{DxRotate90CCW8B}}(\textcolor{keywordtype}{void}*\ pInputBuffer,\ \textcolor{keywordtype}{void}*\ pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00229\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00230\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_ac0d59025302e5e800988182471657613}{DxBrightness}}(\textcolor{keywordtype}{void}*\ pInputBuffer,\ \textcolor{keywordtype}{void}*\ pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nImagesize,\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ nFactor);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00242\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00243\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a044ad18a1927ca348cf59d7f1cc63ada}{DxContrast}}(\textcolor{keywordtype}{void}*\ pInputBuffer,\ \textcolor{keywordtype}{void}*\ pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nImagesize,\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ nFactor);}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00256\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00257\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a61c11f87195b56ddbd129f36f380a821}{DxSharpen24B}}(\textcolor{keywordtype}{void}*\ pInputBuffer,\ \textcolor{keywordtype}{void}*\ pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \textcolor{keywordtype}{float}\ fFactor);}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00269\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00270\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a16f6ee89c49768099e7435bda85ffe3c}{DxSaturation}}(\textcolor{keywordtype}{void}*\ pInputBuffer,\ \textcolor{keywordtype}{void}*\ pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nImagesize,\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ nFactor);}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00285\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00286\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_ac1a81815abc8a490dfb4ed266d8f3c15}{DxGetWhiteBalanceRatio}}(\textcolor{keywordtype}{void}\ *pInputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \textcolor{keywordtype}{double}*\ dRatioR,\ \textcolor{keywordtype}{double}*\ dRatioG,\ \textcolor{keywordtype}{double}*\ dRatioB);}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00300\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00301\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a8121cdae0eef22eabeddedb7d3b8fb58}{DxAutoRawDefectivePixelCorrect}}(\textcolor{keywordtype}{void}*\ pRawImgBuf,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ nBitNum);}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00314\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00315\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a9794af81fccb52454c8cefe5f37e777a}{DxRaw16toRaw8}}(\textcolor{keywordtype}{void}\ *pInputBuffer,\ \textcolor{keywordtype}{void}\ *pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \mbox{\hyperlink{DxImageProc_8h_a829a8775cc522c0d3ffefbcad05686cd}{DX\_VALID\_BIT}}\ nValidBits);}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00328\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00329\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_af7d5cc47a6d5e1559d9f3726f7f0f4ff}{DxRGB48toRGB24}}(\textcolor{keywordtype}{void}\ *pInputBuffer,\ \textcolor{keywordtype}{void}\ *pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \mbox{\hyperlink{DxImageProc_8h_a829a8775cc522c0d3ffefbcad05686cd}{DX\_VALID\_BIT}}\ nValidBits);}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00331\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00345\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00346\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a2a10ddaa3e2bb7a98d71858ab4fb5924}{DxRaw16toRGB48}}(\textcolor{keywordtype}{void}\ *pInputBuffer,\ \textcolor{keywordtype}{void}\ *pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \mbox{\hyperlink{DxImageProc_8h_a843824c2d44a7ca3b00c307631f4f2a1}{DX\_ACTUAL\_BITS}}\ nActualBits,\ \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\_BAYER\_CONVERT\_TYPE}}\ cvtype,\ \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\_PIXEL\_COLOR\_FILTER}}\ nBayerType,\ \textcolor{keywordtype}{bool}\ bFlip);}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00364\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00365\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a7491a802d20fe18c50af00e4a79c5775}{DxRaw8toARGB32}}(\textcolor{keywordtype}{void}\ *pInputBuffer,\ \textcolor{keywordtype}{void}\ *pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \textcolor{keywordtype}{int}\ nStride,\ \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\_BAYER\_CONVERT\_TYPE}}\ cvtype,\ \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\_PIXEL\_COLOR\_FILTER}}\ nBayerType,\ \textcolor{keywordtype}{bool}\ bFlip,\ \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{VxUint8}}\ nAlpha);}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00367\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00376\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00377\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_ab0c98f764d78e823728007f4a6ec98b6}{DxGetContrastLut}}(\textcolor{keywordtype}{int}\ nContrastParam,\ \textcolor{keywordtype}{void}\ *pContrastLut,\ \textcolor{keywordtype}{int}\ *pLutLength);}
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00379\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00388\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00389\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_abca721405588cda2e3db80e94aca1e41}{DxGetGammatLut}}(\textcolor{keywordtype}{double}\ dGammaParam,\ \textcolor{keywordtype}{void}\ *pGammaLut,\ \textcolor{keywordtype}{int}\ *pLutLength);}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00404\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00405\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a56fd2cdc7b80a84219782ec56d2a08e2}{DxImageImprovment}}(\textcolor{keywordtype}{void}\ *pInputBuffer,\ \textcolor{keywordtype}{void}\ *pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{VxInt64}}\ nColorCorrectionParam,\ \textcolor{keywordtype}{void}\ *pContrastLut,\ \textcolor{keywordtype}{void}\ *pGammaLut);}
+\DoxyCodeLine{00406\ }
+\DoxyCodeLine{00407\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00420\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00421\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_af09adf346253a4a495ac510fa4c46c22}{DxARGBImageImprovment}}(\textcolor{keywordtype}{void}\ *pInputBuffer,\ \textcolor{keywordtype}{void}\ *pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{VxInt64}}\ nColorCorrectionParam,\ \textcolor{keywordtype}{void}\ *pContrastLut,\ \textcolor{keywordtype}{void}\ *pGammaLut);}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00423\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00437\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00438\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_ac9e7adeaeed3c1fed2d6b143ba615011}{DxImageImprovmentEx}}(\textcolor{keywordtype}{void}\ *pInputBuffer,\ \textcolor{keywordtype}{void}\ *pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{VxInt64}}\ nColorCorrectionParam,\ \textcolor{keywordtype}{void}\ *pContrastLut,\ \textcolor{keywordtype}{void}\ *pGammaLut,\ \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\_RGB\_CHANNEL\_ORDER}}\ emChannelOrder);}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00451\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00452\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a4b9278bebee46c1984fa80a29a03e9d4}{DxImageMirror}}(\textcolor{keywordtype}{void}\ *pInputBuffer,\ \textcolor{keywordtype}{void}\ *pOutputBuffer,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705}{DX\_IMAGE\_MIRROR\_MODE}}\ emMirrorMode);}
+\DoxyCodeLine{00453\ }
+\DoxyCodeLine{00454\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00465\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00466\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_adf26f5eb58bb71ae1d906d1cd294697d}{DxGetLut}}(\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ nContrastParam,\ \textcolor{keywordtype}{double}\ dGamma,\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ nLightness,\ \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{VxUint8}}\ *pLut,\ \mbox{\hyperlink{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973}{VxUint16}}\ *pLutLength);}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00468\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00478\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00479\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_ac491b54c69c41c128cb1ba544d7afa2f}{DxCalcCCParam}}(\mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{VxInt64}}\ nColorCorrectionParam,\ \mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{VxInt16}}\ nSaturation,\ \mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{VxInt16}}\ *parrCC,\ \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{VxUint8}}\ nLength);}
+\DoxyCodeLine{00480\ }
+\DoxyCodeLine{00481\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00492\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00493\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a962e76118b8997228527f6d6d3bcb809}{DxRaw8ImgProcess}}(\textcolor{keywordtype}{void}\ *pRaw8Buf,\ \textcolor{keywordtype}{void}\ *pRgb24Buf,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nHeight,\ \mbox{\hyperlink{structCOLOR__IMG__PROCESS}{COLOR\_IMG\_PROCESS}}\ *pstClrImgProc);}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00506\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00507\ \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{VxInt32}}\ \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}\ \mbox{\hyperlink{DxImageProc_8h_a00588ad58dcc60e78c00c0cdd47c6235}{DxMono8ImgProcess}}(\textcolor{keywordtype}{void}\ *pInputBuf,\ \textcolor{keywordtype}{void}\ *pOutputBuf,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ nWidth,\ \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{VxUint32}}\ \ nHeight,\ \mbox{\hyperlink{structMONO__IMG__PROCESS}{MONO\_IMG\_PROCESS}}\ *pstGrayImgProc);}
+\DoxyCodeLine{00508\ }
+\DoxyCodeLine{00509\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00510\ \}}
+\DoxyCodeLine{00511\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00512\ }
+\DoxyCodeLine{00513\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00514\ }
+\DoxyCodeLine{00515\ }
+\DoxyCodeLine{00516\ }
+\DoxyCodeLine{00517\ }
+
+\end{DoxyCode}

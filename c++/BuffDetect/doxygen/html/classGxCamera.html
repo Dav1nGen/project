@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EVENT_MANGER: GxCamera类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">EVENT_MANGER
+   </div>
+   <div id="projectbrief">这是一个简单的订阅者发布者</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classGxCamera.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classGxCamera-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">GxCamera类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="GxCamera_8h_source.html">GxCamera.h</a>&gt;</code></p>
+<div class="dynheader">
+GxCamera 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGxCamera__coll__graph.png" border="0" usemap="#aGxCamera_coll__map" alt="Collaboration graph"/></div>
+<map name="aGxCamera_coll__map" id="aGxCamera_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,175,309"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a02c50cc2d16aa8681a73a321ab0df1d8" id="r_a02c50cc2d16aa8681a73a321ab0df1d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02c50cc2d16aa8681a73a321ab0df1d8">GxCamera</a> ()</td></tr>
+<tr class="separator:a02c50cc2d16aa8681a73a321ab0df1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47caaeeb6090105cc185a2ebca0f304f" id="r_a47caaeeb6090105cc185a2ebca0f304f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47caaeeb6090105cc185a2ebca0f304f">~GxCamera</a> ()</td></tr>
+<tr class="separator:a47caaeeb6090105cc185a2ebca0f304f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f5af3c930b1b0c5e6304bfaf1a799e4" id="r_a6f5af3c930b1b0c5e6304bfaf1a799e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f5af3c930b1b0c5e6304bfaf1a799e4">initial</a> ()</td></tr>
+<tr class="memdesc:a6f5af3c930b1b0c5e6304bfaf1a799e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">initial  <br /></td></tr>
+<tr class="separator:a6f5af3c930b1b0c5e6304bfaf1a799e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4298120e9ef0484c06056ce095aac4d" id="r_ac4298120e9ef0484c06056ce095aac4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4298120e9ef0484c06056ce095aac4d">isOpen</a> ()</td></tr>
+<tr class="memdesc:ac4298120e9ef0484c06056ce095aac4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is open  <br /></td></tr>
+<tr class="separator:ac4298120e9ef0484c06056ce095aac4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61afe2f0f130108e4bb50806cdd0d81" id="r_af61afe2f0f130108e4bb50806cdd0d81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af61afe2f0f130108e4bb50806cdd0d81">close</a> ()</td></tr>
+<tr class="memdesc:af61afe2f0f130108e4bb50806cdd0d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close devise  <br /></td></tr>
+<tr class="separator:af61afe2f0f130108e4bb50806cdd0d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa96bdd2586c6013f9d22f9e45aaecd67" id="r_aa96bdd2586c6013f9d22f9e45aaecd67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa96bdd2586c6013f9d22f9e45aaecd67">get_exposure_us</a> (double *us)</td></tr>
+<tr class="memdesc:aa96bdd2586c6013f9d22f9e45aaecd67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get exposure time(us)  <br /></td></tr>
+<tr class="separator:aa96bdd2586c6013f9d22f9e45aaecd67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413afeb31f44dfe16d7efa18b41140d6" id="r_a413afeb31f44dfe16d7efa18b41140d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a413afeb31f44dfe16d7efa18b41140d6">read</a> (cv::Mat *targetMatImg, float *timestamp)</td></tr>
+<tr class="separator:a413afeb31f44dfe16d7efa18b41140d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2737ac031096690e6ee033171062725" id="r_af2737ac031096690e6ee033171062725"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2737ac031096690e6ee033171062725">openDevice</a> (bool useSN, const char *CameraSN)</td></tr>
+<tr class="memdesc:af2737ac031096690e6ee033171062725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open device and display device information  <br /></td></tr>
+<tr class="separator:af2737ac031096690e6ee033171062725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa77c4292bf8a86127ea3d90722c69b84" id="r_aa77c4292bf8a86127ea3d90722c69b84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa77c4292bf8a86127ea3d90722c69b84">setTriggerParam</a> (bool useHardTrigger)</td></tr>
+<tr class="memdesc:aa77c4292bf8a86127ea3d90722c69b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set trigger mode  <br /></td></tr>
+<tr class="separator:aa77c4292bf8a86127ea3d90722c69b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa444f2eb5658476c41f5a875775094f9" id="r_aa444f2eb5658476c41f5a875775094f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa444f2eb5658476c41f5a875775094f9">setExposureGainParam</a> (bool AutoExposure, bool AutoGain, double ExposureTime, double AutoExposureTimeMin, double AutoExposureTimeMax, double Gain, double AutoGainMin, double AutoGainMax, int64_t GrayValue)</td></tr>
+<tr class="memdesc:aa444f2eb5658476c41f5a875775094f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set camera exposure and gain  <br /></td></tr>
+<tr class="separator:aa444f2eb5658476c41f5a875775094f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a2e4b253fa1d796375cf937e24a901d" id="r_a3a2e4b253fa1d796375cf937e24a901d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a2e4b253fa1d796375cf937e24a901d">setRoiParam</a> (int64_t Width, int64_t Height, int64_t OffsetX, int64_t OffsetY)</td></tr>
+<tr class="memdesc:a3a2e4b253fa1d796375cf937e24a901d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set camera roi param  <br /></td></tr>
+<tr class="separator:a3a2e4b253fa1d796375cf937e24a901d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefaf0f843ff3459b34c96f8c09cd96e8" id="r_aefaf0f843ff3459b34c96f8c09cd96e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefaf0f843ff3459b34c96f8c09cd96e8">setWhiteBalanceParam</a> (bool WhiteBalanceOn, <a class="el" href="GxIAPI_8h.html#ad9805db4f9f6c0a6d9e0bb6fefdd84ad">GX_AWB_LAMP_HOUSE_ENTRY</a> lightSource)</td></tr>
+<tr class="memdesc:aefaf0f843ff3459b34c96f8c09cd96e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set camera <a class="el" href="structWhiteBalance.html" title="WhiteBalance">WhiteBalance</a>  <br /></td></tr>
+<tr class="separator:aefaf0f843ff3459b34c96f8c09cd96e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a02c50cc2d16aa8681a73a321ab0df1d8" name="a02c50cc2d16aa8681a73a321ab0df1d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c50cc2d16aa8681a73a321ab0df1d8">&#9670;&#160;</a></span>GxCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GxCamera::GxCamera </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>&lt; Device handle</p>
+<p>&lt; Color filter support flag</p>
+<p>&lt; Color filter of device</p>
+<p>&lt; Payload size</p>
+
+<p class="reference">引用了 <a class="el" href="GxIAPI_8h.html#aec292d5bd4d07698f6aaa21fca7d3a66a20ee419926098812bf3db580fa590b2a">GX_COLOR_FILTER_NONE</a>.</p>
+
+</div>
+</div>
+<a id="a47caaeeb6090105cc185a2ebca0f304f" name="a47caaeeb6090105cc185a2ebca0f304f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47caaeeb6090105cc185a2ebca0f304f">&#9670;&#160;</a></span>~GxCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GxCamera::~GxCamera </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af61afe2f0f130108e4bb50806cdd0d81" name="af61afe2f0f130108e4bb50806cdd0d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61afe2f0f130108e4bb50806cdd0d81">&#9670;&#160;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GxCamera::close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close devise </p>
+
+<p class="reference">引用了 <a class="el" href="GxIAPI_8h.html#a069f2cefb829d5b929259f1e85e05db3">GXCloseDevice()</a>, <a class="el" href="GxIAPI_8h.html#a6601fae30c60ad1da98e94ab478c1430">GXCloseLib()</a> , 以及 <a class="el" href="GxIAPI_8h.html#a1ff25e042451fac5394f5da8987f5c84">GXStreamOff()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+
+</div>
+</div>
+<a id="aa96bdd2586c6013f9d22f9e45aaecd67" name="aa96bdd2586c6013f9d22f9e45aaecd67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa96bdd2586c6013f9d22f9e45aaecd67">&#9670;&#160;</a></span>get_exposure_us()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GxCamera::get_exposure_us </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>us</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get exposure time(us) </p>
+
+<p class="reference">引用了 <a class="el" href="GxIAPI_8h.html#a50b9574ff3075eb404081ef39b0bed8eacba1d85ede0c8fd972aae12e093f5763">GX_FLOAT_EXPOSURE_TIME</a> , 以及 <a class="el" href="GxIAPI_8h.html#ad5e6df734ef44c90629e29244614f6cd">GXGetFloat()</a>.</p>
+
+</div>
+</div>
+<a id="a6f5af3c930b1b0c5e6304bfaf1a799e4" name="a6f5af3c930b1b0c5e6304bfaf1a799e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f5af3c930b1b0c5e6304bfaf1a799e4">&#9670;&#160;</a></span>initial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GxCamera::initial </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initial </p>
+
+<p class="reference">引用了 <a class="el" href="GxIAPI_8h.html#ad9805db4f9f6c0a6d9e0bb6fefdd84ada2b38b2da23ea16bb713f74ba7afba91d">GX_AWB_LAMP_HOUSE_ADAPTIVE</a>, <a class="el" href="GxIAPI_8h.html#a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a">GX_STATUS_SUCCESS</a>, <a class="el" href="GxCamera_8h.html#a5d30266edf63d17aa7629e54e92336a2">GX_VERIFY_EXIT</a>, <a class="el" href="GxIAPI_8h.html#a221acff1913d90f6649436bd74f403bc">GXInitLib()</a>, <a class="el" href="GxIAPI_8h.html#ae0e6f85215dc98691cbc975e25cc2f23">GXUpdateDeviceList()</a>, <a class="el" href="#aa444f2eb5658476c41f5a875775094f9">setExposureGainParam()</a>, <a class="el" href="#a3a2e4b253fa1d796375cf937e24a901d">setRoiParam()</a>, <a class="el" href="#aa77c4292bf8a86127ea3d90722c69b84">setTriggerParam()</a> , 以及 <a class="el" href="#aefaf0f843ff3459b34c96f8c09cd96e8">setWhiteBalanceParam()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+
+</div>
+</div>
+<a id="ac4298120e9ef0484c06056ce095aac4d" name="ac4298120e9ef0484c06056ce095aac4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4298120e9ef0484c06056ce095aac4d">&#9670;&#160;</a></span>isOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GxCamera::isOpen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is open </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="#af2737ac031096690e6ee033171062725">openDevice()</a>.</p>
+
+</div>
+</div>
+<a id="af2737ac031096690e6ee033171062725" name="af2737ac031096690e6ee033171062725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2737ac031096690e6ee033171062725">&#9670;&#160;</a></span>openDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GxCamera::openDevice </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>useSN</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>CameraSN</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open device and display device information </p>
+<p>Open device and display device information 打开设备并显示图像信息 </p>
+
+<p class="reference">引用了 <a class="el" href="structGX__OPEN__PARAM.html#ae6c6e49468d351389cb434484caebc5e">GX_OPEN_PARAM::accessMode</a>, <a class="el" href="GxIAPI_8h.html#a80774c8ef6975364e1916e1d5aef48b5a1b43b74ec3785284fdef12b5d85293f0">GX_ACCESS_EXCLUSIVE</a>, <a class="el" href="GxIAPI_8h.html#a50b9574ff3075eb404081ef39b0bed8eaa1affbab2027c6b256688cf5b140f013">GX_ENUM_PIXEL_COLOR_FILTER</a>, <a class="el" href="GxIAPI_8h.html#aca9c20427953e4718f870154e10a52e6ab87c781cd9f9e7e9ae066f79823b05eb">GX_OPEN_INDEX</a>, <a class="el" href="GxIAPI_8h.html#aca9c20427953e4718f870154e10a52e6a0234fccc5e5042a2bbbbf9e476793522">GX_OPEN_SN</a>, <a class="el" href="GxIAPI_8h.html#a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a">GX_STATUS_SUCCESS</a>, <a class="el" href="GxCamera_8h.html#a5d30266edf63d17aa7629e54e92336a2">GX_VERIFY_EXIT</a>, <a class="el" href="GxIAPI_8h.html#a6601fae30c60ad1da98e94ab478c1430">GXCloseLib()</a>, <a class="el" href="GxIAPI_8h.html#a53809c20f1068619479ae4cda58c0785">GXGetEnum()</a>, <a class="el" href="GxIAPI_8h.html#a3dc71807fc024ee4ea3df29da20782d8">GXIsImplemented()</a>, <a class="el" href="GxIAPI_8h.html#a77ef77c6e48e6d2a6bd8973b380744ee">GXOpenDevice()</a>, <a class="el" href="GxIAPI_8h.html#a61749c69c12989980f30e1ff3468d057">GXStreamOn()</a>, <a class="el" href="#ac4298120e9ef0484c06056ce095aac4d">isOpen()</a>, <a class="el" href="structGX__OPEN__PARAM.html#ad13b6d59e7f1999c4044c5d579ad2db7">GX_OPEN_PARAM::openMode</a> , 以及 <a class="el" href="structGX__OPEN__PARAM.html#a5290044e174a4845600bf4be870dc934">GX_OPEN_PARAM::pszContent</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+
+</div>
+</div>
+<a id="a413afeb31f44dfe16d7efa18b41140d6" name="a413afeb31f44dfe16d7efa18b41140d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413afeb31f44dfe16d7efa18b41140d6">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GxCamera::read </td>
+          <td>(</td>
+          <td class="paramtype">cv::Mat *</td>          <td class="paramname"><span class="paramname"><em>targetMatImg</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>timestamp</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="DxImageProc_8h.html#a5e4a4ba02dda68a87ead17d8a15e5350aec44e0244d26e5f4a09d640bb9228e30">BAYERBG</a>, <a class="el" href="DxImageProc_8h.html#a071fff98bf9feb9211aaa66f0de2dd21a455d746c7a8480b5568609c314ebe4f8">DX_OK</a>, <a class="el" href="DxImageProc_8h.html#a5f348d7923ab6d77c4b4c71001c916b8">DxRaw8toRGB24()</a>, <a class="el" href="GxCamera_8h.html#a5e9a7655747743a3e0deaa5f5a80d58a">GetErrorString()</a>, <a class="el" href="GxIAPI_8h.html#a74f99fed9c5fb0d06bd8d26d34dff190a5b5a85ad3665f4a350264e1bb2f3e200">GX_FRAME_STATUS_SUCCESS</a>, <a class="el" href="GxIAPI_8h.html#a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a">GX_STATUS_SUCCESS</a>, <a class="el" href="GxIAPI_8h.html#a8cd2067c476aa79382e9593eb1398204ace82569c77f176e31e55f7403fd58e80">GX_STATUS_TIMEOUT</a>, <a class="el" href="GxIAPI_8h.html#a4fc397772b16f506da27bf484b4db5c2">GXDQBuf()</a>, <a class="el" href="GxIAPI_8h.html#a591823ce8e2ad9c7b203b986916ae2a5">GXQBuf()</a>, <a class="el" href="structGX__FRAME__BUFFER.html#ad530a96fb849075118fc5e8421f9040c">GX_FRAME_BUFFER::nHeight</a>, <a class="el" href="structGX__FRAME__BUFFER.html#a3ec64f82446ed7d08e937f279baa610c">GX_FRAME_BUFFER::nStatus</a>, <a class="el" href="structGX__FRAME__BUFFER.html#af9b2758aed62d26d563ca4c80e151532">GX_FRAME_BUFFER::nTimestamp</a>, <a class="el" href="structGX__FRAME__BUFFER.html#a53c909ab94278eee12c5208319867f35">GX_FRAME_BUFFER::nWidth</a>, <a class="el" href="structGX__FRAME__BUFFER.html#a294291b9246520b57d3259867b005a64">GX_FRAME_BUFFER::pImgBuf</a> , 以及 <a class="el" href="DxImageProc_8h.html#afb0d0657dd1213aaf58b35d3d0858b28ac84388ebeefecd120741da0fef012e96">RAW2RGB_NEIGHBOUR</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+
+</div>
+</div>
+<a id="aa444f2eb5658476c41f5a875775094f9" name="aa444f2eb5658476c41f5a875775094f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa444f2eb5658476c41f5a875775094f9">&#9670;&#160;</a></span>setExposureGainParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GxCamera::setExposureGainParam </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>AutoExposure</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>AutoGain</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>ExposureTime</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>AutoExposureTimeMin</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>AutoExposureTimeMax</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>Gain</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>AutoGainMin</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>AutoGainMax</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>GrayValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set camera exposure and gain </p>
+<p>For client Set camera exposure and gain params </p>
+
+<p class="reference">引用了 <a class="el" href="structExposureGain.html#a333bd43c182caeae98bdb1469ef1bd7e">ExposureGain::m_bAutoExposure</a>, <a class="el" href="structExposureGain.html#a3f1e77a836addab0efa1f2432db851c8">ExposureGain::m_bAutoGain</a>, <a class="el" href="structExposureGain.html#aeea8e1fda7390bc1b8b038f44e805367">ExposureGain::m_dAutoExposureTimeMax</a>, <a class="el" href="structExposureGain.html#a89e80bc712066e4ac237506e03a74b01">ExposureGain::m_dAutoExposureTimeMin</a>, <a class="el" href="structExposureGain.html#ac012d2dcd3d8699ee5ff828c3b58992d">ExposureGain::m_dAutoGainMax</a>, <a class="el" href="structExposureGain.html#adc91d88e430c7a9e035b19c74f55ffb6">ExposureGain::m_dAutoGainMin</a>, <a class="el" href="structExposureGain.html#a96ead067b1b93d338019d94d160c95f0">ExposureGain::m_dExposureTime</a>, <a class="el" href="structExposureGain.html#ad8b99936814a736a504d91872eaaa498">ExposureGain::m_dGain</a> , 以及 <a class="el" href="structExposureGain.html#adf5fbb6b60d6a8ee9ad13c4dc3326903">ExposureGain::m_i64GrayValue</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="#a6f5af3c930b1b0c5e6304bfaf1a799e4">initial()</a>.</p>
+
+</div>
+</div>
+<a id="a3a2e4b253fa1d796375cf937e24a901d" name="a3a2e4b253fa1d796375cf937e24a901d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a2e4b253fa1d796375cf937e24a901d">&#9670;&#160;</a></span>setRoiParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GxCamera::setRoiParam </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>Width</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>Height</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>OffsetX</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>OffsetY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set camera roi param </p>
+<p>For client Set camera roi params 设置相机感兴趣区域参数的变量 </p>
+
+<p class="reference">引用了 <a class="el" href="structRoi.html#a69eb5203019664984895a163bebfb9e0">Roi::m_i64Height</a>, <a class="el" href="structRoi.html#a9927c534e881f98546fe820b06fbbc42">Roi::m_i64OffsetX</a>, <a class="el" href="structRoi.html#a3eeed4b05b18df0112786c34b014bc91">Roi::m_i64OffsetY</a> , 以及 <a class="el" href="structRoi.html#ac30e2622afe4971678f0359d252c874f">Roi::m_i64Width</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="#a6f5af3c930b1b0c5e6304bfaf1a799e4">initial()</a>.</p>
+
+</div>
+</div>
+<a id="aa77c4292bf8a86127ea3d90722c69b84" name="aa77c4292bf8a86127ea3d90722c69b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa77c4292bf8a86127ea3d90722c69b84">&#9670;&#160;</a></span>setTriggerParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GxCamera::setTriggerParam </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>useHardTrigger</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set trigger mode </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="#a6f5af3c930b1b0c5e6304bfaf1a799e4">initial()</a>.</p>
+
+</div>
+</div>
+<a id="aefaf0f843ff3459b34c96f8c09cd96e8" name="aefaf0f843ff3459b34c96f8c09cd96e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefaf0f843ff3459b34c96f8c09cd96e8">&#9670;&#160;</a></span>setWhiteBalanceParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GxCamera::setWhiteBalanceParam </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>WhiteBalanceOn</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="GxIAPI_8h.html#ad9805db4f9f6c0a6d9e0bb6fefdd84ad">GX_AWB_LAMP_HOUSE_ENTRY</a></td>          <td class="paramname"><span class="paramname"><em>lightSource</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set camera <a class="el" href="structWhiteBalance.html" title="WhiteBalance">WhiteBalance</a> </p>
+<p>For client Set camera white balance params </p>
+
+<p class="reference">引用了 <a class="el" href="structWhiteBalance.html#a0fd222e56218ed83993690bc46f8daae">WhiteBalance::lightSource</a> , 以及 <a class="el" href="structWhiteBalance.html#ac37b43333344081122c7b8432543bdca">WhiteBalance::m_bWhiteBalance</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="#a6f5af3c930b1b0c5e6304bfaf1a799e4">initial()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>/home/davi/project/c++/BuffDetect/general/GxCamera/<a class="el" href="GxCamera_8h_source.html">GxCamera.h</a></li>
+<li>/home/davi/project/c++/BuffDetect/general/GxCamera/<a class="el" href="GxCamera_8cpp.html">GxCamera.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGxCamera.html">GxCamera</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

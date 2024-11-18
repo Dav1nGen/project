@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EVENT_MANGER: /home/davi/project/c++/BuffDetect/general/GxCamera/GxCamera.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">EVENT_MANGER
+   </div>
+   <div id="projectbrief">这是一个简单的订阅者发布者</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('GxCamera_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">GxCamera.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classGxCamera.html">GxCamera</a> class declare  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;opencv2/opencv.hpp&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="GxIAPI_8h_source.html">./include/GxIAPI.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DxImageProc_8h_source.html">./include/DxImageProc.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+GxCamera.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="GxCamera_8h__incl.png" border="0" usemap="#a_2home_2davi_2project_2c_09_09_2BuffDetect_2general_2GxCamera_2GxCamera_8h" alt=""/></div>
+<map name="a_2home_2davi_2project_2c_09_09_2BuffDetect_2general_2GxCamera_2GxCamera_8h" id="a_2home_2davi_2project_2c_09_09_2BuffDetect_2general_2GxCamera_2GxCamera_8h">
+<area shape="rect" title="GxCamera class declare" alt="" coords="180,5,347,64"/>
+<area shape="rect" title=" " alt="" coords="5,112,146,139"/>
+<area shape="poly" title=" " alt="" coords="204,67,117,107,115,103,201,62"/>
+<area shape="rect" title=" " alt="" coords="170,112,237,139"/>
+<area shape="poly" title=" " alt="" coords="246,66,223,101,218,98,242,63"/>
+<area shape="rect" href="GxIAPI_8h.html" title=" " alt="" coords="261,112,389,139"/>
+<area shape="poly" title=" " alt="" coords="285,63,310,97,305,101,281,66"/>
+<area shape="rect" href="DxImageProc_8h.html" title="Image Processing Library" alt="" coords="413,112,578,139"/>
+<area shape="poly" title=" " alt="" coords="340,62,449,104,448,109,338,67"/>
+<area shape="rect" title=" " alt="" coords="222,187,286,213"/>
+<area shape="poly" title=" " alt="" coords="314,141,279,177,275,174,311,137"/>
+<area shape="rect" title=" " alt="" coords="311,187,379,213"/>
+<area shape="poly" title=" " alt="" coords="331,138,340,171,335,173,326,140"/>
+<area shape="rect" title=" " alt="" coords="443,187,506,213"/>
+<area shape="poly" title=" " alt="" coords="494,140,485,173,480,171,489,138"/>
+<area shape="rect" title=" " alt="" coords="530,187,594,213"/>
+<area shape="poly" title=" " alt="" coords="509,137,542,173,539,177,505,141"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="GxCamera_8h__dep__incl.png" border="0" usemap="#a_2home_2davi_2project_2c_09_09_2BuffDetect_2general_2GxCamera_2GxCamera_8hdep" alt=""/></div>
+<map name="a_2home_2davi_2project_2c_09_09_2BuffDetect_2general_2GxCamera_2GxCamera_8hdep" id="a_2home_2davi_2project_2c_09_09_2BuffDetect_2general_2GxCamera_2GxCamera_8hdep">
+<area shape="rect" title="GxCamera class declare" alt="" coords="103,5,269,64"/>
+<area shape="rect" href="GxCamera_8cpp.html" title="GxCamera class defination" alt="" coords="5,112,186,171"/>
+<area shape="poly" title=" " alt="" coords="153,78,122,113,118,110,149,74"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="210,112,346,171"/>
+<area shape="poly" title=" " alt="" coords="223,74,255,110,251,113,219,77"/>
+</map>
+</div>
+</div>
+<p><a href="GxCamera_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRoi.html">Roi</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structRoi.html" title="Roi and resolution Param">Roi</a> and resolution Param  <a href="structRoi.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExposureGain.html">ExposureGain</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exposure and Gain Param struct 曝光和图像通道增益  <a href="structExposureGain.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structWhiteBalance.html">WhiteBalance</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structWhiteBalance.html" title="WhiteBalance">WhiteBalance</a>  <a href="structWhiteBalance.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGxCamera.html">GxCamera</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a51434da017b167ebdb567ae763b70183" id="r_a51434da017b167ebdb567ae763b70183"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51434da017b167ebdb567ae763b70183">ACQ_BUFFER_NUM</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a51434da017b167ebdb567ae763b70183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acquisition Buffer Qty.  <br /></td></tr>
+<tr class="separator:a51434da017b167ebdb567ae763b70183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389092fcf9e398e3647b1222a155df11" id="r_a389092fcf9e398e3647b1222a155df11"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a389092fcf9e398e3647b1222a155df11">ACQ_TRANSFER_SIZE</a>&#160;&#160;&#160;(64 * 1024)</td></tr>
+<tr class="memdesc:a389092fcf9e398e3647b1222a155df11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of data transfer block  <br /></td></tr>
+<tr class="separator:a389092fcf9e398e3647b1222a155df11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab46c1a79de9a350c49212f46af6ecd9" id="r_aab46c1a79de9a350c49212f46af6ecd9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab46c1a79de9a350c49212f46af6ecd9">ACQ_TRANSFER_NUMBER_URB</a>&#160;&#160;&#160;64</td></tr>
+<tr class="memdesc:aab46c1a79de9a350c49212f46af6ecd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Qty. of data transfer block  <br /></td></tr>
+<tr class="separator:aab46c1a79de9a350c49212f46af6ecd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a965c352a909cb594b74a91c7730fcd35" id="r_a965c352a909cb594b74a91c7730fcd35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a965c352a909cb594b74a91c7730fcd35">GX_VER</a>(emStatus)</td></tr>
+<tr class="separator:a965c352a909cb594b74a91c7730fcd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b38bf6f8a20174ebcb8f03cc50d04b" id="r_ab5b38bf6f8a20174ebcb8f03cc50d04b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5b38bf6f8a20174ebcb8f03cc50d04b">GX_VERIFY</a>(emStatus)</td></tr>
+<tr class="separator:ab5b38bf6f8a20174ebcb8f03cc50d04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d30266edf63d17aa7629e54e92336a2" id="r_a5d30266edf63d17aa7629e54e92336a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d30266edf63d17aa7629e54e92336a2">GX_VERIFY_EXIT</a>(emStatus)</td></tr>
+<tr class="separator:a5d30266edf63d17aa7629e54e92336a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:aa2309e113c8af637c41e33f877e53f97" id="r_aa2309e113c8af637c41e33f877e53f97"><td class="memItemLeft" align="right" valign="top">typedef struct Roi&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2309e113c8af637c41e33f877e53f97">Roi</a></td></tr>
+<tr class="memdesc:aa2309e113c8af637c41e33f877e53f97"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structRoi.html" title="Roi and resolution Param">Roi</a> and resolution Param  <br /></td></tr>
+<tr class="separator:aa2309e113c8af637c41e33f877e53f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab651e28802e5694b605afa4a23caaa38" id="r_ab651e28802e5694b605afa4a23caaa38"><td class="memItemLeft" align="right" valign="top">typedef struct ExposureGain&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab651e28802e5694b605afa4a23caaa38">ExposureGain</a></td></tr>
+<tr class="memdesc:ab651e28802e5694b605afa4a23caaa38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exposure and Gain Param struct 曝光和图像通道增益  <br /></td></tr>
+<tr class="separator:ab651e28802e5694b605afa4a23caaa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9ccaa2d6b5f9429f799d9a9d628392" id="r_a8d9ccaa2d6b5f9429f799d9a9d628392"><td class="memItemLeft" align="right" valign="top">typedef struct WhiteBalance&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d9ccaa2d6b5f9429f799d9a9d628392">WhiteBalance</a></td></tr>
+<tr class="memdesc:a8d9ccaa2d6b5f9429f799d9a9d628392"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structWhiteBalance.html" title="WhiteBalance">WhiteBalance</a>  <br /></td></tr>
+<tr class="separator:a8d9ccaa2d6b5f9429f799d9a9d628392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a5e9a7655747743a3e0deaa5f5a80d58a" id="r_a5e9a7655747743a3e0deaa5f5a80d58a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e9a7655747743a3e0deaa5f5a80d58a">GetErrorString</a> (<a class="el" href="GxIAPI_8h.html#a024157349dab0f7a113c5ff7267672ea">GX_STATUS</a> emErrorStatus)</td></tr>
+<tr class="memdesc:a5e9a7655747743a3e0deaa5f5a80d58a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of input error code  <br /></td></tr>
+<tr class="separator:a5e9a7655747743a3e0deaa5f5a80d58a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07653d7837e6264e0472a8899eaa4a8" id="r_ac07653d7837e6264e0472a8899eaa4a8"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac07653d7837e6264e0472a8899eaa4a8">ProcGetImage</a> (void *pAcquisitionThread)</td></tr>
+<tr class="separator:ac07653d7837e6264e0472a8899eaa4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classGxCamera.html">GxCamera</a> class declare </p>
+<dl class="section date"><dt>日期</dt><dd>2020-05-14 </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>Qunshan He,<a href="#" onclick="location.href='mai'+'lto:'+'mou'+'nt'+'ain'+'.h'+'e@q'+'q.'+'com'; return false;">mount<span class="obfuscator">.nosp@m.</span>ain.<span class="obfuscator">.nosp@m.</span>he@qq<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="a51434da017b167ebdb567ae763b70183" name="a51434da017b167ebdb567ae763b70183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51434da017b167ebdb567ae763b70183">&#9670;&#160;</a></span>ACQ_BUFFER_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACQ_BUFFER_NUM&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Acquisition Buffer Qty. </p>
+
+</div>
+</div>
+<a id="aab46c1a79de9a350c49212f46af6ecd9" name="aab46c1a79de9a350c49212f46af6ecd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab46c1a79de9a350c49212f46af6ecd9">&#9670;&#160;</a></span>ACQ_TRANSFER_NUMBER_URB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACQ_TRANSFER_NUMBER_URB&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Qty. of data transfer block </p>
+
+</div>
+</div>
+<a id="a389092fcf9e398e3647b1222a155df11" name="a389092fcf9e398e3647b1222a155df11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a389092fcf9e398e3647b1222a155df11">&#9670;&#160;</a></span>ACQ_TRANSFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACQ_TRANSFER_SIZE&#160;&#160;&#160;(64 * 1024)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size of data transfer block </p>
+
+</div>
+</div>
+<a id="a965c352a909cb594b74a91c7730fcd35" name="a965c352a909cb594b74a91c7730fcd35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a965c352a909cb594b74a91c7730fcd35">&#9670;&#160;</a></span>GX_VER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GX_VER</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">emStatus</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span> (emStatus != <a class="code hl_enumvalue" href="GxIAPI_8h.html#a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a">GX_STATUS_SUCCESS</a>)     \</div>
+<div class="line">    {                                      \</div>
+<div class="line">        std::cout&lt;&lt;<span class="stringliteral">&quot;error&quot;</span>&lt;&lt;endl;          \</div>
+<div class="line">        <span class="keywordflow">break</span>;                             \</div>
+<div class="line">    }</div>
+<div class="ttc" id="aGxIAPI_8h_html_a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a"><div class="ttname"><a href="GxIAPI_8h.html#a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a">GX_STATUS_SUCCESS</a></div><div class="ttdeci">@ GX_STATUS_SUCCESS</div><div class="ttdoc">Success</div><div class="ttdef"><b>Definition</b> GxIAPI.h:108</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab5b38bf6f8a20174ebcb8f03cc50d04b" name="ab5b38bf6f8a20174ebcb8f03cc50d04b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b38bf6f8a20174ebcb8f03cc50d04b">&#9670;&#160;</a></span>GX_VERIFY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GX_VERIFY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">emStatus</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span> (emStatus != <a class="code hl_enumvalue" href="GxIAPI_8h.html#a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a">GX_STATUS_SUCCESS</a>)     \</div>
+<div class="line">    {                                      \</div>
+<div class="line">        GetErrorString(emStatus);          \</div>
+<div class="line">        <span class="keywordflow">return</span> emStatus;                   \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5d30266edf63d17aa7629e54e92336a2" name="a5d30266edf63d17aa7629e54e92336a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d30266edf63d17aa7629e54e92336a2">&#9670;&#160;</a></span>GX_VERIFY_EXIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GX_VERIFY_EXIT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">emStatus</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span> (emStatus != <a class="code hl_enumvalue" href="GxIAPI_8h.html#a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a">GX_STATUS_SUCCESS</a>)     \</div>
+<div class="line">    {                                      \</div>
+<div class="line">        GetErrorString(emStatus);          \</div>
+<div class="line">        GXCloseDevice(g_hDevice);          \</div>
+<div class="line">        g_hDevice = NULL;                  \</div>
+<div class="line">        GXCloseLib();                      \</div>
+<div class="line">        printf(<span class="stringliteral">&quot;&lt;App Exit!&gt;\n&quot;</span>);           \</div>
+<div class="line">        exit(emStatus);                    \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="classGxCamera.html#a6f5af3c930b1b0c5e6304bfaf1a799e4">GxCamera::initial()</a> , 以及 <a class="el" href="classGxCamera.html#af2737ac031096690e6ee033171062725">GxCamera::openDevice()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ab651e28802e5694b605afa4a23caaa38" name="ab651e28802e5694b605afa4a23caaa38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab651e28802e5694b605afa4a23caaa38">&#9670;&#160;</a></span>ExposureGain</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct ExposureGain ExposureGain</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exposure and Gain Param struct 曝光和图像通道增益 </p>
+
+</div>
+</div>
+<a id="aa2309e113c8af637c41e33f877e53f97" name="aa2309e113c8af637c41e33f877e53f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2309e113c8af637c41e33f877e53f97">&#9670;&#160;</a></span>Roi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct Roi Roi</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structRoi.html" title="Roi and resolution Param">Roi</a> and resolution Param </p>
+
+</div>
+</div>
+<a id="a8d9ccaa2d6b5f9429f799d9a9d628392" name="a8d9ccaa2d6b5f9429f799d9a9d628392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9ccaa2d6b5f9429f799d9a9d628392">&#9670;&#160;</a></span>WhiteBalance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct WhiteBalance WhiteBalance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structWhiteBalance.html" title="WhiteBalance">WhiteBalance</a> </p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a5e9a7655747743a3e0deaa5f5a80d58a" name="a5e9a7655747743a3e0deaa5f5a80d58a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e9a7655747743a3e0deaa5f5a80d58a">&#9670;&#160;</a></span>GetErrorString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetErrorString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="GxIAPI_8h.html#a024157349dab0f7a113c5ff7267672ea">GX_STATUS</a></td>          <td class="paramname"><span class="paramname"><em>emErrorStatus</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get description of input error code </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">emErrorStatus</td><td>error code</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="GxIAPI_8h.html#a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a">GX_STATUS_SUCCESS</a> , 以及 <a class="el" href="GxIAPI_8h.html#a1e092cc1ad7cf9d56ee22ba468cc2c55">GXGetLastError()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classGxCamera.html#a413afeb31f44dfe16d7efa18b41140d6">GxCamera::read()</a>.</p>
+
+</div>
+</div>
+<a id="ac07653d7837e6264e0472a8899eaa4a8" name="ac07653d7837e6264e0472a8899eaa4a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac07653d7837e6264e0472a8899eaa4a8">&#9670;&#160;</a></span>ProcGetImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * ProcGetImage </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pAcquisitionThread</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bba024cd03edd7f9d6096b84e1006209.html">general</a></li><li class="navelem"><a class="el" href="dir_ee337c26d41058f8e9191e89f946b191.html">GxCamera</a></li><li class="navelem"><a class="el" href="GxCamera_8h.html">GxCamera.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

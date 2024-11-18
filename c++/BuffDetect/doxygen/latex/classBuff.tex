@@ -1,0 +1,337 @@
+\doxysection{Buff类 参考}
+\hypertarget{classBuff}{}\label{classBuff}\index{Buff@{Buff}}
+
+
+{\ttfamily \#include $<$Buff\+Detect.\+hpp$>$}
+
+
+
+Buff 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classBuff__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classBuff_a284930eec851627e230db7864c64e605}{Points\+Data}} = std\+::vector$<$std\+::vector$<$cv\+::\+Point2f$>$$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Point2f \mbox{\hyperlink{classBuff_af4f36cb762bb56b3902758414d0dcb07}{Get\+Armor\+Center}} ()
+\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \mbox{\hyperlink{classBuff_a78b37bf2996c20d6cb8e4aa1a4ac8af7}{Get\+Image\+Points}} ()
+\item 
+bool \mbox{\hyperlink{classBuff_abaede8a88df5df7268b4d7c83f7afbb6}{If\+Find\+Buff}} ()
+\item 
+\mbox{\hyperlink{classBuff_a33a00b2209a1beb2e10c9c27e1e9893e}{Buff}} (uint init\+\_\+color, double init\+\_\+min\+Area)
+\item 
+void \mbox{\hyperlink{classBuff_a32338520494c8a482663492297df8051}{Image\+Process}} (cv\+::\+Mat src)
+\begin{DoxyCompactList}\small\item\em 图像处理,返回扇页轮廓 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBuff_ab5127d52c3b9cf17da41b97833a1c3cf}{Find\+Center}} ()
+\begin{DoxyCompactList}\small\item\em 寻找需要击打的能量机关的装甲板中心 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBuff_af77fc71c6e31cf0c2cebd3b1ecac5d4a}{Angle\+Solve}} ()
+\item 
+cv\+::\+Point2f \mbox{\hyperlink{classBuff_af4f36cb762bb56b3902758414d0dcb07}{Get\+Armor\+Center}} ()
+\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \mbox{\hyperlink{classBuff_a78b37bf2996c20d6cb8e4aa1a4ac8af7}{Get\+Image\+Points}} ()
+\item 
+void \mbox{\hyperlink{classBuff_a7b4d26b65edb5d4e81c375c16cb5c54e}{Process}} (cv\+::\+Mat src)
+\item 
+bool \mbox{\hyperlink{classBuff_abaede8a88df5df7268b4d7c83f7afbb6}{If\+Find\+Buff}} ()
+\item 
+\mbox{\hyperlink{classBuff_a8d1e9a43abff0e939089390f58a432ba}{Buff}} (uint init\+\_\+color)
+\item 
+void \mbox{\hyperlink{classBuff_a32338520494c8a482663492297df8051}{Image\+Process}} (cv\+::\+Mat src)
+\begin{DoxyCompactList}\small\item\em 图像处理,返回扇页轮廓 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBuff_ab5127d52c3b9cf17da41b97833a1c3cf}{Find\+Center}} ()
+\begin{DoxyCompactList}\small\item\em 寻找需要击打的能量机关的装甲板中心 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBuff_af77fc71c6e31cf0c2cebd3b1ecac5d4a}{Angle\+Solve}} ()
+\item 
+cv\+::\+Point2f \mbox{\hyperlink{classBuff_a2cfd3f99a1ca3cc5c7796a8e22e4c752}{Predict}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBuff_a284930eec851627e230db7864c64e605}{Points\+Data}} \mbox{\hyperlink{classBuff_a4b3d91be484fe601f97fc180eb89cc61}{judge\+\_\+points}}
+\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \mbox{\hyperlink{classBuff_a890d30dda982e1da20f04f73b4568c1b}{predict\+\_\+points}}
+\item 
+double \mbox{\hyperlink{classBuff_a86b1aac5d395485978ff2b79dadaa407}{FPS}}
+\item 
+float \mbox{\hyperlink{classBuff_aa002fdf49da1b13f9401a9a1ea8f7de2}{small\+\_\+energy}} = 20 \texorpdfstring{$\ast$}{*} 3.\+14159265358979323846 / 60
+\item 
+std\+::vector$<$ std\+::vector$<$ cv\+::\+Point2f $>$ $>$ \mbox{\hyperlink{classBuff_a199f8f7074b76f0dc6c0b59c3ae7ebe5}{judge\+\_\+points}}
+\item 
+double \mbox{\hyperlink{classBuff_a9351fd4ef74bbaf10cbe071db79c355c}{angular\+\_\+velocity}}
+\item 
+cv\+::\+Point2d \mbox{\hyperlink{classBuff_a12b9f7b0038bb424d9cf4d2591dfa71d}{armor\+\_\+roi\+\_\+position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员类型定义说明}
+\Hypertarget{classBuff_a284930eec851627e230db7864c64e605}\label{classBuff_a284930eec851627e230db7864c64e605} 
+\index{Buff@{Buff}!PointsData@{PointsData}}
+\index{PointsData@{PointsData}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{PointsData}{PointsData}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classBuff_a284930eec851627e230db7864c64e605}{Buff\+::\+Points\+Data}} = std\+::vector$<$std\+::vector$<$cv\+::\+Point2f$>$$>$}
+
+
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{classBuff_a33a00b2209a1beb2e10c9c27e1e9893e}\label{classBuff_a33a00b2209a1beb2e10c9c27e1e9893e} 
+\index{Buff@{Buff}!Buff@{Buff}}
+\index{Buff@{Buff}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{Buff()}{Buff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Buff\+::\+Buff (\begin{DoxyParamCaption}\item[{uint}]{init\+\_\+color,  }\item[{double}]{init\+\_\+min\+Area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classBuff_a8d1e9a43abff0e939089390f58a432ba}\label{classBuff_a8d1e9a43abff0e939089390f58a432ba} 
+\index{Buff@{Buff}!Buff@{Buff}}
+\index{Buff@{Buff}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{Buff()}{Buff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Buff\+::\+Buff (\begin{DoxyParamCaption}\item[{uint}]{init\+\_\+color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{classBuff_af77fc71c6e31cf0c2cebd3b1ecac5d4a}\label{classBuff_af77fc71c6e31cf0c2cebd3b1ecac5d4a} 
+\index{Buff@{Buff}!AngleSolve@{AngleSolve}}
+\index{AngleSolve@{AngleSolve}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{AngleSolve()}{AngleSolve()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Buff\+::\+Angle\+Solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{参数}
+{\em img} & \\
+\hline
+{\em energy\+\_\+organ\+\_\+center} & \\
+\hline
+{\em armor\+\_\+center} & \\
+\hline
+{\em radius\+\_\+armor\+\_\+center} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+cv\+::\+Point2f 
+\end{DoxyReturn}
+
+
+被这些函数引用 \mbox{\hyperlink{classBuff_a7b4d26b65edb5d4e81c375c16cb5c54e}{Process()}}.
+
+\Hypertarget{classBuff_af77fc71c6e31cf0c2cebd3b1ecac5d4a}\label{classBuff_af77fc71c6e31cf0c2cebd3b1ecac5d4a} 
+\index{Buff@{Buff}!AngleSolve@{AngleSolve}}
+\index{AngleSolve@{AngleSolve}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{AngleSolve()}{AngleSolve()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Buff\+::\+Angle\+Solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classBuff_ab5127d52c3b9cf17da41b97833a1c3cf}\label{classBuff_ab5127d52c3b9cf17da41b97833a1c3cf} 
+\index{Buff@{Buff}!FindCenter@{FindCenter}}
+\index{FindCenter@{FindCenter}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{FindCenter()}{FindCenter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Buff\+::\+Find\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+寻找需要击打的能量机关的装甲板中心 
+
+
+\begin{DoxyParams}{参数}
+{\em } & \\
+\hline
+\end{DoxyParams}
+return Armor\+Center 
+
+引用了 \mbox{\hyperlink{BuffDetect__new_8hpp_a283fef6e65b4947b13ea679a8c8579bd}{compare\+\_\+contours\+\_\+len()}}, \mbox{\hyperlink{BuffDetect__new_8hpp_a8d1937d06941b40fb166020866c1fc44}{compare\+\_\+radius()}} , 以及 \mbox{\hyperlink{BuffDetect__new_8hpp_aca38ebb1b0c1cf259fb4eb55e878ad36}{Get\+Line\+Angle()}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} , 以及 \mbox{\hyperlink{classBuff_a7b4d26b65edb5d4e81c375c16cb5c54e}{Process()}}.
+
+\Hypertarget{classBuff_ab5127d52c3b9cf17da41b97833a1c3cf}\label{classBuff_ab5127d52c3b9cf17da41b97833a1c3cf} 
+\index{Buff@{Buff}!FindCenter@{FindCenter}}
+\index{FindCenter@{FindCenter}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{FindCenter()}{FindCenter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Buff\+::\+Find\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+寻找需要击打的能量机关的装甲板中心 
+
+
+\begin{DoxyParams}{参数}
+{\em } & \\
+\hline
+\end{DoxyParams}
+return Armor\+Center 
+
+引用了 \mbox{\hyperlink{BuffDetect__new_8hpp_a283fef6e65b4947b13ea679a8c8579bd}{compare\+\_\+contours\+\_\+len()}}, \mbox{\hyperlink{BuffDetect__new_8hpp_a8d1937d06941b40fb166020866c1fc44}{compare\+\_\+radius()}} , 以及 \mbox{\hyperlink{BuffDetect__new_8hpp_aca38ebb1b0c1cf259fb4eb55e878ad36}{Get\+Line\+Angle()}}.
+
+\Hypertarget{classBuff_af4f36cb762bb56b3902758414d0dcb07}\label{classBuff_af4f36cb762bb56b3902758414d0dcb07} 
+\index{Buff@{Buff}!GetArmorCenter@{GetArmorCenter}}
+\index{GetArmorCenter@{GetArmorCenter}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{GetArmorCenter()}{GetArmorCenter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily cv\+::\+Point2f Buff\+::\+Get\+Armor\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classBuff_af4f36cb762bb56b3902758414d0dcb07}\label{classBuff_af4f36cb762bb56b3902758414d0dcb07} 
+\index{Buff@{Buff}!GetArmorCenter@{GetArmorCenter}}
+\index{GetArmorCenter@{GetArmorCenter}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{GetArmorCenter()}{GetArmorCenter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily cv\+::\+Point2f Buff\+::\+Get\+Armor\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classBuff_a78b37bf2996c20d6cb8e4aa1a4ac8af7}\label{classBuff_a78b37bf2996c20d6cb8e4aa1a4ac8af7} 
+\index{Buff@{Buff}!GetImagePoints@{GetImagePoints}}
+\index{GetImagePoints@{GetImagePoints}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{GetImagePoints()}{GetImagePoints()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Point2f $>$ Buff\+::\+Get\+Image\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classBuff_a78b37bf2996c20d6cb8e4aa1a4ac8af7}\label{classBuff_a78b37bf2996c20d6cb8e4aa1a4ac8af7} 
+\index{Buff@{Buff}!GetImagePoints@{GetImagePoints}}
+\index{GetImagePoints@{GetImagePoints}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{GetImagePoints()}{GetImagePoints()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Point2f $>$ Buff\+::\+Get\+Image\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classBuff_abaede8a88df5df7268b4d7c83f7afbb6}\label{classBuff_abaede8a88df5df7268b4d7c83f7afbb6} 
+\index{Buff@{Buff}!IfFindBuff@{IfFindBuff}}
+\index{IfFindBuff@{IfFindBuff}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{IfFindBuff()}{IfFindBuff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Buff\+::\+If\+Find\+Buff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classBuff_abaede8a88df5df7268b4d7c83f7afbb6}\label{classBuff_abaede8a88df5df7268b4d7c83f7afbb6} 
+\index{Buff@{Buff}!IfFindBuff@{IfFindBuff}}
+\index{IfFindBuff@{IfFindBuff}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{IfFindBuff()}{IfFindBuff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Buff\+::\+If\+Find\+Buff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classBuff_a32338520494c8a482663492297df8051}\label{classBuff_a32338520494c8a482663492297df8051} 
+\index{Buff@{Buff}!ImageProcess@{ImageProcess}}
+\index{ImageProcess@{ImageProcess}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{ImageProcess()}{ImageProcess()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Buff\+::\+Image\+Process (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+图像处理,返回扇页轮廓 
+
+
+\begin{DoxyParams}{参数}
+{\em src} & 原图像 \\
+\hline
+{\em color} & 需要筛选的颜色 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+cv\+::\+Mat 
+\end{DoxyReturn}
+
+
+被这些函数引用 \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} , 以及 \mbox{\hyperlink{classBuff_a7b4d26b65edb5d4e81c375c16cb5c54e}{Process()}}.
+
+\Hypertarget{classBuff_a32338520494c8a482663492297df8051}\label{classBuff_a32338520494c8a482663492297df8051} 
+\index{Buff@{Buff}!ImageProcess@{ImageProcess}}
+\index{ImageProcess@{ImageProcess}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{ImageProcess()}{ImageProcess()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Buff\+::\+Image\+Process (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+图像处理,返回扇页轮廓 
+
+
+\begin{DoxyParams}{参数}
+{\em src} & 原图像 \\
+\hline
+{\em color} & 需要筛选的颜色 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+\Hypertarget{classBuff_a2cfd3f99a1ca3cc5c7796a8e22e4c752}\label{classBuff_a2cfd3f99a1ca3cc5c7796a8e22e4c752} 
+\index{Buff@{Buff}!Predict@{Predict}}
+\index{Predict@{Predict}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{Predict()}{Predict()}}
+{\footnotesize\ttfamily cv\+::\+Point2f Buff\+::\+Predict (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{参数}
+{\em img} & \\
+\hline
+{\em energy\+\_\+organ\+\_\+center} & \\
+\hline
+{\em armor\+\_\+center} & \\
+\hline
+{\em radius\+\_\+armor\+\_\+center} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+cv\+::\+Point2f 
+\end{DoxyReturn}
+\Hypertarget{classBuff_a7b4d26b65edb5d4e81c375c16cb5c54e}\label{classBuff_a7b4d26b65edb5d4e81c375c16cb5c54e} 
+\index{Buff@{Buff}!Process@{Process}}
+\index{Process@{Process}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily void Buff\+::\+Process (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+引用了 \mbox{\hyperlink{classBuff_af77fc71c6e31cf0c2cebd3b1ecac5d4a}{Angle\+Solve()}}, \mbox{\hyperlink{classBuff_ab5127d52c3b9cf17da41b97833a1c3cf}{Find\+Center()}} , 以及 \mbox{\hyperlink{classBuff_a32338520494c8a482663492297df8051}{Image\+Process()}}.
+
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{classBuff_a9351fd4ef74bbaf10cbe071db79c355c}\label{classBuff_a9351fd4ef74bbaf10cbe071db79c355c} 
+\index{Buff@{Buff}!angular\_velocity@{angular\_velocity}}
+\index{angular\_velocity@{angular\_velocity}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{angular\_velocity}{angular\_velocity}}
+{\footnotesize\ttfamily double Buff\+::angular\+\_\+velocity}
+
+\Hypertarget{classBuff_a12b9f7b0038bb424d9cf4d2591dfa71d}\label{classBuff_a12b9f7b0038bb424d9cf4d2591dfa71d} 
+\index{Buff@{Buff}!armor\_roi\_position@{armor\_roi\_position}}
+\index{armor\_roi\_position@{armor\_roi\_position}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{armor\_roi\_position}{armor\_roi\_position}}
+{\footnotesize\ttfamily cv\+::\+Point2d Buff\+::armor\+\_\+roi\+\_\+position}
+
+\Hypertarget{classBuff_a86b1aac5d395485978ff2b79dadaa407}\label{classBuff_a86b1aac5d395485978ff2b79dadaa407} 
+\index{Buff@{Buff}!FPS@{FPS}}
+\index{FPS@{FPS}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{FPS}{FPS}}
+{\footnotesize\ttfamily double Buff\+::\+FPS}
+
+
+
+被这些函数引用 \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\Hypertarget{classBuff_a4b3d91be484fe601f97fc180eb89cc61}\label{classBuff_a4b3d91be484fe601f97fc180eb89cc61} 
+\index{Buff@{Buff}!judge\_points@{judge\_points}}
+\index{judge\_points@{judge\_points}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{judge\_points}{judge\_points}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuff_a284930eec851627e230db7864c64e605}{Points\+Data}} Buff\+::judge\+\_\+points}
+
+\Hypertarget{classBuff_a199f8f7074b76f0dc6c0b59c3ae7ebe5}\label{classBuff_a199f8f7074b76f0dc6c0b59c3ae7ebe5} 
+\index{Buff@{Buff}!judge\_points@{judge\_points}}
+\index{judge\_points@{judge\_points}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{judge\_points}{judge\_points}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$cv\+::\+Point2f$>$ $>$ Buff\+::judge\+\_\+points}
+
+\Hypertarget{classBuff_a890d30dda982e1da20f04f73b4568c1b}\label{classBuff_a890d30dda982e1da20f04f73b4568c1b} 
+\index{Buff@{Buff}!predict\_points@{predict\_points}}
+\index{predict\_points@{predict\_points}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{predict\_points}{predict\_points}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point2f$>$ Buff\+::predict\+\_\+points}
+
+\Hypertarget{classBuff_aa002fdf49da1b13f9401a9a1ea8f7de2}\label{classBuff_aa002fdf49da1b13f9401a9a1ea8f7de2} 
+\index{Buff@{Buff}!small\_energy@{small\_energy}}
+\index{small\_energy@{small\_energy}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{small\_energy}{small\_energy}}
+{\footnotesize\ttfamily float Buff\+::small\+\_\+energy = 20 \texorpdfstring{$\ast$}{*} 3.\+14159265358979323846 / 60}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/home/davi/project/c++/\+Buff\+Detect/include/\mbox{\hyperlink{BuffDetect_8hpp}{Buff\+Detect.\+hpp}}\item 
+/home/davi/project/c++/\+Buff\+Detect/include/\mbox{\hyperlink{BuffDetect__new_8hpp}{Buff\+Detect\+\_\+new.\+hpp}}\end{DoxyCompactItemize}

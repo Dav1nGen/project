@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['dx_5factual_5fbits_5f10_0',['DX_ACTUAL_BITS_10',['../DxImageProc_8h.html#a4ae39510d9d8586b23c4bf73cebd83eda45280026da721103bc4a4bc9d539f958',1,'DxImageProc.h']]],
+  ['dx_5factual_5fbits_5f12_1',['DX_ACTUAL_BITS_12',['../DxImageProc_8h.html#a4ae39510d9d8586b23c4bf73cebd83eda12aec5c49d97735d82bd47d9d1ba877e',1,'DxImageProc.h']]],
+  ['dx_5factual_5fbits_5f14_2',['DX_ACTUAL_BITS_14',['../DxImageProc_8h.html#a4ae39510d9d8586b23c4bf73cebd83eda4dfc5261b982fbf28c709429b81e5a1e',1,'DxImageProc.h']]],
+  ['dx_5factual_5fbits_5f16_3',['DX_ACTUAL_BITS_16',['../DxImageProc_8h.html#a4ae39510d9d8586b23c4bf73cebd83edad08b09f7787e0aff2643edc9c2b994db',1,'DxImageProc.h']]],
+  ['dx_5fbit_5f0_5f7_4',['DX_BIT_0_7',['../DxImageProc_8h.html#aa23609bbbc92d096a1cc5d1f34ab76bba21d4c851c5569748f517a4daa331d45f',1,'DxImageProc.h']]],
+  ['dx_5fbit_5f1_5f8_5',['DX_BIT_1_8',['../DxImageProc_8h.html#aa23609bbbc92d096a1cc5d1f34ab76bba9da89be4706b08a073819280719cb987',1,'DxImageProc.h']]],
+  ['dx_5fbit_5f2_5f9_6',['DX_BIT_2_9',['../DxImageProc_8h.html#aa23609bbbc92d096a1cc5d1f34ab76bba1e33d57b50653e6834710d2f4dd77929',1,'DxImageProc.h']]],
+  ['dx_5fbit_5f3_5f10_7',['DX_BIT_3_10',['../DxImageProc_8h.html#aa23609bbbc92d096a1cc5d1f34ab76bbad344bb2f7b0585feedf9f5f010e8d38f',1,'DxImageProc.h']]],
+  ['dx_5fbit_5f4_5f11_8',['DX_BIT_4_11',['../DxImageProc_8h.html#aa23609bbbc92d096a1cc5d1f34ab76bba48ac71952ae967b909acd5c630f064f4',1,'DxImageProc.h']]],
+  ['dx_5fcpu_5fnot_5fsupport_5faccelerate_9',['DX_CPU_NOT_SUPPORT_ACCELERATE',['../DxImageProc_8h.html#a071fff98bf9feb9211aaa66f0de2dd21af6d34e7cd2bf5027efb4c8f29e038544',1,'DxImageProc.h']]],
+  ['dx_5fnot_5fenough_5fsystem_5fmemory_10',['DX_NOT_ENOUGH_SYSTEM_MEMORY',['../DxImageProc_8h.html#a071fff98bf9feb9211aaa66f0de2dd21a7ad8f683c0e8bb64de9f41f26ef78f97',1,'DxImageProc.h']]],
+  ['dx_5fnot_5ffind_5fdevice_11',['DX_NOT_FIND_DEVICE',['../DxImageProc_8h.html#a071fff98bf9feb9211aaa66f0de2dd21a403a69ee1fcafbf665f290cd36523823',1,'DxImageProc.h']]],
+  ['dx_5fok_12',['DX_OK',['../DxImageProc_8h.html#a071fff98bf9feb9211aaa66f0de2dd21a455d746c7a8480b5568609c314ebe4f8',1,'DxImageProc.h']]],
+  ['dx_5forder_5fbgr_13',['DX_ORDER_BGR',['../DxImageProc_8h.html#a1afcc9ef0ba3201649777eea8145106faa3e1709bd8205fb2c3db13358d734007',1,'DxImageProc.h']]],
+  ['dx_5forder_5frgb_14',['DX_ORDER_RGB',['../DxImageProc_8h.html#a1afcc9ef0ba3201649777eea8145106facb593cdf97ab194689e707ddef2f9b5f',1,'DxImageProc.h']]],
+  ['dx_5fparameter_5finvalid_15',['DX_PARAMETER_INVALID',['../DxImageProc_8h.html#a071fff98bf9feb9211aaa66f0de2dd21a030a87958a49b108fb4070234074328d',1,'DxImageProc.h']]],
+  ['dx_5fparameter_5fout_5fof_5fbound_16',['DX_PARAMETER_OUT_OF_BOUND',['../DxImageProc_8h.html#a071fff98bf9feb9211aaa66f0de2dd21ac412733620c7d166507cfea57e508781',1,'DxImageProc.h']]],
+  ['dx_5fstatus_5fnot_5fsupported_17',['DX_STATUS_NOT_SUPPORTED',['../DxImageProc_8h.html#a071fff98bf9feb9211aaa66f0de2dd21ad685b044bddeedcbc1a71c9ef47001ed',1,'DxImageProc.h']]]
+];

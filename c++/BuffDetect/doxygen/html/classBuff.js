@@ -1,0 +1,27 @@
+var classBuff =
+[
+    [ "PointsData", "classBuff.html#a284930eec851627e230db7864c64e605", null ],
+    [ "Buff", "classBuff.html#a33a00b2209a1beb2e10c9c27e1e9893e", null ],
+    [ "Buff", "classBuff.html#a8d1e9a43abff0e939089390f58a432ba", null ],
+    [ "AngleSolve", "classBuff.html#af77fc71c6e31cf0c2cebd3b1ecac5d4a", null ],
+    [ "AngleSolve", "classBuff.html#af77fc71c6e31cf0c2cebd3b1ecac5d4a", null ],
+    [ "FindCenter", "classBuff.html#ab5127d52c3b9cf17da41b97833a1c3cf", null ],
+    [ "FindCenter", "classBuff.html#ab5127d52c3b9cf17da41b97833a1c3cf", null ],
+    [ "GetArmorCenter", "classBuff.html#af4f36cb762bb56b3902758414d0dcb07", null ],
+    [ "GetArmorCenter", "classBuff.html#af4f36cb762bb56b3902758414d0dcb07", null ],
+    [ "GetImagePoints", "classBuff.html#a78b37bf2996c20d6cb8e4aa1a4ac8af7", null ],
+    [ "GetImagePoints", "classBuff.html#a78b37bf2996c20d6cb8e4aa1a4ac8af7", null ],
+    [ "IfFindBuff", "classBuff.html#abaede8a88df5df7268b4d7c83f7afbb6", null ],
+    [ "IfFindBuff", "classBuff.html#abaede8a88df5df7268b4d7c83f7afbb6", null ],
+    [ "ImageProcess", "classBuff.html#a32338520494c8a482663492297df8051", null ],
+    [ "ImageProcess", "classBuff.html#a32338520494c8a482663492297df8051", null ],
+    [ "Predict", "classBuff.html#a2cfd3f99a1ca3cc5c7796a8e22e4c752", null ],
+    [ "Process", "classBuff.html#a7b4d26b65edb5d4e81c375c16cb5c54e", null ],
+    [ "angular_velocity", "classBuff.html#a9351fd4ef74bbaf10cbe071db79c355c", null ],
+    [ "armor_roi_position", "classBuff.html#a12b9f7b0038bb424d9cf4d2591dfa71d", null ],
+    [ "FPS", "classBuff.html#a86b1aac5d395485978ff2b79dadaa407", null ],
+    [ "judge_points", "classBuff.html#a4b3d91be484fe601f97fc180eb89cc61", null ],
+    [ "judge_points", "classBuff.html#a199f8f7074b76f0dc6c0b59c3ae7ebe5", null ],
+    [ "predict_points", "classBuff.html#a890d30dda982e1da20f04f73b4568c1b", null ],
+    [ "small_energy", "classBuff.html#aa002fdf49da1b13f9401a9a1ea8f7de2", null ]
+];

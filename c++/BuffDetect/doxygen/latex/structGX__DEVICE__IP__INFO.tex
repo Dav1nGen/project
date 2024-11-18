@@ -1,0 +1,159 @@
+\doxysection{GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO结构体 参考}
+\hypertarget{structGX__DEVICE__IP__INFO}{}\label{structGX__DEVICE__IP__INFO}\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+
+
+{\ttfamily \#include $<$Gx\+IAPI.\+h$>$}
+
+
+
+GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{structGX__DEVICE__IP__INFO__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structGX__DEVICE__IP__INFO_a2a9933516649c74f7ef3c6c814cd4c07}{sz\+Device\+ID}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_a9a99d2c8528848c0520bbf7b760666ae}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+64\+\_\+\+BYTE}}+4\mbox{]}
+\begin{DoxyCompactList}\small\item\em the unique identifier of the device, 64+4 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__IP__INFO_a77fa7c8ad1e3658393e040d80378c934}{sz\+MAC}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em MAC address, 32 bytes, \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__IP__INFO_acf851b5314b5b6212b944d3c58526c6f}{sz\+IP}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em IP address, 32 bytes, \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__IP__INFO_ad23623ae89b21b86abe8792e74e1056d}{sz\+Sub\+Net\+Mask}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em subnet mask, 32 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__IP__INFO_a468d16ef3754c15ab2b7aeb7c2888a02}{sz\+Gate\+Way}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em gateway, 32 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__IP__INFO_a6863962fe86bc48402ac90e9c4ab969e}{sz\+NICMAC}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em the MAC address of the corresponding NIC(\+Network Interface Card), 32 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__IP__INFO_a0df4bf5db22ff94207fcf160d266e6c8}{sz\+NICIP}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em the IP address of the corresponding NIC, 32 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__IP__INFO_a62ac0764248b3f47812d8b48d4b5067a}{sz\+NICSub\+Net\+Mask}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em the subnet mask of the corresponding NIC, 32 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__IP__INFO_ab1a505c70eff5b1eee63cd7376be81ea}{sz\+NICGate\+Way}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em the gateway of the corresponding NIC, 32 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__IP__INFO_a17950abe1055415845c54a262985bc94}{sz\+NICDescription}} \mbox{[}\mbox{\hyperlink{GxIAPI_8h_a158e075ff932e46219aaf735299589eb}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+128\+\_\+\+BYTE}}+4\mbox{]}
+\begin{DoxyCompactList}\small\item\em the description of the corresponding NIC, 128+4 bytes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structGX__DEVICE__IP__INFO_ad00fca53830310736b7458a305807e70}{reserved}} \mbox{[}512\mbox{]}
+\begin{DoxyCompactList}\small\item\em reserved, 512 bytes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{structGX__DEVICE__IP__INFO_ad00fca53830310736b7458a305807e70}\label{structGX__DEVICE__IP__INFO_ad00fca53830310736b7458a305807e70} 
+\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}!reserved@{reserved}}
+\index{reserved@{reserved}!GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO\+::reserved\mbox{[}512\mbox{]}}
+
+
+
+reserved, 512 bytes 
+
+\Hypertarget{structGX__DEVICE__IP__INFO_a2a9933516649c74f7ef3c6c814cd4c07}\label{structGX__DEVICE__IP__INFO_a2a9933516649c74f7ef3c6c814cd4c07} 
+\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}!szDeviceID@{szDeviceID}}
+\index{szDeviceID@{szDeviceID}!GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+\doxysubsubsection{\texorpdfstring{szDeviceID}{szDeviceID}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO\+::sz\+Device\+ID\mbox{[}\mbox{\hyperlink{GxIAPI_8h_a9a99d2c8528848c0520bbf7b760666ae}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+64\+\_\+\+BYTE}}+4\mbox{]}}
+
+
+
+the unique identifier of the device, 64+4 bytes 
+
+\Hypertarget{structGX__DEVICE__IP__INFO_a468d16ef3754c15ab2b7aeb7c2888a02}\label{structGX__DEVICE__IP__INFO_a468d16ef3754c15ab2b7aeb7c2888a02} 
+\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}!szGateWay@{szGateWay}}
+\index{szGateWay@{szGateWay}!GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+\doxysubsubsection{\texorpdfstring{szGateWay}{szGateWay}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO\+::sz\+Gate\+Way\mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}}
+
+
+
+gateway, 32 bytes 
+
+\Hypertarget{structGX__DEVICE__IP__INFO_acf851b5314b5b6212b944d3c58526c6f}\label{structGX__DEVICE__IP__INFO_acf851b5314b5b6212b944d3c58526c6f} 
+\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}!szIP@{szIP}}
+\index{szIP@{szIP}!GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+\doxysubsubsection{\texorpdfstring{szIP}{szIP}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO\+::sz\+IP\mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}}
+
+
+
+IP address, 32 bytes, 
+
+\Hypertarget{structGX__DEVICE__IP__INFO_a77fa7c8ad1e3658393e040d80378c934}\label{structGX__DEVICE__IP__INFO_a77fa7c8ad1e3658393e040d80378c934} 
+\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}!szMAC@{szMAC}}
+\index{szMAC@{szMAC}!GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+\doxysubsubsection{\texorpdfstring{szMAC}{szMAC}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO\+::sz\+MAC\mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}}
+
+
+
+MAC address, 32 bytes, 
+
+\Hypertarget{structGX__DEVICE__IP__INFO_a17950abe1055415845c54a262985bc94}\label{structGX__DEVICE__IP__INFO_a17950abe1055415845c54a262985bc94} 
+\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}!szNICDescription@{szNICDescription}}
+\index{szNICDescription@{szNICDescription}!GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+\doxysubsubsection{\texorpdfstring{szNICDescription}{szNICDescription}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO\+::sz\+NICDescription\mbox{[}\mbox{\hyperlink{GxIAPI_8h_a158e075ff932e46219aaf735299589eb}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+128\+\_\+\+BYTE}}+4\mbox{]}}
+
+
+
+the description of the corresponding NIC, 128+4 bytes 
+
+\Hypertarget{structGX__DEVICE__IP__INFO_ab1a505c70eff5b1eee63cd7376be81ea}\label{structGX__DEVICE__IP__INFO_ab1a505c70eff5b1eee63cd7376be81ea} 
+\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}!szNICGateWay@{szNICGateWay}}
+\index{szNICGateWay@{szNICGateWay}!GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+\doxysubsubsection{\texorpdfstring{szNICGateWay}{szNICGateWay}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO\+::sz\+NICGate\+Way\mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}}
+
+
+
+the gateway of the corresponding NIC, 32 bytes 
+
+\Hypertarget{structGX__DEVICE__IP__INFO_a0df4bf5db22ff94207fcf160d266e6c8}\label{structGX__DEVICE__IP__INFO_a0df4bf5db22ff94207fcf160d266e6c8} 
+\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}!szNICIP@{szNICIP}}
+\index{szNICIP@{szNICIP}!GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+\doxysubsubsection{\texorpdfstring{szNICIP}{szNICIP}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO\+::sz\+NICIP\mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}}
+
+
+
+the IP address of the corresponding NIC, 32 bytes 
+
+\Hypertarget{structGX__DEVICE__IP__INFO_a6863962fe86bc48402ac90e9c4ab969e}\label{structGX__DEVICE__IP__INFO_a6863962fe86bc48402ac90e9c4ab969e} 
+\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}!szNICMAC@{szNICMAC}}
+\index{szNICMAC@{szNICMAC}!GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+\doxysubsubsection{\texorpdfstring{szNICMAC}{szNICMAC}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO\+::sz\+NICMAC\mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}}
+
+
+
+the MAC address of the corresponding NIC(\+Network Interface Card), 32 bytes 
+
+\Hypertarget{structGX__DEVICE__IP__INFO_a62ac0764248b3f47812d8b48d4b5067a}\label{structGX__DEVICE__IP__INFO_a62ac0764248b3f47812d8b48d4b5067a} 
+\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}!szNICSubNetMask@{szNICSubNetMask}}
+\index{szNICSubNetMask@{szNICSubNetMask}!GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+\doxysubsubsection{\texorpdfstring{szNICSubNetMask}{szNICSubNetMask}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO\+::sz\+NICSub\+Net\+Mask\mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}}
+
+
+
+the subnet mask of the corresponding NIC, 32 bytes 
+
+\Hypertarget{structGX__DEVICE__IP__INFO_ad23623ae89b21b86abe8792e74e1056d}\label{structGX__DEVICE__IP__INFO_ad23623ae89b21b86abe8792e74e1056d} 
+\index{GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}!szSubNetMask@{szSubNetMask}}
+\index{szSubNetMask@{szSubNetMask}!GX\_DEVICE\_IP\_INFO@{GX\_DEVICE\_IP\_INFO}}
+\doxysubsubsection{\texorpdfstring{szSubNetMask}{szSubNetMask}}
+{\footnotesize\ttfamily char GX\+\_\+\+DEVICE\+\_\+\+IP\+\_\+\+INFO\+::sz\+Sub\+Net\+Mask\mbox{[}\mbox{\hyperlink{GxIAPI_8h_ade8c756f0f7b887fb1cefa02a628534b}{GX\+\_\+\+INFO\+\_\+\+LENGTH\+\_\+32\+\_\+\+BYTE}}\mbox{]}}
+
+
+
+subnet mask, 32 bytes 
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/home/davi/project/c++/\+Buff\+Detect/general/\+Gx\+Camera/include/\mbox{\hyperlink{GxIAPI_8h}{Gx\+IAPI.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EVENT_MANGER: /home/davi/project/c++/BuffDetect/include/BuffDetect_new.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">EVENT_MANGER
+   </div>
+   <div id="projectbrief">这是一个简单的订阅者发布者</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('BuffDetect__new_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BuffDetect_new.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="BuffDetect__new_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef BUFFDETECT_BUFFDETECT_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define BUFFDETECT_BUFFDETECT_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// STL</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;eigen3/Eigen/Dense&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;opencv4/opencv2/core/eigen.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;opencv4/opencv2/highgui.hpp&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;opencv4/opencv2/core.hpp&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="BuffDetect__new_8hpp.html#a8d1937d06941b40fb166020866c1fc44">   26</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="BuffDetect__new_8hpp.html#a8d1937d06941b40fb166020866c1fc44">compare_radius</a>(<span class="keyword">const</span> cv::Point3d &amp;p1, <span class="keyword">const</span> cv::Point3d &amp;p2)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">return</span> p1.z &lt; p2.z;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="BuffDetect__new_8hpp.html#a283fef6e65b4947b13ea679a8c8579bd">   30</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="BuffDetect__new_8hpp.html#a283fef6e65b4947b13ea679a8c8579bd">compare_contours_len</a>(<span class="keyword">const</span> std::vector&lt;cv::Point&gt; &amp;c1, <span class="keyword">const</span> std::vector&lt;cv::Point&gt; &amp;c2)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">double</span> l1 = cv::arcLength(c1, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">double</span> l2 = cv::arcLength(c2, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">return</span> l1 &lt; l2;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="BuffDetect__new_8hpp.html#aca38ebb1b0c1cf259fb4eb55e878ad36">   37</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="BuffDetect__new_8hpp.html#aca38ebb1b0c1cf259fb4eb55e878ad36">GetLineAngle</a>(cv::Vec4f line) <span class="comment">// 起点xy 终点xy</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    cv::Point p1(line[0], line[1]);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    cv::Point p2(line[2], line[3]);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">float</span> angle = 0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">float</span> angle_ = atan2(p1.y - p2.y, p1.x - p2.x);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    angle = (angle_ * 180) / CV_PI;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (angle_ &gt;= -CV_PI &amp;&amp; angle_ &lt; 0)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        angle = 180 + (180 + angle);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> angle;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">class </span><a class="code hl_class" href="classBuff.html">Buff</a></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    uint color;                                                                                                     <span class="comment">// RED==2,BLUE==3</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">const</span> std::vector&lt;cv::Point3f&gt; objectPoints = {{-186, 183, 0}, {-186, -190, 0}, {186, 183, 0}, {186, -190, 0}}; <span class="comment">// 物体世界坐标系的坐标点(左上，左下，右上，右下)</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::vector&lt;cv::Point2f&gt; imagePoints_;                                                                          <span class="comment">// 物体在像素坐标系上的坐标点(左下，左上,右上，右下)</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::vector&lt;cv::Point2f&gt; imagePoints;                                                                           <span class="comment">// 物体在像素坐标系上的不变坐标点(左上，左下,右上，右下)</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    cv::Mat rvec;                                                                                                   <span class="comment">// 旋转向量</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    cv::Mat tvec;                                                                                                   <span class="comment">// 平移向量</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">float</span> radius_armor_center = cv::norm(this-&gt;energy_organ_center - this-&gt;armor_center);                           <span class="comment">// 能量机关中心到装甲板中心的半径</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">float</span> radius_energy_organ;                                                                                      <span class="comment">// 能量机关完整半径</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    cv::Point2f energy_organ_center;                                                                                <span class="comment">// 能量机关圆心坐标</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    cv::Point2f armor_center = cv::Point2f(-1, -1);                                                                 <span class="comment">// 待击打装甲板中心坐标</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">double</span> angle_Energy_organ_center2armor_center; <span class="comment">// 能量机关中心只指向装甲板中心的向量的角度</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    cv::Mat src;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    cv::Mat processed_img;         <span class="comment">// 经过ImageProcess()函数处理过得图像</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">bool</span> if_find_contours = <span class="keyword">false</span>; <span class="comment">// 是否找到轮廓</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// predict</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classBuff.html#a199f8f7074b76f0dc6c0b59c3ae7ebe5">   76</a></span>    std::vector&lt;std::vector&lt;cv::Point2f&gt;&gt; <a class="code hl_variable" href="classBuff.html#a199f8f7074b76f0dc6c0b59c3ae7ebe5">judge_points</a>; <span class="comment">// 判断大小能量机关所需的数据点</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classBuff.html#a9351fd4ef74bbaf10cbe071db79c355c">   77</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="classBuff.html#a9351fd4ef74bbaf10cbe071db79c355c">angular_velocity</a>;                            <span class="comment">// 能量机关转动的角速度</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="classBuff.html#a86b1aac5d395485978ff2b79dadaa407">FPS</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="classBuff.html#aa002fdf49da1b13f9401a9a1ea8f7de2">small_energy</a> = 20 * CV_PI / 60; <span class="comment">// 小能量机关角速度(rad/s)</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classBuff.html#a12b9f7b0038bb424d9cf4d2591dfa71d">   81</a></span>    cv::Point2d <a class="code hl_variable" href="classBuff.html#a12b9f7b0038bb424d9cf4d2591dfa71d">armor_roi_position</a>; <span class="comment">// 装甲板中心点在ROI中的坐标</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classBuff.html#af4f36cb762bb56b3902758414d0dcb07">   83</a></span>    cv::Point2f <a class="code hl_function" href="classBuff.html#af4f36cb762bb56b3902758414d0dcb07">GetArmorCenter</a>()</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> armor_center;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classBuff.html#a78b37bf2996c20d6cb8e4aa1a4ac8af7">   88</a></span>    std::vector&lt;cv::Point2f&gt; <a class="code hl_function" href="classBuff.html#a78b37bf2996c20d6cb8e4aa1a4ac8af7">GetImagePoints</a>()</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> imagePoints;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">// 总处理函数</span></div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classBuff.html#a7b4d26b65edb5d4e81c375c16cb5c54e">   94</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classBuff.html#a7b4d26b65edb5d4e81c375c16cb5c54e">Process</a>(cv::Mat src)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        this-&gt;<a class="code hl_function" href="classBuff.html#a32338520494c8a482663492297df8051">ImageProcess</a>(src);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">if</span> (this-&gt;if_find_contours)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            this-&gt;<a class="code hl_function" href="classBuff.html#ab5127d52c3b9cf17da41b97833a1c3cf">FindCenter</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            this-&gt;<a class="code hl_function" href="classBuff.html#af77fc71c6e31cf0c2cebd3b1ecac5d4a">AngleSolve</a>();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="comment">// this-&gt;Predict();</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">// 是否找到待击打装甲板中心</span></div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classBuff.html#abaede8a88df5df7268b4d7c83f7afbb6">  106</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classBuff.html#abaede8a88df5df7268b4d7c83f7afbb6">IfFindBuff</a>()</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">return</span> this-&gt;armor_center.x == -1 &amp;&amp; this-&gt;armor_center.y == -1 ? false : <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
+</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classBuff.html#a8d1e9a43abff0e939089390f58a432ba">  111</a></span>    <a class="code hl_function" href="classBuff.html#a8d1e9a43abff0e939089390f58a432ba">Buff</a>(uint init_color)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        color = init_color;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classBuff.html#a32338520494c8a482663492297df8051">  123</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classBuff.html#a32338520494c8a482663492297df8051">ImageProcess</a>(cv::Mat src)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        cv::resize(src, src, cv::Size(2*src.cols / 3, 2*src.rows / 3));</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        this-&gt;src = src;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        std::vector&lt;cv::Mat&gt; channels;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        cv::Mat channel_img;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        cv::Mat threshold_img;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        cv::Mat test = cv::Mat::zeros(src.size(), CV_8UC3);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        cv::split(src, channels);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">if</span> (this-&gt;color == 2)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            cv::subtract(channels[2], channels[0], channel_img); <span class="comment">// 识别红</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            cv::subtract(channel_img, channels[1], channel_img);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            cv::threshold(channel_img, threshold_img, 100, 255, cv::THRESH_BINARY);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">if</span> (this-&gt;color == 3)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            cv::subtract(channels[0], channels[2], channel_img); <span class="comment">// 识别蓝</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            cv::subtract(channel_img, channels[1], channel_img);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            cv::threshold(channel_img, threshold_img, 120, 255, cv::THRESH_BINARY);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        std::vector&lt;std::vector&lt;cv::Point&gt;&gt; contours;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        cv::findContours(threshold_img, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">if</span> (contours.size() &gt; 1)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            this-&gt;if_find_contours = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        this-&gt;processed_img = threshold_img;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="foldopen" id="foldopen00161" data-start="{" data-end="}">
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classBuff.html#ab5127d52c3b9cf17da41b97833a1c3cf">  161</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classBuff.html#ab5127d52c3b9cf17da41b97833a1c3cf">FindCenter</a>()</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        std::vector&lt;cv::Point3f&gt; armor_data; <span class="comment">// center.x center.y raduis</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        cv::Mat processed_img =this-&gt;processed_img.clone();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="comment">// cv::Mat element_1 = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(2, 2));</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        cv::Mat element_2 = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(1, 1));</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="comment">// cv::morphologyEx(processed_img, processed_img, cv::MORPH_CLOSE, element_1);</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        cv::morphologyEx(processed_img, processed_img, cv::MORPH_OPEN, element_2);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        cv::imshow(<span class="stringliteral">&quot;test&quot;</span>,processed_img);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        std::vector&lt;std::vector&lt;cv::Point&gt;&gt; contours;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        cv::findContours(processed_img, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="comment">// 凸包检测</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        std::vector&lt;std::vector&lt;cv::Point&gt;&gt; hull(contours.size());</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; contours.size(); i++)</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <span class="comment">// 寻找凸包</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            cv::convexHull(cv::Mat(contours[i]), hull[i], <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        }</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; contours.size(); i++)</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            cv::fillConvexPoly(this-&gt;processed_img, hull[i], cv::Scalar(255, 255, 255), cv::LINE_AA, 0);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        std::vector&lt;std::vector&lt;cv::Point&gt;&gt; contours_;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        cv::findContours(this-&gt;processed_img, contours_, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        cv::Mat black_img = cv::Mat::zeros(this-&gt;processed_img.size(), CV_8UC1);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        cv::drawContours(black_img, contours_, -1, cv::Scalar(255, 255, 255), 1, 8);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = contours_.begin(); it != contours_.end();)</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            <span class="keywordtype">double</span> minArea=200;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            <span class="keywordtype">double</span> area = contourArea(*it);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keywordflow">if</span> (area &lt; minArea)</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                it = contours_.erase(it);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            }</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                ++it;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="comment">// 确保已完整识别到能量机关(轮廓最小个数为2)</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <span class="keywordflow">if</span> (contours_.size() &gt; 1)</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            std::sort(contours_.begin(), contours_.end(), <a class="code hl_function" href="BuffDetect__new_8hpp.html#a283fef6e65b4947b13ea679a8c8579bd">compare_contours_len</a>); <span class="comment">// 根据轮廓长度对轮廓进行排序</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            std::cout&lt;&lt;contours_.size()&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;contours : contours_)</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                cv::Point2f center;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                <span class="keywordtype">float</span> radius;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                minEnclosingCircle(contours, center, radius);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                cv::Point3f temp = cv::Point3f(center.x, center.y, radius);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                armor_data.push_back(temp);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="comment">// 根据半径大小对识别的轮廓进行排序。（半径最小为R标，半径第二小为待击打装甲板）</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            std::sort(armor_data.begin(), armor_data.end(), <a class="code hl_function" href="BuffDetect__new_8hpp.html#a8d1937d06941b40fb166020866c1fc44">compare_radius</a>);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            cv::circle(black_img, cv::Point(armor_data[0].x, armor_data[0].y), 5, cv::Scalar(255, 255, 255), 1, 8, 0); <span class="comment">// 画出能量机关的中心坐标</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            cv::circle(black_img, cv::Point(armor_data[1].x, armor_data[1].y), 5, cv::Scalar(255, 255, 255), 1, 8, 0); <span class="comment">// 画出待击打装甲板的中心坐标</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            this-&gt;energy_organ_center.x = armor_data[0].x;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            this-&gt;energy_organ_center.y = armor_data[0].y;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            this-&gt;armor_center.x = armor_data[1].x;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            this-&gt;armor_center.y = armor_data[1].y;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            cv::RotatedRect rotrect;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            cv::Point2f rect_points[4]; <span class="comment">// point[0]左下:x最小 point[1]左上:y最小 point[2]右上:x最大 point[3]右下:y最大</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            cv::Mat boxPoints2f, boxPointsCov;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            <span class="comment">// 获取最小外接矩形点阵</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            rotrect = cv::minAreaRect(contours_[1]);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            rotrect.points(rect_points);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            cv::boxPoints(rotrect, boxPoints2f);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            boxPoints2f.assignTo(boxPointsCov, CV_32S);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            <span class="comment">// 绘制旋转矩形及其顶点</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            cv::polylines(black_img, boxPointsCov, <span class="keyword">true</span>, cv::Scalar(255, 255, 255), 2);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            cv::circle(black_img, rect_points[0], 5, cv::Scalar(255, 255, 255), 1, 8, 0);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            std::vector&lt;cv::Point2f&gt; imagePoint_temp;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            imagePoint_temp.push_back(rect_points[0]); <span class="comment">// 左下</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            imagePoint_temp.push_back(rect_points[1]); <span class="comment">// 左上</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            imagePoint_temp.push_back(rect_points[2]); <span class="comment">// 右上</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            imagePoint_temp.push_back(rect_points[3]); <span class="comment">// 右下</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            this-&gt;imagePoints_ = imagePoint_temp;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            cv::imshow(<span class="stringliteral">&quot;2&quot;</span>, black_img);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            cv::Vec4f line(this-&gt;energy_organ_center.x, this-&gt;energy_organ_center.y, this-&gt;armor_center.x, this-&gt;armor_center.y);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            cv::Point point(this-&gt;energy_organ_center.x, this-&gt;energy_organ_center.y);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            cv::Point point_(this-&gt;armor_center.x, this-&gt;armor_center.y);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            <span class="keywordtype">double</span> angle = <a class="code hl_function" href="BuffDetect__new_8hpp.html#aca38ebb1b0c1cf259fb4eb55e878ad36">GetLineAngle</a>(line);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            this-&gt;angle_Energy_organ_center2armor_center = angle;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    }</div>
+</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="foldopen" id="foldopen00265" data-start="{" data-end="}">
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="classBuff.html#af77fc71c6e31cf0c2cebd3b1ecac5d4a">  265</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classBuff.html#af77fc71c6e31cf0c2cebd3b1ecac5d4a">AngleSolve</a>()</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <span class="keywordflow">if</span> (this-&gt;angle_Energy_organ_center2armor_center &gt;= 0 &amp;&amp; this-&gt;angle_Energy_organ_center2armor_center &lt; 90)</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[0]);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[3]);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[1]);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[2]);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        }</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;angle_Energy_organ_center2armor_center &gt;= 90 &amp;&amp; this-&gt;angle_Energy_organ_center2armor_center &lt; 180)</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        {</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[1]);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[0]);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[2]);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[3]);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;angle_Energy_organ_center2armor_center &gt;= 180 &amp;&amp; this-&gt;angle_Energy_organ_center2armor_center &lt; 270)</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        {</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[2]);</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[1]);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[3]);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[0]);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;angle_Energy_organ_center2armor_center &gt;= 270 &amp;&amp; this-&gt;angle_Energy_organ_center2armor_center &lt;= 360)</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[3]);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[2]);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[0]);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            this-&gt;imagePoints.push_back(this-&gt;imagePoints_[1]);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    }</div>
+</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="foldopen" id="foldopen00308" data-start="{" data-end="}">
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno"><a class="line" href="classBuff.html#a2cfd3f99a1ca3cc5c7796a8e22e4c752">  308</a></span>    cv::Point2f <a class="code hl_function" href="classBuff.html#a2cfd3f99a1ca3cc5c7796a8e22e4c752">Predict</a>()</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <span class="keywordtype">double</span> roi_x = this-&gt;energy_organ_center.x - this-&gt;radius_energy_organ;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <span class="keywordtype">double</span> roi_y = this-&gt;energy_organ_center.y - this-&gt;radius_energy_organ;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        <span class="keywordtype">double</span> width = 2 * this-&gt;radius_energy_organ;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keywordtype">double</span> height = 2 * this-&gt;radius_energy_organ;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        cv::Rect buff_roi(roi_x, roi_y, width, height);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        this-&gt;armor_roi_position.x = this-&gt;armor_center.x - roi_x;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        this-&gt;armor_roi_position.y = this-&gt;armor_center.y - roi_y;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    }</div>
+</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>};</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="preprocessor">#endif </span><span class="comment">// BUFFDETECT_BUFFDETECT_H_</span></div>
+<div class="ttc" id="aBuffDetect__new_8hpp_html_a283fef6e65b4947b13ea679a8c8579bd"><div class="ttname"><a href="BuffDetect__new_8hpp.html#a283fef6e65b4947b13ea679a8c8579bd">compare_contours_len</a></div><div class="ttdeci">bool compare_contours_len(const std::vector&lt; cv::Point &gt; &amp;c1, const std::vector&lt; cv::Point &gt; &amp;c2)</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:30</div></div>
+<div class="ttc" id="aBuffDetect__new_8hpp_html_a8d1937d06941b40fb166020866c1fc44"><div class="ttname"><a href="BuffDetect__new_8hpp.html#a8d1937d06941b40fb166020866c1fc44">compare_radius</a></div><div class="ttdeci">bool compare_radius(const cv::Point3d &amp;p1, const cv::Point3d &amp;p2)</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:26</div></div>
+<div class="ttc" id="aBuffDetect__new_8hpp_html_aca38ebb1b0c1cf259fb4eb55e878ad36"><div class="ttname"><a href="BuffDetect__new_8hpp.html#aca38ebb1b0c1cf259fb4eb55e878ad36">GetLineAngle</a></div><div class="ttdeci">float GetLineAngle(cv::Vec4f line)</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:37</div></div>
+<div class="ttc" id="aclassBuff_html"><div class="ttname"><a href="classBuff.html">Buff</a></div><div class="ttdef"><b>Definition</b> BuffDetect.hpp:56</div></div>
+<div class="ttc" id="aclassBuff_html_a12b9f7b0038bb424d9cf4d2591dfa71d"><div class="ttname"><a href="classBuff.html#a12b9f7b0038bb424d9cf4d2591dfa71d">Buff::armor_roi_position</a></div><div class="ttdeci">cv::Point2d armor_roi_position</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:81</div></div>
+<div class="ttc" id="aclassBuff_html_a199f8f7074b76f0dc6c0b59c3ae7ebe5"><div class="ttname"><a href="classBuff.html#a199f8f7074b76f0dc6c0b59c3ae7ebe5">Buff::judge_points</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; cv::Point2f &gt; &gt; judge_points</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:76</div></div>
+<div class="ttc" id="aclassBuff_html_a2cfd3f99a1ca3cc5c7796a8e22e4c752"><div class="ttname"><a href="classBuff.html#a2cfd3f99a1ca3cc5c7796a8e22e4c752">Buff::Predict</a></div><div class="ttdeci">cv::Point2f Predict()</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:308</div></div>
+<div class="ttc" id="aclassBuff_html_a32338520494c8a482663492297df8051"><div class="ttname"><a href="classBuff.html#a32338520494c8a482663492297df8051">Buff::ImageProcess</a></div><div class="ttdeci">void ImageProcess(cv::Mat src)</div><div class="ttdoc">图像处理,返回扇页轮廓</div><div class="ttdef"><b>Definition</b> BuffDetect.hpp:112</div></div>
+<div class="ttc" id="aclassBuff_html_a78b37bf2996c20d6cb8e4aa1a4ac8af7"><div class="ttname"><a href="classBuff.html#a78b37bf2996c20d6cb8e4aa1a4ac8af7">Buff::GetImagePoints</a></div><div class="ttdeci">std::vector&lt; cv::Point2f &gt; GetImagePoints()</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:88</div></div>
+<div class="ttc" id="aclassBuff_html_a7b4d26b65edb5d4e81c375c16cb5c54e"><div class="ttname"><a href="classBuff.html#a7b4d26b65edb5d4e81c375c16cb5c54e">Buff::Process</a></div><div class="ttdeci">void Process(cv::Mat src)</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:94</div></div>
+<div class="ttc" id="aclassBuff_html_a86b1aac5d395485978ff2b79dadaa407"><div class="ttname"><a href="classBuff.html#a86b1aac5d395485978ff2b79dadaa407">Buff::FPS</a></div><div class="ttdeci">double FPS</div><div class="ttdef"><b>Definition</b> BuffDetect.hpp:81</div></div>
+<div class="ttc" id="aclassBuff_html_a8d1e9a43abff0e939089390f58a432ba"><div class="ttname"><a href="classBuff.html#a8d1e9a43abff0e939089390f58a432ba">Buff::Buff</a></div><div class="ttdeci">Buff(uint init_color)</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:111</div></div>
+<div class="ttc" id="aclassBuff_html_a9351fd4ef74bbaf10cbe071db79c355c"><div class="ttname"><a href="classBuff.html#a9351fd4ef74bbaf10cbe071db79c355c">Buff::angular_velocity</a></div><div class="ttdeci">double angular_velocity</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:77</div></div>
+<div class="ttc" id="aclassBuff_html_aa002fdf49da1b13f9401a9a1ea8f7de2"><div class="ttname"><a href="classBuff.html#aa002fdf49da1b13f9401a9a1ea8f7de2">Buff::small_energy</a></div><div class="ttdeci">float small_energy</div><div class="ttdef"><b>Definition</b> BuffDetect.hpp:82</div></div>
+<div class="ttc" id="aclassBuff_html_ab5127d52c3b9cf17da41b97833a1c3cf"><div class="ttname"><a href="classBuff.html#ab5127d52c3b9cf17da41b97833a1c3cf">Buff::FindCenter</a></div><div class="ttdeci">void FindCenter()</div><div class="ttdoc">寻找需要击打的能量机关的装甲板中心</div><div class="ttdef"><b>Definition</b> BuffDetect.hpp:182</div></div>
+<div class="ttc" id="aclassBuff_html_abaede8a88df5df7268b4d7c83f7afbb6"><div class="ttname"><a href="classBuff.html#abaede8a88df5df7268b4d7c83f7afbb6">Buff::IfFindBuff</a></div><div class="ttdeci">bool IfFindBuff()</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:106</div></div>
+<div class="ttc" id="aclassBuff_html_af4f36cb762bb56b3902758414d0dcb07"><div class="ttname"><a href="classBuff.html#af4f36cb762bb56b3902758414d0dcb07">Buff::GetArmorCenter</a></div><div class="ttdeci">cv::Point2f GetArmorCenter()</div><div class="ttdef"><b>Definition</b> BuffDetect_new.hpp:83</div></div>
+<div class="ttc" id="aclassBuff_html_af77fc71c6e31cf0c2cebd3b1ecac5d4a"><div class="ttname"><a href="classBuff.html#af77fc71c6e31cf0c2cebd3b1ecac5d4a">Buff::AngleSolve</a></div><div class="ttdeci">void AngleSolve()</div><div class="ttdef"><b>Definition</b> BuffDetect.hpp:334</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="BuffDetect__new_8hpp.html">BuffDetect_new.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

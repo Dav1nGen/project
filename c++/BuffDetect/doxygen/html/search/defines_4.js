@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['gx_5fapi_0',['GX_API',['../GxIAPI_8h.html#ad02930e4573c489f8c5703aaf4d3425b',1,'GxIAPI.h']]],
+  ['gx_5fdllentry_1',['GX_DLLENTRY',['../GxIAPI_8h.html#a59554a8605a208b8a8c40484918f2f55',1,'GxIAPI.h']]],
+  ['gx_5finfo_5flength_5f128_5fbyte_2',['GX_INFO_LENGTH_128_BYTE',['../GxIAPI_8h.html#a158e075ff932e46219aaf735299589eb',1,'GxIAPI.h']]],
+  ['gx_5finfo_5flength_5f32_5fbyte_3',['GX_INFO_LENGTH_32_BYTE',['../GxIAPI_8h.html#ade8c756f0f7b887fb1cefa02a628534b',1,'GxIAPI.h']]],
+  ['gx_5finfo_5flength_5f64_5fbyte_4',['GX_INFO_LENGTH_64_BYTE',['../GxIAPI_8h.html#a9a99d2c8528848c0520bbf7b760666ae',1,'GxIAPI.h']]],
+  ['gx_5finfo_5flength_5f8_5fbyte_5',['GX_INFO_LENGTH_8_BYTE',['../GxIAPI_8h.html#a5c638a8bb7d3bfff7ca1bc2045e0128e',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5f10bit_6',['GX_PIXEL_10BIT',['../GxIAPI_8h.html#a84359375966e76b4dc55b605ad841dc2',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5f12bit_7',['GX_PIXEL_12BIT',['../GxIAPI_8h.html#a84e6d929fa5f70bde136622f098beaac',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5f16bit_8',['GX_PIXEL_16BIT',['../GxIAPI_8h.html#a19d9014e379c2952b16e5469fcb5c1ed',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5f24bit_9',['GX_PIXEL_24BIT',['../GxIAPI_8h.html#a9207593cfe37ebee78b2c3d335dbff19',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5f30bit_10',['GX_PIXEL_30BIT',['../GxIAPI_8h.html#aea875ad36d42b5f08e8c125a2c8b2a05',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5f32bit_11',['GX_PIXEL_32BIT',['../GxIAPI_8h.html#a66e0b54bb6e129347d0bef15feae167a',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5f36bit_12',['GX_PIXEL_36BIT',['../GxIAPI_8h.html#ad6e1b9f52608b94f1c8a69786dc08120',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5f48bit_13',['GX_PIXEL_48BIT',['../GxIAPI_8h.html#a2291264b2b849402e2135e834bcaae2b',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5f64bit_14',['GX_PIXEL_64BIT',['../GxIAPI_8h.html#a4070c18f8d8f4340d472b9c3b2976338',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5f8bit_15',['GX_PIXEL_8BIT',['../GxIAPI_8h.html#ace1f626ad648d6f12641a89e90393d32',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5fcolor_16',['GX_PIXEL_COLOR',['../GxIAPI_8h.html#acc2a250f213b5ff680e657509176c9d4',1,'GxIAPI.h']]],
+  ['gx_5fpixel_5fmono_17',['GX_PIXEL_MONO',['../GxIAPI_8h.html#a24b4f4d588edc794f31a02bf8b4cc43c',1,'GxIAPI.h']]],
+  ['gx_5fver_18',['GX_VER',['../GxCamera_8h.html#a965c352a909cb594b74a91c7730fcd35',1,'GxCamera.h']]],
+  ['gx_5fverify_19',['GX_VERIFY',['../GxCamera_8h.html#ab5b38bf6f8a20174ebcb8f03cc50d04b',1,'GxCamera.h']]],
+  ['gx_5fverify_5fexit_20',['GX_VERIFY_EXIT',['../GxCamera_8h.html#a5d30266edf63d17aa7629e54e92336a2',1,'GxCamera.h']]]
+];

@@ -1,0 +1,123 @@
+\doxysection{Roi结构体 参考}
+\hypertarget{structRoi}{}\label{structRoi}\index{Roi@{Roi}}
+
+
+\doxylink{structRoi}{Roi} and resolution Param  
+
+
+
+
+{\ttfamily \#include $<$Gx\+Camera.\+h$>$}
+
+
+
+Roi 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{structRoi__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structRoi_abc48174ce19b7437798ecbaf64c870bb}{Roi}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+int64\+\_\+t \mbox{\hyperlink{structRoi_ac30e2622afe4971678f0359d252c874f}{m\+\_\+i64\+Width}}
+\begin{DoxyCompactList}\small\item\em Image roi width \end{DoxyCompactList}\item 
+int64\+\_\+t \mbox{\hyperlink{structRoi_a69eb5203019664984895a163bebfb9e0}{m\+\_\+i64\+Height}}
+\begin{DoxyCompactList}\small\item\em Image roi height \end{DoxyCompactList}\item 
+int64\+\_\+t \mbox{\hyperlink{structRoi_a9927c534e881f98546fe820b06fbbc42}{m\+\_\+i64\+OffsetX}}
+\begin{DoxyCompactList}\small\item\em OffsetX of roi \end{DoxyCompactList}\item 
+int64\+\_\+t \mbox{\hyperlink{structRoi_a3eeed4b05b18df0112786c34b014bc91}{m\+\_\+i64\+OffsetY}}
+\begin{DoxyCompactList}\small\item\em OffsetY of roi \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\doxylink{structRoi}{Roi} and resolution Param 
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{structRoi_abc48174ce19b7437798ecbaf64c870bb}\label{structRoi_abc48174ce19b7437798ecbaf64c870bb} 
+\index{Roi@{Roi}!Roi@{Roi}}
+\index{Roi@{Roi}!Roi@{Roi}}
+\doxysubsubsection{\texorpdfstring{Roi()}{Roi()}}
+{\footnotesize\ttfamily Roi\+::\+Roi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\texorpdfstring{$<$}{<} \doxylink{structRoi}{Roi} width 640
+
+\texorpdfstring{$<$}{<} \doxylink{structRoi}{Roi} height 480
+
+\texorpdfstring{$<$}{<} OffsetX 80 和\+Min的差必须是16的倍数
+
+\texorpdfstring{$<$}{<} OffsetY 60 和\+Min的差必须是2的倍数
+
+引用了 \mbox{\hyperlink{structRoi_a69eb5203019664984895a163bebfb9e0}{m\+\_\+i64\+Height}}, \mbox{\hyperlink{structRoi_a9927c534e881f98546fe820b06fbbc42}{m\+\_\+i64\+OffsetX}}, \mbox{\hyperlink{structRoi_a3eeed4b05b18df0112786c34b014bc91}{m\+\_\+i64\+OffsetY}} , 以及 \mbox{\hyperlink{structRoi_ac30e2622afe4971678f0359d252c874f}{m\+\_\+i64\+Width}}.
+
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{structRoi_a69eb5203019664984895a163bebfb9e0}\label{structRoi_a69eb5203019664984895a163bebfb9e0} 
+\index{Roi@{Roi}!m\_i64Height@{m\_i64Height}}
+\index{m\_i64Height@{m\_i64Height}!Roi@{Roi}}
+\doxysubsubsection{\texorpdfstring{m\_i64Height}{m\_i64Height}}
+{\footnotesize\ttfamily int64\+\_\+t Roi\+::m\+\_\+i64\+Height}
+
+
+
+Image roi height 
+
+
+
+被这些函数引用 \mbox{\hyperlink{structRoi_abc48174ce19b7437798ecbaf64c870bb}{Roi()}} , 以及 \mbox{\hyperlink{classGxCamera_a3a2e4b253fa1d796375cf937e24a901d}{Gx\+Camera\+::set\+Roi\+Param()}}.
+
+\Hypertarget{structRoi_a9927c534e881f98546fe820b06fbbc42}\label{structRoi_a9927c534e881f98546fe820b06fbbc42} 
+\index{Roi@{Roi}!m\_i64OffsetX@{m\_i64OffsetX}}
+\index{m\_i64OffsetX@{m\_i64OffsetX}!Roi@{Roi}}
+\doxysubsubsection{\texorpdfstring{m\_i64OffsetX}{m\_i64OffsetX}}
+{\footnotesize\ttfamily int64\+\_\+t Roi\+::m\+\_\+i64\+OffsetX}
+
+
+
+OffsetX of roi 
+
+
+
+被这些函数引用 \mbox{\hyperlink{structRoi_abc48174ce19b7437798ecbaf64c870bb}{Roi()}} , 以及 \mbox{\hyperlink{classGxCamera_a3a2e4b253fa1d796375cf937e24a901d}{Gx\+Camera\+::set\+Roi\+Param()}}.
+
+\Hypertarget{structRoi_a3eeed4b05b18df0112786c34b014bc91}\label{structRoi_a3eeed4b05b18df0112786c34b014bc91} 
+\index{Roi@{Roi}!m\_i64OffsetY@{m\_i64OffsetY}}
+\index{m\_i64OffsetY@{m\_i64OffsetY}!Roi@{Roi}}
+\doxysubsubsection{\texorpdfstring{m\_i64OffsetY}{m\_i64OffsetY}}
+{\footnotesize\ttfamily int64\+\_\+t Roi\+::m\+\_\+i64\+OffsetY}
+
+
+
+OffsetY of roi 
+
+
+
+被这些函数引用 \mbox{\hyperlink{structRoi_abc48174ce19b7437798ecbaf64c870bb}{Roi()}} , 以及 \mbox{\hyperlink{classGxCamera_a3a2e4b253fa1d796375cf937e24a901d}{Gx\+Camera\+::set\+Roi\+Param()}}.
+
+\Hypertarget{structRoi_ac30e2622afe4971678f0359d252c874f}\label{structRoi_ac30e2622afe4971678f0359d252c874f} 
+\index{Roi@{Roi}!m\_i64Width@{m\_i64Width}}
+\index{m\_i64Width@{m\_i64Width}!Roi@{Roi}}
+\doxysubsubsection{\texorpdfstring{m\_i64Width}{m\_i64Width}}
+{\footnotesize\ttfamily int64\+\_\+t Roi\+::m\+\_\+i64\+Width}
+
+
+
+Image roi width 
+
+
+
+被这些函数引用 \mbox{\hyperlink{structRoi_abc48174ce19b7437798ecbaf64c870bb}{Roi()}} , 以及 \mbox{\hyperlink{classGxCamera_a3a2e4b253fa1d796375cf937e24a901d}{Gx\+Camera\+::set\+Roi\+Param()}}.
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/home/davi/project/c++/\+Buff\+Detect/general/\+Gx\+Camera/\mbox{\hyperlink{GxCamera_8h}{Gx\+Camera.\+h}}\end{DoxyCompactItemize}

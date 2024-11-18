@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['small_5fenergy_0',['small_energy',['../classBuff.html#aa002fdf49da1b13f9401a9a1ea8f7de2',1,'Buff']]],
+  ['status_1',['status',['../structGX__FRAME__CALLBACK__PARAM.html#a119b3b0323a22534e2d5b9fa5cbfea17',1,'GX_FRAME_CALLBACK_PARAM']]],
+  ['szdeviceid_2',['szDeviceID',['../structGX__DEVICE__IP__INFO.html#a2a9933516649c74f7ef3c6c814cd4c07',1,'GX_DEVICE_IP_INFO::szDeviceID'],['../structGX__DEVICE__BASE__INFO.html#a87a69d31a28e7b71b99ce4d357244014',1,'GX_DEVICE_BASE_INFO::szDeviceID']]],
+  ['szdisplayname_3',['szDisplayName',['../structGX__DEVICE__BASE__INFO.html#a6b2f5885735484be93dce4e646954e49',1,'GX_DEVICE_BASE_INFO']]],
+  ['szgateway_4',['szGateWay',['../structGX__DEVICE__IP__INFO.html#a468d16ef3754c15ab2b7aeb7c2888a02',1,'GX_DEVICE_IP_INFO']]],
+  ['szip_5',['szIP',['../structGX__DEVICE__IP__INFO.html#acf851b5314b5b6212b944d3c58526c6f',1,'GX_DEVICE_IP_INFO']]],
+  ['szmac_6',['szMAC',['../structGX__DEVICE__IP__INFO.html#a77fa7c8ad1e3658393e040d80378c934',1,'GX_DEVICE_IP_INFO']]],
+  ['szmodelname_7',['szModelName',['../structGX__DEVICE__BASE__INFO.html#aa0b7a05b912774c5ea4bd07d52900bde',1,'GX_DEVICE_BASE_INFO']]],
+  ['sznicdescription_8',['szNICDescription',['../structGX__DEVICE__IP__INFO.html#a17950abe1055415845c54a262985bc94',1,'GX_DEVICE_IP_INFO']]],
+  ['sznicgateway_9',['szNICGateWay',['../structGX__DEVICE__IP__INFO.html#ab1a505c70eff5b1eee63cd7376be81ea',1,'GX_DEVICE_IP_INFO']]],
+  ['sznicip_10',['szNICIP',['../structGX__DEVICE__IP__INFO.html#a0df4bf5db22ff94207fcf160d266e6c8',1,'GX_DEVICE_IP_INFO']]],
+  ['sznicmac_11',['szNICMAC',['../structGX__DEVICE__IP__INFO.html#a6863962fe86bc48402ac90e9c4ab969e',1,'GX_DEVICE_IP_INFO']]],
+  ['sznicsubnetmask_12',['szNICSubNetMask',['../structGX__DEVICE__IP__INFO.html#a62ac0764248b3f47812d8b48d4b5067a',1,'GX_DEVICE_IP_INFO']]],
+  ['szsn_13',['szSN',['../structGX__DEVICE__BASE__INFO.html#a67955eb17b59eec9155f1d0679503bbf',1,'GX_DEVICE_BASE_INFO']]],
+  ['szsubnetmask_14',['szSubNetMask',['../structGX__DEVICE__IP__INFO.html#ad23623ae89b21b86abe8792e74e1056d',1,'GX_DEVICE_IP_INFO']]],
+  ['szsymbolic_15',['szSymbolic',['../structGX__ENUM__DESCRIPTION.html#ad0a67787e76ea9a491dd427dc7f7332d',1,'GX_ENUM_DESCRIPTION']]],
+  ['szunit_16',['szUnit',['../structGX__FLOAT__RANGE.html#aa03af97e959dea82596551876f14360f',1,'GX_FLOAT_RANGE']]],
+  ['szuserid_17',['szUserID',['../structGX__DEVICE__BASE__INFO.html#a0a43e3523fba8be1e4d50207c3d2531e',1,'GX_DEVICE_BASE_INFO']]],
+  ['szvendorname_18',['szVendorName',['../structGX__DEVICE__BASE__INFO.html#a0eee167874453acd9f768316e6f78c6a',1,'GX_DEVICE_BASE_INFO']]]
+];

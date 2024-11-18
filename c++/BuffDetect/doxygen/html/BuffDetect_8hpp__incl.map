@@ -1,0 +1,21 @@
+<map id="/home/davi/project/c++/BuffDetect/include/BuffDetect.hpp" name="/home/davi/project/c++/BuffDetect/include/BuffDetect.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="340,5,499,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,120,77,147"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="340,53,221,79,90,115,84,116,83,111,88,109,220,73,339,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="101,120,160,147"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="341,60,259,84,173,114,169,116,167,111,171,110,257,79,339,55"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="184,120,245,147"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="360,67,258,114,256,116,253,111,256,110,358,62"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="270,120,327,147"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="386,66,328,112,324,108,382,62"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="351,120,489,147"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="422,64,422,104,417,104,417,64"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="513,112,665,155"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="471,62,541,102,538,106,469,67"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="690,120,883,147"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="500,54,725,113,723,118,499,60"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="907,120,1084,147"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="500,45,896,109,920,114,919,119,895,115,499,50"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="1108,120,1249,147"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="500,39,766,63,932,84,1097,109,1118,113,1117,119,1097,115,931,89,766,69,500,44"/>
+</map>

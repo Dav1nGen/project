@@ -1,0 +1,54 @@
+\doxysection{/home/davi/project/c++/\+Buff\+Detect/include/\+Buff\+Detect.hpp 文件参考}
+\hypertarget{BuffDetect_8hpp}{}\label{BuffDetect_8hpp}\index{/home/davi/project/c++/BuffDetect/include/BuffDetect.hpp@{/home/davi/project/c++/BuffDetect/include/BuffDetect.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$opencv4/opencv2/core/eigen.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv4/opencv2/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv4/opencv2/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+Buff\+Detect.\+hpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BuffDetect_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBuff}{Buff}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{BuffDetect_8hpp_a8d1937d06941b40fb166020866c1fc44}{compare\+\_\+radius}} (const cv\+::\+Point3d \&p1, const cv\+::\+Point3d \&p2)
+\item 
+bool \mbox{\hyperlink{BuffDetect_8hpp_a283fef6e65b4947b13ea679a8c8579bd}{compare\+\_\+contours\+\_\+len}} (const std\+::vector$<$ cv\+::\+Point $>$ \&c1, const std\+::vector$<$ cv\+::\+Point $>$ \&c2)
+\item 
+float \mbox{\hyperlink{BuffDetect_8hpp_aca38ebb1b0c1cf259fb4eb55e878ad36}{Get\+Line\+Angle}} (cv\+::\+Vec4f line)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\Hypertarget{BuffDetect_8hpp_a283fef6e65b4947b13ea679a8c8579bd}\label{BuffDetect_8hpp_a283fef6e65b4947b13ea679a8c8579bd} 
+\index{BuffDetect.hpp@{BuffDetect.hpp}!compare\_contours\_len@{compare\_contours\_len}}
+\index{compare\_contours\_len@{compare\_contours\_len}!BuffDetect.hpp@{BuffDetect.hpp}}
+\doxysubsubsection{\texorpdfstring{compare\_contours\_len()}{compare\_contours\_len()}}
+{\footnotesize\ttfamily bool compare\+\_\+contours\+\_\+len (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Point $>$ \&}]{c1,  }\item[{const std\+::vector$<$ cv\+::\+Point $>$ \&}]{c2 }\end{DoxyParamCaption})}
+
+\Hypertarget{BuffDetect_8hpp_a8d1937d06941b40fb166020866c1fc44}\label{BuffDetect_8hpp_a8d1937d06941b40fb166020866c1fc44} 
+\index{BuffDetect.hpp@{BuffDetect.hpp}!compare\_radius@{compare\_radius}}
+\index{compare\_radius@{compare\_radius}!BuffDetect.hpp@{BuffDetect.hpp}}
+\doxysubsubsection{\texorpdfstring{compare\_radius()}{compare\_radius()}}
+{\footnotesize\ttfamily bool compare\+\_\+radius (\begin{DoxyParamCaption}\item[{const cv\+::\+Point3d \&}]{p1,  }\item[{const cv\+::\+Point3d \&}]{p2 }\end{DoxyParamCaption})}
+
+\Hypertarget{BuffDetect_8hpp_aca38ebb1b0c1cf259fb4eb55e878ad36}\label{BuffDetect_8hpp_aca38ebb1b0c1cf259fb4eb55e878ad36} 
+\index{BuffDetect.hpp@{BuffDetect.hpp}!GetLineAngle@{GetLineAngle}}
+\index{GetLineAngle@{GetLineAngle}!BuffDetect.hpp@{BuffDetect.hpp}}
+\doxysubsubsection{\texorpdfstring{GetLineAngle()}{GetLineAngle()}}
+{\footnotesize\ttfamily float Get\+Line\+Angle (\begin{DoxyParamCaption}\item[{cv\+::\+Vec4f}]{line }\end{DoxyParamCaption})}
+

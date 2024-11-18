@@ -1,0 +1,191 @@
+\doxysection{GX\+\_\+\+FRAME\+\_\+\+BUFFER结构体 参考}
+\hypertarget{structGX__FRAME__BUFFER}{}\label{structGX__FRAME__BUFFER}\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+
+
+{\ttfamily \#include $<$Gx\+IAPI.\+h$>$}
+
+
+
+GX\+\_\+\+FRAME\+\_\+\+BUFFER 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{structGX__FRAME__BUFFER__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{GxIAPI_8h_aad84105035741875c882b1a37b7a0033}{GX\+\_\+\+FRAME\+\_\+\+STATUS}} \mbox{\hyperlink{structGX__FRAME__BUFFER_a3ec64f82446ed7d08e937f279baa610c}{n\+Status}}
+\begin{DoxyCompactList}\small\item\em The state of the acquired image. Please refer to GX\+\_\+\+FRAME\+\_\+\+STATUS \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structGX__FRAME__BUFFER_a294291b9246520b57d3259867b005a64}{p\+Img\+Buf}}
+\begin{DoxyCompactList}\small\item\em The image data pointer (After the frame information is enabled, the p\+Img\+Buf contains image data and frame information data) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__BUFFER_a53c909ab94278eee12c5208319867f35}{n\+Width}}
+\begin{DoxyCompactList}\small\item\em Image width \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__BUFFER_ad530a96fb849075118fc5e8421f9040c}{n\+Height}}
+\begin{DoxyCompactList}\small\item\em Image height \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__BUFFER_ab4963d4292a4553f9d2b25681463f09d}{n\+Pixel\+Format}}
+\begin{DoxyCompactList}\small\item\em Pixel format of image \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__BUFFER_a5c8cf84dcc55ae14138ac0d11eaa10fb}{n\+Img\+Size}}
+\begin{DoxyCompactList}\small\item\em Data size, in bytes (After the frame information is enabled, n\+Img\+Size is the sum of the size of the image data and the size of the frame information) \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structGX__FRAME__BUFFER_af80b0dbe3356533ea46b8c70ca336c18}{n\+Frame\+ID}}
+\begin{DoxyCompactList}\small\item\em Frame identification of image \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structGX__FRAME__BUFFER_af9b2758aed62d26d563ca4c80e151532}{n\+Timestamp}}
+\begin{DoxyCompactList}\small\item\em Timestamp of image \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structGX__FRAME__BUFFER_a880e74ca04f9dd6523c40355a25381a3}{n\+Buf\+ID}}
+\begin{DoxyCompactList}\small\item\em Buf\+ID \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__BUFFER_a4c81fd4ff1af2b0723b075558ae68c49}{n\+OffsetX}}
+\begin{DoxyCompactList}\small\item\em X-\/direction offset of the image \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__BUFFER_a6a98568bb9824be1686bd3ba9822e65a}{n\+OffsetY}}
+\begin{DoxyCompactList}\small\item\em Y-\/direction offset of the image \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structGX__FRAME__BUFFER_a50d2414657af79e3abfa902fc46b0328}{reserved}} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em 64 bytes,reserved \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{structGX__FRAME__BUFFER_a880e74ca04f9dd6523c40355a25381a3}\label{structGX__FRAME__BUFFER_a880e74ca04f9dd6523c40355a25381a3} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!nBufID@{nBufID}}
+\index{nBufID@{nBufID}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{nBufID}{nBufID}}
+{\footnotesize\ttfamily uint64\+\_\+t GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Buf\+ID}
+
+
+
+Buf\+ID 
+
+\Hypertarget{structGX__FRAME__BUFFER_af80b0dbe3356533ea46b8c70ca336c18}\label{structGX__FRAME__BUFFER_af80b0dbe3356533ea46b8c70ca336c18} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!nFrameID@{nFrameID}}
+\index{nFrameID@{nFrameID}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{nFrameID}{nFrameID}}
+{\footnotesize\ttfamily uint64\+\_\+t GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Frame\+ID}
+
+
+
+Frame identification of image 
+
+\Hypertarget{structGX__FRAME__BUFFER_ad530a96fb849075118fc5e8421f9040c}\label{structGX__FRAME__BUFFER_ad530a96fb849075118fc5e8421f9040c} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!nHeight@{nHeight}}
+\index{nHeight@{nHeight}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{nHeight}{nHeight}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Height}
+
+
+
+Image height 
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6}{Gx\+Camera\+::read()}}.
+
+\Hypertarget{structGX__FRAME__BUFFER_a5c8cf84dcc55ae14138ac0d11eaa10fb}\label{structGX__FRAME__BUFFER_a5c8cf84dcc55ae14138ac0d11eaa10fb} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!nImgSize@{nImgSize}}
+\index{nImgSize@{nImgSize}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{nImgSize}{nImgSize}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Img\+Size}
+
+
+
+Data size, in bytes (After the frame information is enabled, n\+Img\+Size is the sum of the size of the image data and the size of the frame information) 
+
+\Hypertarget{structGX__FRAME__BUFFER_a4c81fd4ff1af2b0723b075558ae68c49}\label{structGX__FRAME__BUFFER_a4c81fd4ff1af2b0723b075558ae68c49} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!nOffsetX@{nOffsetX}}
+\index{nOffsetX@{nOffsetX}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{nOffsetX}{nOffsetX}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+OffsetX}
+
+
+
+X-\/direction offset of the image 
+
+\Hypertarget{structGX__FRAME__BUFFER_a6a98568bb9824be1686bd3ba9822e65a}\label{structGX__FRAME__BUFFER_a6a98568bb9824be1686bd3ba9822e65a} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!nOffsetY@{nOffsetY}}
+\index{nOffsetY@{nOffsetY}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{nOffsetY}{nOffsetY}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+OffsetY}
+
+
+
+Y-\/direction offset of the image 
+
+\Hypertarget{structGX__FRAME__BUFFER_ab4963d4292a4553f9d2b25681463f09d}\label{structGX__FRAME__BUFFER_ab4963d4292a4553f9d2b25681463f09d} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!nPixelFormat@{nPixelFormat}}
+\index{nPixelFormat@{nPixelFormat}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{nPixelFormat}{nPixelFormat}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Pixel\+Format}
+
+
+
+Pixel format of image 
+
+\Hypertarget{structGX__FRAME__BUFFER_a3ec64f82446ed7d08e937f279baa610c}\label{structGX__FRAME__BUFFER_a3ec64f82446ed7d08e937f279baa610c} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!nStatus@{nStatus}}
+\index{nStatus@{nStatus}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{nStatus}{nStatus}}
+{\footnotesize\ttfamily \mbox{\hyperlink{GxIAPI_8h_aad84105035741875c882b1a37b7a0033}{GX\+\_\+\+FRAME\+\_\+\+STATUS}} GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Status}
+
+
+
+The state of the acquired image. Please refer to GX\+\_\+\+FRAME\+\_\+\+STATUS 
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6}{Gx\+Camera\+::read()}}.
+
+\Hypertarget{structGX__FRAME__BUFFER_af9b2758aed62d26d563ca4c80e151532}\label{structGX__FRAME__BUFFER_af9b2758aed62d26d563ca4c80e151532} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!nTimestamp@{nTimestamp}}
+\index{nTimestamp@{nTimestamp}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{nTimestamp}{nTimestamp}}
+{\footnotesize\ttfamily uint64\+\_\+t GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Timestamp}
+
+
+
+Timestamp of image 
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6}{Gx\+Camera\+::read()}}.
+
+\Hypertarget{structGX__FRAME__BUFFER_a53c909ab94278eee12c5208319867f35}\label{structGX__FRAME__BUFFER_a53c909ab94278eee12c5208319867f35} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!nWidth@{nWidth}}
+\index{nWidth@{nWidth}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{nWidth}{nWidth}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Width}
+
+
+
+Image width 
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6}{Gx\+Camera\+::read()}}.
+
+\Hypertarget{structGX__FRAME__BUFFER_a294291b9246520b57d3259867b005a64}\label{structGX__FRAME__BUFFER_a294291b9246520b57d3259867b005a64} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!pImgBuf@{pImgBuf}}
+\index{pImgBuf@{pImgBuf}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{pImgBuf}{pImgBuf}}
+{\footnotesize\ttfamily void\texorpdfstring{$\ast$}{*} GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::p\+Img\+Buf}
+
+
+
+The image data pointer (After the frame information is enabled, the p\+Img\+Buf contains image data and frame information data) 
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6}{Gx\+Camera\+::read()}}.
+
+\Hypertarget{structGX__FRAME__BUFFER_a50d2414657af79e3abfa902fc46b0328}\label{structGX__FRAME__BUFFER_a50d2414657af79e3abfa902fc46b0328} 
+\index{GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}!reserved@{reserved}}
+\index{reserved@{reserved}!GX\_FRAME\_BUFFER@{GX\_FRAME\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily int32\+\_\+t GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::reserved\mbox{[}16\mbox{]}}
+
+
+
+64 bytes,reserved 
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/home/davi/project/c++/\+Buff\+Detect/general/\+Gx\+Camera/include/\mbox{\hyperlink{GxIAPI_8h}{Gx\+IAPI.\+h}}\end{DoxyCompactItemize}

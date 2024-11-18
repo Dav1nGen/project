@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EVENT_MANGER: /home/davi/project/c++/BuffDetect/general/GxCamera/GxCamera.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">EVENT_MANGER
+   </div>
+   <div id="projectbrief">这是一个简单的订阅者发布者</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('GxCamera_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GxCamera.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="GxCamera_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="GxIAPI_8h.html">./include/GxIAPI.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="DxImageProc_8h.html">./include/DxImageProc.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//#include &quot;../General/General.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="GxCamera_8h.html#a51434da017b167ebdb567ae763b70183">   19</a></span><span class="preprocessor">#define ACQ_BUFFER_NUM          5               </span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="GxCamera_8h.html#a389092fcf9e398e3647b1222a155df11">   20</a></span><span class="preprocessor">#define ACQ_TRANSFER_SIZE       (64 * 1024)     </span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="GxCamera_8h.html#aab46c1a79de9a350c49212f46af6ecd9">   21</a></span><span class="preprocessor">#define ACQ_TRANSFER_NUMBER_URB 64              </span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> <a class="code hl_function" href="GxCamera_8h.html#a5e9a7655747743a3e0deaa5f5a80d58a">GetErrorString</a>(<a class="code hl_typedef" href="GxIAPI_8h.html#a024157349dab0f7a113c5ff7267672ea">GX_STATUS</a> emErrorStatus);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="GxCamera_8h.html#ac07653d7837e6264e0472a8899eaa4a8">   24</a></span><span class="keywordtype">void</span> *<a class="code hl_function" href="GxCamera_8h.html#ac07653d7837e6264e0472a8899eaa4a8">ProcGetImage</a>(<span class="keywordtype">void</span>* pAcquisitionThread);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="" data-end="">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="GxCamera_8h.html#a965c352a909cb594b74a91c7730fcd35">   26</a></span><span class="preprocessor">#define GX_VER(emStatus)\</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">    if (emStatus != GX_STATUS_SUCCESS)     \</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">    {                                      \</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">        std::cout&lt;&lt;&quot;error&quot;&lt;&lt;endl;          \</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">        break;                             \</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">    }</span></div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">//Show error message</span></div>
+<div class="foldopen" id="foldopen00033" data-start="" data-end="">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="GxCamera_8h.html#ab5b38bf6f8a20174ebcb8f03cc50d04b">   33</a></span><span class="preprocessor">#define GX_VERIFY(emStatus) \</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">    if (emStatus != GX_STATUS_SUCCESS)     \</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">    {                                      \</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">        GetErrorString(emStatus);          \</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">        return emStatus;                   \</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">    }</span></div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">//Show error message, close device and lib</span></div>
+<div class="foldopen" id="foldopen00041" data-start="" data-end="">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="GxCamera_8h.html#a5d30266edf63d17aa7629e54e92336a2">   41</a></span><span class="preprocessor">#define GX_VERIFY_EXIT(emStatus) \</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">    if (emStatus != GX_STATUS_SUCCESS)     \</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">    {                                      \</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">        GetErrorString(emStatus);          \</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">        GXCloseDevice(g_hDevice);          \</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">        g_hDevice = NULL;                  \</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">        GXCloseLib();                      \</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">        printf(&quot;&lt;App Exit!&gt;\n&quot;);           \</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">        exit(emStatus);                    \</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    }</span></div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="};">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structRoi.html">   53</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structRoi.html">Roi</a></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structRoi.html#ac30e2622afe4971678f0359d252c874f">   55</a></span>    int64_t              <a class="code hl_variable" href="structRoi.html#ac30e2622afe4971678f0359d252c874f">m_i64Width</a>;                </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structRoi.html#a69eb5203019664984895a163bebfb9e0">   56</a></span>    int64_t              <a class="code hl_variable" href="structRoi.html#a69eb5203019664984895a163bebfb9e0">m_i64Height</a>;               </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structRoi.html#a9927c534e881f98546fe820b06fbbc42">   57</a></span>    int64_t              <a class="code hl_variable" href="structRoi.html#a9927c534e881f98546fe820b06fbbc42">m_i64OffsetX</a>;              </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structRoi.html#a3eeed4b05b18df0112786c34b014bc91">   58</a></span>    int64_t              <a class="code hl_variable" href="structRoi.html#a3eeed4b05b18df0112786c34b014bc91">m_i64OffsetY</a>;              </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structRoi.html#abc48174ce19b7437798ecbaf64c870bb">   60</a></span>    <a class="code hl_function" href="structRoi.html#abc48174ce19b7437798ecbaf64c870bb">Roi</a>()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="comment">//default roi is a 640*480 area in the center     默认的roi是640*480的中心区域 </span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_variable" href="structRoi.html#ac30e2622afe4971678f0359d252c874f">m_i64Width</a> = 640;             </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_variable" href="structRoi.html#a69eb5203019664984895a163bebfb9e0">m_i64Height</a> = 480;            </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_variable" href="structRoi.html#a9927c534e881f98546fe820b06fbbc42">m_i64OffsetX</a> = 80;            </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_variable" href="structRoi.html#a3eeed4b05b18df0112786c34b014bc91">m_i64OffsetY</a> = 60;            </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="GxCamera_8h.html#aa2309e113c8af637c41e33f877e53f97">   68</a></span>}<a class="code hl_typedef" href="GxCamera_8h.html#aa2309e113c8af637c41e33f877e53f97">Roi</a>;</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="};">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structExposureGain.html">   71</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structExposureGain.html">ExposureGain</a></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structExposureGain.html#a333bd43c182caeae98bdb1469ef1bd7e">   74</a></span>    <span class="keywordtype">bool</span>                 <a class="code hl_variable" href="structExposureGain.html#a333bd43c182caeae98bdb1469ef1bd7e">m_bAutoExposure</a>;               </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structExposureGain.html#a3f1e77a836addab0efa1f2432db851c8">   75</a></span>    <span class="keywordtype">bool</span>                 <a class="code hl_variable" href="structExposureGain.html#a3f1e77a836addab0efa1f2432db851c8">m_bAutoGain</a>;                   </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structExposureGain.html#a96ead067b1b93d338019d94d160c95f0">   77</a></span>    <span class="keywordtype">double</span>               <a class="code hl_variable" href="structExposureGain.html#a96ead067b1b93d338019d94d160c95f0">m_dExposureTime</a>;               </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="structExposureGain.html#aeea8e1fda7390bc1b8b038f44e805367">   78</a></span>    <span class="keywordtype">double</span>               <a class="code hl_variable" href="structExposureGain.html#aeea8e1fda7390bc1b8b038f44e805367">m_dAutoExposureTimeMax</a>;        </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structExposureGain.html#a89e80bc712066e4ac237506e03a74b01">   79</a></span>    <span class="keywordtype">double</span>               <a class="code hl_variable" href="structExposureGain.html#a89e80bc712066e4ac237506e03a74b01">m_dAutoExposureTimeMin</a>;        </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structExposureGain.html#ad8b99936814a736a504d91872eaaa498">   81</a></span>    <span class="keywordtype">double</span>               <a class="code hl_variable" href="structExposureGain.html#ad8b99936814a736a504d91872eaaa498">m_dGain</a>;                       </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structExposureGain.html#ac012d2dcd3d8699ee5ff828c3b58992d">   82</a></span>    <span class="keywordtype">double</span>               <a class="code hl_variable" href="structExposureGain.html#ac012d2dcd3d8699ee5ff828c3b58992d">m_dAutoGainMax</a>;                </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structExposureGain.html#adc91d88e430c7a9e035b19c74f55ffb6">   83</a></span>    <span class="keywordtype">double</span>               <a class="code hl_variable" href="structExposureGain.html#adc91d88e430c7a9e035b19c74f55ffb6">m_dAutoGainMin</a>;                </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="structExposureGain.html#adf5fbb6b60d6a8ee9ad13c4dc3326903">   85</a></span>    int64_t              <a class="code hl_variable" href="structExposureGain.html#adf5fbb6b60d6a8ee9ad13c4dc3326903">m_i64GrayValue</a>;                </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="structExposureGain.html#ac6014a33726881ddedf1dfe1618c105f">   88</a></span>    <a class="code hl_function" href="structExposureGain.html#ac6014a33726881ddedf1dfe1618c105f">ExposureGain</a>()</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_variable" href="structExposureGain.html#a333bd43c182caeae98bdb1469ef1bd7e">m_bAutoExposure</a> = <span class="keyword">true</span>;              </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_variable" href="structExposureGain.html#a3f1e77a836addab0efa1f2432db851c8">m_bAutoGain</a> = <span class="keyword">true</span>;                  </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <a class="code hl_variable" href="structExposureGain.html#a96ead067b1b93d338019d94d160c95f0">m_dExposureTime</a> = 2000;               </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_variable" href="structExposureGain.html#aeea8e1fda7390bc1b8b038f44e805367">m_dAutoExposureTimeMax</a> = 10000;        </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_variable" href="structExposureGain.html#a89e80bc712066e4ac237506e03a74b01">m_dAutoExposureTimeMin</a> = 500;        </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_variable" href="structExposureGain.html#ad8b99936814a736a504d91872eaaa498">m_dGain</a> = 6;                          </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_variable" href="structExposureGain.html#ac012d2dcd3d8699ee5ff828c3b58992d">m_dAutoGainMax</a> = 10;                   </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_variable" href="structExposureGain.html#adc91d88e430c7a9e035b19c74f55ffb6">m_dAutoGainMin</a> = 5;                   </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_variable" href="structExposureGain.html#adf5fbb6b60d6a8ee9ad13c4dc3326903">m_i64GrayValue</a> = 200;                 </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="GxCamera_8h.html#ab651e28802e5694b605afa4a23caaa38">  103</a></span>}<a class="code hl_typedef" href="GxCamera_8h.html#ab651e28802e5694b605afa4a23caaa38">ExposureGain</a>;</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="};">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="structWhiteBalance.html">  106</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structWhiteBalance.html">WhiteBalance</a></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>{</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="structWhiteBalance.html#ac37b43333344081122c7b8432543bdca">  108</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structWhiteBalance.html#ac37b43333344081122c7b8432543bdca">m_bWhiteBalance</a>;                          </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="structWhiteBalance.html#a0fd222e56218ed83993690bc46f8daae">  109</a></span>    <a class="code hl_enumeration" href="GxIAPI_8h.html#ad9805db4f9f6c0a6d9e0bb6fefdd84ad">GX_AWB_LAMP_HOUSE_ENTRY</a> <a class="code hl_variable" href="structWhiteBalance.html#a0fd222e56218ed83993690bc46f8daae">lightSource</a>;           </div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="structWhiteBalance.html#a84fca47e214fb40d86e2255b4ee022ac">  110</a></span>    <a class="code hl_function" href="structWhiteBalance.html#a84fca47e214fb40d86e2255b4ee022ac">WhiteBalance</a>()</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_variable" href="structWhiteBalance.html#ac37b43333344081122c7b8432543bdca">m_bWhiteBalance</a> = <span class="keyword">false</span>;                   </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <a class="code hl_variable" href="structWhiteBalance.html#a0fd222e56218ed83993690bc46f8daae">lightSource</a> = <a class="code hl_enumvalue" href="GxIAPI_8h.html#ad9805db4f9f6c0a6d9e0bb6fefdd84ada2b38b2da23ea16bb713f74ba7afba91d">GX_AWB_LAMP_HOUSE_ADAPTIVE</a>;  </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="GxCamera_8h.html#a8d9ccaa2d6b5f9429f799d9a9d628392">  115</a></span>}<a class="code hl_typedef" href="GxCamera_8h.html#a8d9ccaa2d6b5f9429f799d9a9d628392">WhiteBalance</a>;</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="};">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classGxCamera.html">  117</a></span><span class="keyword">class </span><a class="code hl_class" href="classGxCamera.html">GxCamera</a></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>{</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="comment">//friend void *ProcGetImage(void* pMatImage);</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_function" href="classGxCamera.html#a02c50cc2d16aa8681a73a321ab0df1d8">GxCamera</a>();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <a class="code hl_function" href="classGxCamera.html#a47caaeeb6090105cc185a2ebca0f304f">~GxCamera</a>();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGxCamera.html#a6f5af3c930b1b0c5e6304bfaf1a799e4">initial</a>();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGxCamera.html#ac4298120e9ef0484c06056ce095aac4d">isOpen</a>();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGxCamera.html#af61afe2f0f130108e4bb50806cdd0d81">close</a>(); </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGxCamera.html#aa96bdd2586c6013f9d22f9e45aaecd67">get_exposure_us</a>(<span class="keywordtype">double</span>* us);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="comment">// Capture single picture</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGxCamera.html#a413afeb31f44dfe16d7efa18b41140d6">read</a>(cv::Mat* targetMatImg, <span class="keywordtype">float</span>* timestamp);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGxCamera.html#af2737ac031096690e6ee033171062725">openDevice</a>(<span class="keywordtype">bool</span> useSN, <span class="keyword">const</span> <span class="keywordtype">char</span>* CameraSN);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGxCamera.html#aa77c4292bf8a86127ea3d90722c69b84">setTriggerParam</a>(<span class="keywordtype">bool</span> useHardTrigger);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGxCamera.html#aa444f2eb5658476c41f5a875775094f9">setExposureGainParam</a>( <span class="keywordtype">bool</span> AutoExposure,</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                               <span class="keywordtype">bool</span> AutoGain,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                               <span class="keywordtype">double</span> ExposureTime,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                               <span class="keywordtype">double</span> AutoExposureTimeMin,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                               <span class="keywordtype">double</span> AutoExposureTimeMax,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                               <span class="keywordtype">double</span> Gain,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                               <span class="keywordtype">double</span> AutoGainMin,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                               <span class="keywordtype">double</span> AutoGainMax,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                               int64_t GrayValue);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGxCamera.html#a3a2e4b253fa1d796375cf937e24a901d">setRoiParam</a>( int64_t Width,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                      int64_t Height,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                      int64_t OffsetX,</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                      int64_t OffsetY);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGxCamera.html#aefaf0f843ff3459b34c96f8c09cd96e8">setWhiteBalanceParam</a>( <span class="keywordtype">bool</span> WhiteBalanceOn,</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                               <a class="code hl_enumeration" href="GxIAPI_8h.html#ad9805db4f9f6c0a6d9e0bb6fefdd84ad">GX_AWB_LAMP_HOUSE_ENTRY</a> lightSource);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <a class="code hl_typedef" href="GxIAPI_8h.html#a024157349dab0f7a113c5ff7267672ea">GX_STATUS</a> setRoi();</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_typedef" href="GxIAPI_8h.html#a024157349dab0f7a113c5ff7267672ea">GX_STATUS</a> setExposureGain();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_typedef" href="GxIAPI_8h.html#a024157349dab0f7a113c5ff7267672ea">GX_STATUS</a> setWhiteBalance();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <a class="code hl_typedef" href="GxIAPI_8h.html#a024157349dab0f7a113c5ff7267672ea">GX_STATUS</a> setTrigger();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <a class="code hl_typedef" href="GxIAPI_8h.html#a024157349dab0f7a113c5ff7267672ea">GX_STATUS</a> setBufferSize();</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <a class="code hl_typedef" href="GxIAPI_8h.html#a8e9793aaf704936a037db9c3548a096a">GX_DEV_HANDLE</a> g_hDevice;                    </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordtype">char</span>* g_pDeviceSN;                          </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    int64_t g_i64ColorFilter;                   </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    int64_t g_nPayloadSize = 0;                 </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    uint32_t ui32DeviceNum = 0;                 </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordtype">bool</span> g_bTriggerMode;                        </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordtype">bool</span> g_bColorFilter;                        </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordtype">bool</span> g_bExposure;                           </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordtype">bool</span> g_bGain;                               </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordtype">bool</span> g_bImgImprovement;                     </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordtype">bool</span> g_bRoi;                                </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordtype">bool</span> g_bWhiteBalance;                       </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <a class="code hl_struct" href="structExposureGain.html">ExposureGain</a> exposure_gain;                 </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <a class="code hl_struct" href="structRoi.html">Roi</a> roi;                                    </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <a class="code hl_struct" href="structWhiteBalance.html">WhiteBalance</a> white_balance;                 </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>};</div>
+</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="ttc" id="aDxImageProc_8h_html"><div class="ttname"><a href="DxImageProc_8h.html">DxImageProc.h</a></div><div class="ttdoc">Image Processing Library</div></div>
+<div class="ttc" id="aGxCamera_8h_html_a5e9a7655747743a3e0deaa5f5a80d58a"><div class="ttname"><a href="GxCamera_8h.html#a5e9a7655747743a3e0deaa5f5a80d58a">GetErrorString</a></div><div class="ttdeci">void GetErrorString(GX_STATUS emErrorStatus)</div><div class="ttdoc">Get description of input error code</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:430</div></div>
+<div class="ttc" id="aGxCamera_8h_html_a8d9ccaa2d6b5f9429f799d9a9d628392"><div class="ttname"><a href="GxCamera_8h.html#a8d9ccaa2d6b5f9429f799d9a9d628392">WhiteBalance</a></div><div class="ttdeci">struct WhiteBalance WhiteBalance</div><div class="ttdoc">WhiteBalance</div></div>
+<div class="ttc" id="aGxCamera_8h_html_aa2309e113c8af637c41e33f877e53f97"><div class="ttname"><a href="GxCamera_8h.html#aa2309e113c8af637c41e33f877e53f97">Roi</a></div><div class="ttdeci">struct Roi Roi</div><div class="ttdoc">Roi and resolution Param</div></div>
+<div class="ttc" id="aGxCamera_8h_html_ab651e28802e5694b605afa4a23caaa38"><div class="ttname"><a href="GxCamera_8h.html#ab651e28802e5694b605afa4a23caaa38">ExposureGain</a></div><div class="ttdeci">struct ExposureGain ExposureGain</div><div class="ttdoc">Exposure and Gain Param struct 曝光和图像通道增益</div></div>
+<div class="ttc" id="aGxCamera_8h_html_ac07653d7837e6264e0472a8899eaa4a8"><div class="ttname"><a href="GxCamera_8h.html#ac07653d7837e6264e0472a8899eaa4a8">ProcGetImage</a></div><div class="ttdeci">void * ProcGetImage(void *pAcquisitionThread)</div></div>
+<div class="ttc" id="aGxIAPI_8h_html"><div class="ttname"><a href="GxIAPI_8h.html">GxIAPI.h</a></div></div>
+<div class="ttc" id="aGxIAPI_8h_html_a024157349dab0f7a113c5ff7267672ea"><div class="ttname"><a href="GxIAPI_8h.html#a024157349dab0f7a113c5ff7267672ea">GX_STATUS</a></div><div class="ttdeci">int32_t GX_STATUS</div><div class="ttdef"><b>Definition</b> GxIAPI.h:124</div></div>
+<div class="ttc" id="aGxIAPI_8h_html_a8e9793aaf704936a037db9c3548a096a"><div class="ttname"><a href="GxIAPI_8h.html#a8e9793aaf704936a037db9c3548a096a">GX_DEV_HANDLE</a></div><div class="ttdeci">void * GX_DEV_HANDLE</div><div class="ttdoc">Device handle. It can be obtained through the GXOpenDevice interface and can be used to achieve contr...</div><div class="ttdef"><b>Definition</b> GxIAPI.h:528</div></div>
+<div class="ttc" id="aGxIAPI_8h_html_ad9805db4f9f6c0a6d9e0bb6fefdd84ad"><div class="ttname"><a href="GxIAPI_8h.html#ad9805db4f9f6c0a6d9e0bb6fefdd84ad">GX_AWB_LAMP_HOUSE_ENTRY</a></div><div class="ttdeci">GX_AWB_LAMP_HOUSE_ENTRY</div><div class="ttdef"><b>Definition</b> GxIAPI.h:751</div></div>
+<div class="ttc" id="aGxIAPI_8h_html_ad9805db4f9f6c0a6d9e0bb6fefdd84ada2b38b2da23ea16bb713f74ba7afba91d"><div class="ttname"><a href="GxIAPI_8h.html#ad9805db4f9f6c0a6d9e0bb6fefdd84ada2b38b2da23ea16bb713f74ba7afba91d">GX_AWB_LAMP_HOUSE_ADAPTIVE</a></div><div class="ttdeci">@ GX_AWB_LAMP_HOUSE_ADAPTIVE</div><div class="ttdoc">Adaptive light source</div><div class="ttdef"><b>Definition</b> GxIAPI.h:752</div></div>
+<div class="ttc" id="aclassGxCamera_html"><div class="ttname"><a href="classGxCamera.html">GxCamera</a></div><div class="ttdef"><b>Definition</b> GxCamera.h:118</div></div>
+<div class="ttc" id="aclassGxCamera_html_a02c50cc2d16aa8681a73a321ab0df1d8"><div class="ttname"><a href="classGxCamera.html#a02c50cc2d16aa8681a73a321ab0df1d8">GxCamera::GxCamera</a></div><div class="ttdeci">GxCamera()</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:19</div></div>
+<div class="ttc" id="aclassGxCamera_html_a3a2e4b253fa1d796375cf937e24a901d"><div class="ttname"><a href="classGxCamera.html#a3a2e4b253fa1d796375cf937e24a901d">GxCamera::setRoiParam</a></div><div class="ttdeci">void setRoiParam(int64_t Width, int64_t Height, int64_t OffsetX, int64_t OffsetY)</div><div class="ttdoc">Set camera roi param</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:312</div></div>
+<div class="ttc" id="aclassGxCamera_html_a413afeb31f44dfe16d7efa18b41140d6"><div class="ttname"><a href="classGxCamera.html#a413afeb31f44dfe16d7efa18b41140d6">GxCamera::read</a></div><div class="ttdeci">bool read(cv::Mat *targetMatImg, float *timestamp)</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:136</div></div>
+<div class="ttc" id="aclassGxCamera_html_a47caaeeb6090105cc185a2ebca0f304f"><div class="ttname"><a href="classGxCamera.html#a47caaeeb6090105cc185a2ebca0f304f">GxCamera::~GxCamera</a></div><div class="ttdeci">~GxCamera()</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:28</div></div>
+<div class="ttc" id="aclassGxCamera_html_a6f5af3c930b1b0c5e6304bfaf1a799e4"><div class="ttname"><a href="classGxCamera.html#a6f5af3c930b1b0c5e6304bfaf1a799e4">GxCamera::initial</a></div><div class="ttdeci">bool initial()</div><div class="ttdoc">initial</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:33</div></div>
+<div class="ttc" id="aclassGxCamera_html_aa444f2eb5658476c41f5a875775094f9"><div class="ttname"><a href="classGxCamera.html#aa444f2eb5658476c41f5a875775094f9">GxCamera::setExposureGainParam</a></div><div class="ttdeci">void setExposureGainParam(bool AutoExposure, bool AutoGain, double ExposureTime, double AutoExposureTimeMin, double AutoExposureTimeMax, double Gain, double AutoGainMin, double AutoGainMax, int64_t GrayValue)</div><div class="ttdoc">Set camera exposure and gain</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:202</div></div>
+<div class="ttc" id="aclassGxCamera_html_aa77c4292bf8a86127ea3d90722c69b84"><div class="ttname"><a href="classGxCamera.html#aa77c4292bf8a86127ea3d90722c69b84">GxCamera::setTriggerParam</a></div><div class="ttdeci">void setTriggerParam(bool useHardTrigger)</div><div class="ttdoc">Set trigger mode</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:268</div></div>
+<div class="ttc" id="aclassGxCamera_html_aa96bdd2586c6013f9d22f9e45aaecd67"><div class="ttname"><a href="classGxCamera.html#aa96bdd2586c6013f9d22f9e45aaecd67">GxCamera::get_exposure_us</a></div><div class="ttdeci">void get_exposure_us(double *us)</div><div class="ttdoc">Get exposure time(us)</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:195</div></div>
+<div class="ttc" id="aclassGxCamera_html_ac4298120e9ef0484c06056ce095aac4d"><div class="ttname"><a href="classGxCamera.html#ac4298120e9ef0484c06056ce095aac4d">GxCamera::isOpen</a></div><div class="ttdeci">bool isOpen()</div><div class="ttdoc">Is open</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:62</div></div>
+<div class="ttc" id="aclassGxCamera_html_aefaf0f843ff3459b34c96f8c09cd96e8"><div class="ttname"><a href="classGxCamera.html#aefaf0f843ff3459b34c96f8c09cd96e8">GxCamera::setWhiteBalanceParam</a></div><div class="ttdeci">void setWhiteBalanceParam(bool WhiteBalanceOn, GX_AWB_LAMP_HOUSE_ENTRY lightSource)</div><div class="ttdoc">Set camera WhiteBalance</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:345</div></div>
+<div class="ttc" id="aclassGxCamera_html_af2737ac031096690e6ee033171062725"><div class="ttname"><a href="classGxCamera.html#af2737ac031096690e6ee033171062725">GxCamera::openDevice</a></div><div class="ttdeci">bool openDevice(bool useSN, const char *CameraSN)</div><div class="ttdoc">Open device and display device information</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:76</div></div>
+<div class="ttc" id="aclassGxCamera_html_af61afe2f0f130108e4bb50806cdd0d81"><div class="ttname"><a href="classGxCamera.html#af61afe2f0f130108e4bb50806cdd0d81">GxCamera::close</a></div><div class="ttdeci">bool close()</div><div class="ttdoc">Close devise</div><div class="ttdef"><b>Definition</b> GxCamera.cpp:67</div></div>
+<div class="ttc" id="astructExposureGain_html"><div class="ttname"><a href="structExposureGain.html">ExposureGain</a></div><div class="ttdoc">Exposure and Gain Param struct 曝光和图像通道增益</div><div class="ttdef"><b>Definition</b> GxCamera.h:72</div></div>
+<div class="ttc" id="astructExposureGain_html_a333bd43c182caeae98bdb1469ef1bd7e"><div class="ttname"><a href="structExposureGain.html#a333bd43c182caeae98bdb1469ef1bd7e">ExposureGain::m_bAutoExposure</a></div><div class="ttdeci">bool m_bAutoExposure</div><div class="ttdoc">Exposure is auto mode or not</div><div class="ttdef"><b>Definition</b> GxCamera.h:74</div></div>
+<div class="ttc" id="astructExposureGain_html_a3f1e77a836addab0efa1f2432db851c8"><div class="ttname"><a href="structExposureGain.html#a3f1e77a836addab0efa1f2432db851c8">ExposureGain::m_bAutoGain</a></div><div class="ttdeci">bool m_bAutoGain</div><div class="ttdoc">Gain is auto mode or not</div><div class="ttdef"><b>Definition</b> GxCamera.h:75</div></div>
+<div class="ttc" id="astructExposureGain_html_a89e80bc712066e4ac237506e03a74b01"><div class="ttname"><a href="structExposureGain.html#a89e80bc712066e4ac237506e03a74b01">ExposureGain::m_dAutoExposureTimeMin</a></div><div class="ttdeci">double m_dAutoExposureTimeMin</div><div class="ttdoc">Minimum exposure time when using AutoExporsureTime mode</div><div class="ttdef"><b>Definition</b> GxCamera.h:79</div></div>
+<div class="ttc" id="astructExposureGain_html_a96ead067b1b93d338019d94d160c95f0"><div class="ttname"><a href="structExposureGain.html#a96ead067b1b93d338019d94d160c95f0">ExposureGain::m_dExposureTime</a></div><div class="ttdeci">double m_dExposureTime</div><div class="ttdoc">Exposure Time</div><div class="ttdef"><b>Definition</b> GxCamera.h:77</div></div>
+<div class="ttc" id="astructExposureGain_html_ac012d2dcd3d8699ee5ff828c3b58992d"><div class="ttname"><a href="structExposureGain.html#ac012d2dcd3d8699ee5ff828c3b58992d">ExposureGain::m_dAutoGainMax</a></div><div class="ttdeci">double m_dAutoGainMax</div><div class="ttdoc">Maximum gain when using AutoGain mode</div><div class="ttdef"><b>Definition</b> GxCamera.h:82</div></div>
+<div class="ttc" id="astructExposureGain_html_ac6014a33726881ddedf1dfe1618c105f"><div class="ttname"><a href="structExposureGain.html#ac6014a33726881ddedf1dfe1618c105f">ExposureGain::ExposureGain</a></div><div class="ttdeci">ExposureGain()</div><div class="ttdoc">Default value</div><div class="ttdef"><b>Definition</b> GxCamera.h:88</div></div>
+<div class="ttc" id="astructExposureGain_html_ad8b99936814a736a504d91872eaaa498"><div class="ttname"><a href="structExposureGain.html#ad8b99936814a736a504d91872eaaa498">ExposureGain::m_dGain</a></div><div class="ttdeci">double m_dGain</div><div class="ttdoc">Gain</div><div class="ttdef"><b>Definition</b> GxCamera.h:81</div></div>
+<div class="ttc" id="astructExposureGain_html_adc91d88e430c7a9e035b19c74f55ffb6"><div class="ttname"><a href="structExposureGain.html#adc91d88e430c7a9e035b19c74f55ffb6">ExposureGain::m_dAutoGainMin</a></div><div class="ttdeci">double m_dAutoGainMin</div><div class="ttdoc">Minimum gain when using AutoGain mode</div><div class="ttdef"><b>Definition</b> GxCamera.h:83</div></div>
+<div class="ttc" id="astructExposureGain_html_adf5fbb6b60d6a8ee9ad13c4dc3326903"><div class="ttname"><a href="structExposureGain.html#adf5fbb6b60d6a8ee9ad13c4dc3326903">ExposureGain::m_i64GrayValue</a></div><div class="ttdeci">int64_t m_i64GrayValue</div><div class="ttdoc">Expected gray value</div><div class="ttdef"><b>Definition</b> GxCamera.h:85</div></div>
+<div class="ttc" id="astructExposureGain_html_aeea8e1fda7390bc1b8b038f44e805367"><div class="ttname"><a href="structExposureGain.html#aeea8e1fda7390bc1b8b038f44e805367">ExposureGain::m_dAutoExposureTimeMax</a></div><div class="ttdeci">double m_dAutoExposureTimeMax</div><div class="ttdoc">Maximum exposure time when using AutoExporsureTime mode</div><div class="ttdef"><b>Definition</b> GxCamera.h:78</div></div>
+<div class="ttc" id="astructRoi_html"><div class="ttname"><a href="structRoi.html">Roi</a></div><div class="ttdoc">Roi and resolution Param</div><div class="ttdef"><b>Definition</b> GxCamera.h:54</div></div>
+<div class="ttc" id="astructRoi_html_a3eeed4b05b18df0112786c34b014bc91"><div class="ttname"><a href="structRoi.html#a3eeed4b05b18df0112786c34b014bc91">Roi::m_i64OffsetY</a></div><div class="ttdeci">int64_t m_i64OffsetY</div><div class="ttdoc">OffsetY of roi</div><div class="ttdef"><b>Definition</b> GxCamera.h:58</div></div>
+<div class="ttc" id="astructRoi_html_a69eb5203019664984895a163bebfb9e0"><div class="ttname"><a href="structRoi.html#a69eb5203019664984895a163bebfb9e0">Roi::m_i64Height</a></div><div class="ttdeci">int64_t m_i64Height</div><div class="ttdoc">Image roi height</div><div class="ttdef"><b>Definition</b> GxCamera.h:56</div></div>
+<div class="ttc" id="astructRoi_html_a9927c534e881f98546fe820b06fbbc42"><div class="ttname"><a href="structRoi.html#a9927c534e881f98546fe820b06fbbc42">Roi::m_i64OffsetX</a></div><div class="ttdeci">int64_t m_i64OffsetX</div><div class="ttdoc">OffsetX of roi</div><div class="ttdef"><b>Definition</b> GxCamera.h:57</div></div>
+<div class="ttc" id="astructRoi_html_abc48174ce19b7437798ecbaf64c870bb"><div class="ttname"><a href="structRoi.html#abc48174ce19b7437798ecbaf64c870bb">Roi::Roi</a></div><div class="ttdeci">Roi()</div><div class="ttdef"><b>Definition</b> GxCamera.h:60</div></div>
+<div class="ttc" id="astructRoi_html_ac30e2622afe4971678f0359d252c874f"><div class="ttname"><a href="structRoi.html#ac30e2622afe4971678f0359d252c874f">Roi::m_i64Width</a></div><div class="ttdeci">int64_t m_i64Width</div><div class="ttdoc">Image roi width</div><div class="ttdef"><b>Definition</b> GxCamera.h:55</div></div>
+<div class="ttc" id="astructWhiteBalance_html"><div class="ttname"><a href="structWhiteBalance.html">WhiteBalance</a></div><div class="ttdoc">WhiteBalance</div><div class="ttdef"><b>Definition</b> GxCamera.h:107</div></div>
+<div class="ttc" id="astructWhiteBalance_html_a0fd222e56218ed83993690bc46f8daae"><div class="ttname"><a href="structWhiteBalance.html#a0fd222e56218ed83993690bc46f8daae">WhiteBalance::lightSource</a></div><div class="ttdeci">GX_AWB_LAMP_HOUSE_ENTRY lightSource</div><div class="ttdoc">The lamp type of environment</div><div class="ttdef"><b>Definition</b> GxCamera.h:109</div></div>
+<div class="ttc" id="astructWhiteBalance_html_a84fca47e214fb40d86e2255b4ee022ac"><div class="ttname"><a href="structWhiteBalance.html#a84fca47e214fb40d86e2255b4ee022ac">WhiteBalance::WhiteBalance</a></div><div class="ttdeci">WhiteBalance()</div><div class="ttdef"><b>Definition</b> GxCamera.h:110</div></div>
+<div class="ttc" id="astructWhiteBalance_html_ac37b43333344081122c7b8432543bdca"><div class="ttname"><a href="structWhiteBalance.html#ac37b43333344081122c7b8432543bdca">WhiteBalance::m_bWhiteBalance</a></div><div class="ttdeci">bool m_bWhiteBalance</div><div class="ttdoc">Auto WhiteBalance is applied ?</div><div class="ttdef"><b>Definition</b> GxCamera.h:108</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bba024cd03edd7f9d6096b84e1006209.html">general</a></li><li class="navelem"><a class="el" href="dir_ee337c26d41058f8e9191e89f946b191.html">GxCamera</a></li><li class="navelem"><a class="el" href="GxCamera_8h.html">GxCamera.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

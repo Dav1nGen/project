@@ -1,0 +1,241 @@
+\doxysection{Gx\+Camera类 参考}
+\hypertarget{classGxCamera}{}\label{classGxCamera}\index{GxCamera@{GxCamera}}
+
+
+{\ttfamily \#include $<$Gx\+Camera.\+h$>$}
+
+
+
+Gx\+Camera 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classGxCamera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGxCamera_a02c50cc2d16aa8681a73a321ab0df1d8}{Gx\+Camera}} ()
+\item 
+\mbox{\hyperlink{classGxCamera_a47caaeeb6090105cc185a2ebca0f304f}{\texorpdfstring{$\sim$}{\string~}\+Gx\+Camera}} ()
+\item 
+bool \mbox{\hyperlink{classGxCamera_a6f5af3c930b1b0c5e6304bfaf1a799e4}{initial}} ()
+\begin{DoxyCompactList}\small\item\em initial \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGxCamera_ac4298120e9ef0484c06056ce095aac4d}{is\+Open}} ()
+\begin{DoxyCompactList}\small\item\em Is open \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGxCamera_af61afe2f0f130108e4bb50806cdd0d81}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close devise \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGxCamera_aa96bdd2586c6013f9d22f9e45aaecd67}{get\+\_\+exposure\+\_\+us}} (double \texorpdfstring{$\ast$}{*}us)
+\begin{DoxyCompactList}\small\item\em Get exposure time(us) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6}{read}} (cv\+::\+Mat \texorpdfstring{$\ast$}{*}target\+Mat\+Img, float \texorpdfstring{$\ast$}{*}timestamp)
+\item 
+bool \mbox{\hyperlink{classGxCamera_af2737ac031096690e6ee033171062725}{open\+Device}} (bool use\+SN, const char \texorpdfstring{$\ast$}{*}Camera\+SN)
+\begin{DoxyCompactList}\small\item\em Open device and display device information \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGxCamera_aa77c4292bf8a86127ea3d90722c69b84}{set\+Trigger\+Param}} (bool use\+Hard\+Trigger)
+\begin{DoxyCompactList}\small\item\em Set trigger mode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGxCamera_aa444f2eb5658476c41f5a875775094f9}{set\+Exposure\+Gain\+Param}} (bool Auto\+Exposure, bool Auto\+Gain, double Exposure\+Time, double Auto\+Exposure\+Time\+Min, double Auto\+Exposure\+Time\+Max, double Gain, double Auto\+Gain\+Min, double Auto\+Gain\+Max, int64\+\_\+t Gray\+Value)
+\begin{DoxyCompactList}\small\item\em Set camera exposure and gain \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGxCamera_a3a2e4b253fa1d796375cf937e24a901d}{set\+Roi\+Param}} (int64\+\_\+t Width, int64\+\_\+t Height, int64\+\_\+t OffsetX, int64\+\_\+t OffsetY)
+\begin{DoxyCompactList}\small\item\em Set camera roi param \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGxCamera_aefaf0f843ff3459b34c96f8c09cd96e8}{set\+White\+Balance\+Param}} (bool White\+Balance\+On, \mbox{\hyperlink{GxIAPI_8h_ad9805db4f9f6c0a6d9e0bb6fefdd84ad}{GX\+\_\+\+AWB\+\_\+\+LAMP\+\_\+\+HOUSE\+\_\+\+ENTRY}} light\+Source)
+\begin{DoxyCompactList}\small\item\em Set camera \doxylink{structWhiteBalance}{White\+Balance} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{classGxCamera_a02c50cc2d16aa8681a73a321ab0df1d8}\label{classGxCamera_a02c50cc2d16aa8681a73a321ab0df1d8} 
+\index{GxCamera@{GxCamera}!GxCamera@{GxCamera}}
+\index{GxCamera@{GxCamera}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{GxCamera()}{GxCamera()}}
+{\footnotesize\ttfamily Gx\+Camera\+::\+Gx\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} Device handle
+
+\texorpdfstring{$<$}{<} Color filter support flag
+
+\texorpdfstring{$<$}{<} Color filter of device
+
+\texorpdfstring{$<$}{<} Payload size
+
+引用了 \mbox{\hyperlink{GxIAPI_8h_aec292d5bd4d07698f6aaa21fca7d3a66a20ee419926098812bf3db580fa590b2a}{GX\+\_\+\+COLOR\+\_\+\+FILTER\+\_\+\+NONE}}.
+
+\Hypertarget{classGxCamera_a47caaeeb6090105cc185a2ebca0f304f}\label{classGxCamera_a47caaeeb6090105cc185a2ebca0f304f} 
+\index{GxCamera@{GxCamera}!````~GxCamera@{\texorpdfstring{$\sim$}{\string~}GxCamera}}
+\index{````~GxCamera@{\texorpdfstring{$\sim$}{\string~}GxCamera}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GxCamera()}{\string~GxCamera()}}
+{\footnotesize\ttfamily Gx\+Camera\+::\texorpdfstring{$\sim$}{\string~}\+Gx\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{classGxCamera_af61afe2f0f130108e4bb50806cdd0d81}\label{classGxCamera_af61afe2f0f130108e4bb50806cdd0d81} 
+\index{GxCamera@{GxCamera}!close@{close}}
+\index{close@{close}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool Gx\+Camera\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close devise 
+
+
+
+引用了 \mbox{\hyperlink{GxIAPI_8h_a069f2cefb829d5b929259f1e85e05db3}{GXClose\+Device()}}, \mbox{\hyperlink{GxIAPI_8h_a6601fae30c60ad1da98e94ab478c1430}{GXClose\+Lib()}} , 以及 \mbox{\hyperlink{GxIAPI_8h_a1ff25e042451fac5394f5da8987f5c84}{GXStream\+Off()}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\Hypertarget{classGxCamera_aa96bdd2586c6013f9d22f9e45aaecd67}\label{classGxCamera_aa96bdd2586c6013f9d22f9e45aaecd67} 
+\index{GxCamera@{GxCamera}!get\_exposure\_us@{get\_exposure\_us}}
+\index{get\_exposure\_us@{get\_exposure\_us}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{get\_exposure\_us()}{get\_exposure\_us()}}
+{\footnotesize\ttfamily void Gx\+Camera\+::get\+\_\+exposure\+\_\+us (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{us }\end{DoxyParamCaption})}
+
+
+
+Get exposure time(us) 
+
+
+
+引用了 \mbox{\hyperlink{GxIAPI_8h_a50b9574ff3075eb404081ef39b0bed8eacba1d85ede0c8fd972aae12e093f5763}{GX\+\_\+\+FLOAT\+\_\+\+EXPOSURE\+\_\+\+TIME}} , 以及 \mbox{\hyperlink{GxIAPI_8h_ad5e6df734ef44c90629e29244614f6cd}{GXGet\+Float()}}.
+
+\Hypertarget{classGxCamera_a6f5af3c930b1b0c5e6304bfaf1a799e4}\label{classGxCamera_a6f5af3c930b1b0c5e6304bfaf1a799e4} 
+\index{GxCamera@{GxCamera}!initial@{initial}}
+\index{initial@{initial}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{initial()}{initial()}}
+{\footnotesize\ttfamily bool Gx\+Camera\+::initial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initial 
+
+
+
+引用了 \mbox{\hyperlink{GxIAPI_8h_ad9805db4f9f6c0a6d9e0bb6fefdd84ada2b38b2da23ea16bb713f74ba7afba91d}{GX\+\_\+\+AWB\+\_\+\+LAMP\+\_\+\+HOUSE\+\_\+\+ADAPTIVE}}, \mbox{\hyperlink{GxIAPI_8h_a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a}{GX\+\_\+\+STATUS\+\_\+\+SUCCESS}}, \mbox{\hyperlink{GxCamera_8h_a5d30266edf63d17aa7629e54e92336a2}{GX\+\_\+\+VERIFY\+\_\+\+EXIT}}, \mbox{\hyperlink{GxIAPI_8h_a221acff1913d90f6649436bd74f403bc}{GXInit\+Lib()}}, \mbox{\hyperlink{GxIAPI_8h_ae0e6f85215dc98691cbc975e25cc2f23}{GXUpdate\+Device\+List()}}, \mbox{\hyperlink{classGxCamera_aa444f2eb5658476c41f5a875775094f9}{set\+Exposure\+Gain\+Param()}}, \mbox{\hyperlink{classGxCamera_a3a2e4b253fa1d796375cf937e24a901d}{set\+Roi\+Param()}}, \mbox{\hyperlink{classGxCamera_aa77c4292bf8a86127ea3d90722c69b84}{set\+Trigger\+Param()}} , 以及 \mbox{\hyperlink{classGxCamera_aefaf0f843ff3459b34c96f8c09cd96e8}{set\+White\+Balance\+Param()}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\Hypertarget{classGxCamera_ac4298120e9ef0484c06056ce095aac4d}\label{classGxCamera_ac4298120e9ef0484c06056ce095aac4d} 
+\index{GxCamera@{GxCamera}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily bool Gx\+Camera\+::is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Is open 
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_af2737ac031096690e6ee033171062725}{open\+Device()}}.
+
+\Hypertarget{classGxCamera_af2737ac031096690e6ee033171062725}\label{classGxCamera_af2737ac031096690e6ee033171062725} 
+\index{GxCamera@{GxCamera}!openDevice@{openDevice}}
+\index{openDevice@{openDevice}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{openDevice()}{openDevice()}}
+{\footnotesize\ttfamily bool Gx\+Camera\+::open\+Device (\begin{DoxyParamCaption}\item[{bool}]{use\+SN,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{Camera\+SN }\end{DoxyParamCaption})}
+
+
+
+Open device and display device information 
+
+Open device and display device information 打开设备并显示图像信息 
+
+引用了 \mbox{\hyperlink{structGX__OPEN__PARAM_ae6c6e49468d351389cb434484caebc5e}{GX\+\_\+\+OPEN\+\_\+\+PARAM\+::access\+Mode}}, \mbox{\hyperlink{GxIAPI_8h_a80774c8ef6975364e1916e1d5aef48b5a1b43b74ec3785284fdef12b5d85293f0}{GX\+\_\+\+ACCESS\+\_\+\+EXCLUSIVE}}, \mbox{\hyperlink{GxIAPI_8h_a50b9574ff3075eb404081ef39b0bed8eaa1affbab2027c6b256688cf5b140f013}{GX\+\_\+\+ENUM\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}}, \mbox{\hyperlink{GxIAPI_8h_aca9c20427953e4718f870154e10a52e6ab87c781cd9f9e7e9ae066f79823b05eb}{GX\+\_\+\+OPEN\+\_\+\+INDEX}}, \mbox{\hyperlink{GxIAPI_8h_aca9c20427953e4718f870154e10a52e6a0234fccc5e5042a2bbbbf9e476793522}{GX\+\_\+\+OPEN\+\_\+\+SN}}, \mbox{\hyperlink{GxIAPI_8h_a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a}{GX\+\_\+\+STATUS\+\_\+\+SUCCESS}}, \mbox{\hyperlink{GxCamera_8h_a5d30266edf63d17aa7629e54e92336a2}{GX\+\_\+\+VERIFY\+\_\+\+EXIT}}, \mbox{\hyperlink{GxIAPI_8h_a6601fae30c60ad1da98e94ab478c1430}{GXClose\+Lib()}}, \mbox{\hyperlink{GxIAPI_8h_a53809c20f1068619479ae4cda58c0785}{GXGet\+Enum()}}, \mbox{\hyperlink{GxIAPI_8h_a3dc71807fc024ee4ea3df29da20782d8}{GXIs\+Implemented()}}, \mbox{\hyperlink{GxIAPI_8h_a77ef77c6e48e6d2a6bd8973b380744ee}{GXOpen\+Device()}}, \mbox{\hyperlink{GxIAPI_8h_a61749c69c12989980f30e1ff3468d057}{GXStream\+On()}}, \mbox{\hyperlink{classGxCamera_ac4298120e9ef0484c06056ce095aac4d}{is\+Open()}}, \mbox{\hyperlink{structGX__OPEN__PARAM_ad13b6d59e7f1999c4044c5d579ad2db7}{GX\+\_\+\+OPEN\+\_\+\+PARAM\+::open\+Mode}} , 以及 \mbox{\hyperlink{structGX__OPEN__PARAM_a5290044e174a4845600bf4be870dc934}{GX\+\_\+\+OPEN\+\_\+\+PARAM\+::psz\+Content}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\Hypertarget{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6}\label{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6} 
+\index{GxCamera@{GxCamera}!read@{read}}
+\index{read@{read}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool Gx\+Camera\+::read (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \texorpdfstring{$\ast$}{*}}]{target\+Mat\+Img,  }\item[{float \texorpdfstring{$\ast$}{*}}]{timestamp }\end{DoxyParamCaption})}
+
+
+
+引用了 \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350aec44e0244d26e5f4a09d640bb9228e30}{BAYERBG}}, \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a455d746c7a8480b5568609c314ebe4f8}{DX\+\_\+\+OK}}, \mbox{\hyperlink{DxImageProc_8h_a5f348d7923ab6d77c4b4c71001c916b8}{Dx\+Raw8to\+RGB24()}}, \mbox{\hyperlink{GxCamera_8h_a5e9a7655747743a3e0deaa5f5a80d58a}{Get\+Error\+String()}}, \mbox{\hyperlink{GxIAPI_8h_a74f99fed9c5fb0d06bd8d26d34dff190a5b5a85ad3665f4a350264e1bb2f3e200}{GX\+\_\+\+FRAME\+\_\+\+STATUS\+\_\+\+SUCCESS}}, \mbox{\hyperlink{GxIAPI_8h_a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a}{GX\+\_\+\+STATUS\+\_\+\+SUCCESS}}, \mbox{\hyperlink{GxIAPI_8h_a8cd2067c476aa79382e9593eb1398204ace82569c77f176e31e55f7403fd58e80}{GX\+\_\+\+STATUS\+\_\+\+TIMEOUT}}, \mbox{\hyperlink{GxIAPI_8h_a4fc397772b16f506da27bf484b4db5c2}{GXDQBuf()}}, \mbox{\hyperlink{GxIAPI_8h_a591823ce8e2ad9c7b203b986916ae2a5}{GXQBuf()}}, \mbox{\hyperlink{structGX__FRAME__BUFFER_ad530a96fb849075118fc5e8421f9040c}{GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Height}}, \mbox{\hyperlink{structGX__FRAME__BUFFER_a3ec64f82446ed7d08e937f279baa610c}{GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Status}}, \mbox{\hyperlink{structGX__FRAME__BUFFER_af9b2758aed62d26d563ca4c80e151532}{GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Timestamp}}, \mbox{\hyperlink{structGX__FRAME__BUFFER_a53c909ab94278eee12c5208319867f35}{GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::n\+Width}}, \mbox{\hyperlink{structGX__FRAME__BUFFER_a294291b9246520b57d3259867b005a64}{GX\+\_\+\+FRAME\+\_\+\+BUFFER\+::p\+Img\+Buf}} , 以及 \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28ac84388ebeefecd120741da0fef012e96}{RAW2\+RGB\+\_\+\+NEIGHBOUR}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\Hypertarget{classGxCamera_aa444f2eb5658476c41f5a875775094f9}\label{classGxCamera_aa444f2eb5658476c41f5a875775094f9} 
+\index{GxCamera@{GxCamera}!setExposureGainParam@{setExposureGainParam}}
+\index{setExposureGainParam@{setExposureGainParam}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{setExposureGainParam()}{setExposureGainParam()}}
+{\footnotesize\ttfamily void Gx\+Camera\+::set\+Exposure\+Gain\+Param (\begin{DoxyParamCaption}\item[{bool}]{Auto\+Exposure,  }\item[{bool}]{Auto\+Gain,  }\item[{double}]{Exposure\+Time,  }\item[{double}]{Auto\+Exposure\+Time\+Min,  }\item[{double}]{Auto\+Exposure\+Time\+Max,  }\item[{double}]{Gain,  }\item[{double}]{Auto\+Gain\+Min,  }\item[{double}]{Auto\+Gain\+Max,  }\item[{int64\+\_\+t}]{Gray\+Value }\end{DoxyParamCaption})}
+
+
+
+Set camera exposure and gain 
+
+For client Set camera exposure and gain params 
+
+引用了 \mbox{\hyperlink{structExposureGain_a333bd43c182caeae98bdb1469ef1bd7e}{Exposure\+Gain\+::m\+\_\+b\+Auto\+Exposure}}, \mbox{\hyperlink{structExposureGain_a3f1e77a836addab0efa1f2432db851c8}{Exposure\+Gain\+::m\+\_\+b\+Auto\+Gain}}, \mbox{\hyperlink{structExposureGain_aeea8e1fda7390bc1b8b038f44e805367}{Exposure\+Gain\+::m\+\_\+d\+Auto\+Exposure\+Time\+Max}}, \mbox{\hyperlink{structExposureGain_a89e80bc712066e4ac237506e03a74b01}{Exposure\+Gain\+::m\+\_\+d\+Auto\+Exposure\+Time\+Min}}, \mbox{\hyperlink{structExposureGain_ac012d2dcd3d8699ee5ff828c3b58992d}{Exposure\+Gain\+::m\+\_\+d\+Auto\+Gain\+Max}}, \mbox{\hyperlink{structExposureGain_adc91d88e430c7a9e035b19c74f55ffb6}{Exposure\+Gain\+::m\+\_\+d\+Auto\+Gain\+Min}}, \mbox{\hyperlink{structExposureGain_a96ead067b1b93d338019d94d160c95f0}{Exposure\+Gain\+::m\+\_\+d\+Exposure\+Time}}, \mbox{\hyperlink{structExposureGain_ad8b99936814a736a504d91872eaaa498}{Exposure\+Gain\+::m\+\_\+d\+Gain}} , 以及 \mbox{\hyperlink{structExposureGain_adf5fbb6b60d6a8ee9ad13c4dc3326903}{Exposure\+Gain\+::m\+\_\+i64\+Gray\+Value}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a6f5af3c930b1b0c5e6304bfaf1a799e4}{initial()}}.
+
+\Hypertarget{classGxCamera_a3a2e4b253fa1d796375cf937e24a901d}\label{classGxCamera_a3a2e4b253fa1d796375cf937e24a901d} 
+\index{GxCamera@{GxCamera}!setRoiParam@{setRoiParam}}
+\index{setRoiParam@{setRoiParam}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{setRoiParam()}{setRoiParam()}}
+{\footnotesize\ttfamily void Gx\+Camera\+::set\+Roi\+Param (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{Width,  }\item[{int64\+\_\+t}]{Height,  }\item[{int64\+\_\+t}]{OffsetX,  }\item[{int64\+\_\+t}]{OffsetY }\end{DoxyParamCaption})}
+
+
+
+Set camera roi param 
+
+For client Set camera roi params 设置相机感兴趣区域参数的变量 
+
+引用了 \mbox{\hyperlink{structRoi_a69eb5203019664984895a163bebfb9e0}{Roi\+::m\+\_\+i64\+Height}}, \mbox{\hyperlink{structRoi_a9927c534e881f98546fe820b06fbbc42}{Roi\+::m\+\_\+i64\+OffsetX}}, \mbox{\hyperlink{structRoi_a3eeed4b05b18df0112786c34b014bc91}{Roi\+::m\+\_\+i64\+OffsetY}} , 以及 \mbox{\hyperlink{structRoi_ac30e2622afe4971678f0359d252c874f}{Roi\+::m\+\_\+i64\+Width}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a6f5af3c930b1b0c5e6304bfaf1a799e4}{initial()}}.
+
+\Hypertarget{classGxCamera_aa77c4292bf8a86127ea3d90722c69b84}\label{classGxCamera_aa77c4292bf8a86127ea3d90722c69b84} 
+\index{GxCamera@{GxCamera}!setTriggerParam@{setTriggerParam}}
+\index{setTriggerParam@{setTriggerParam}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{setTriggerParam()}{setTriggerParam()}}
+{\footnotesize\ttfamily void Gx\+Camera\+::set\+Trigger\+Param (\begin{DoxyParamCaption}\item[{bool}]{use\+Hard\+Trigger }\end{DoxyParamCaption})}
+
+
+
+Set trigger mode 
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a6f5af3c930b1b0c5e6304bfaf1a799e4}{initial()}}.
+
+\Hypertarget{classGxCamera_aefaf0f843ff3459b34c96f8c09cd96e8}\label{classGxCamera_aefaf0f843ff3459b34c96f8c09cd96e8} 
+\index{GxCamera@{GxCamera}!setWhiteBalanceParam@{setWhiteBalanceParam}}
+\index{setWhiteBalanceParam@{setWhiteBalanceParam}!GxCamera@{GxCamera}}
+\doxysubsubsection{\texorpdfstring{setWhiteBalanceParam()}{setWhiteBalanceParam()}}
+{\footnotesize\ttfamily void Gx\+Camera\+::set\+White\+Balance\+Param (\begin{DoxyParamCaption}\item[{bool}]{White\+Balance\+On,  }\item[{\mbox{\hyperlink{GxIAPI_8h_ad9805db4f9f6c0a6d9e0bb6fefdd84ad}{GX\+\_\+\+AWB\+\_\+\+LAMP\+\_\+\+HOUSE\+\_\+\+ENTRY}}}]{light\+Source }\end{DoxyParamCaption})}
+
+
+
+Set camera \doxylink{structWhiteBalance}{White\+Balance} 
+
+For client Set camera white balance params 
+
+引用了 \mbox{\hyperlink{structWhiteBalance_a0fd222e56218ed83993690bc46f8daae}{White\+Balance\+::light\+Source}} , 以及 \mbox{\hyperlink{structWhiteBalance_ac37b43333344081122c7b8432543bdca}{White\+Balance\+::m\+\_\+b\+White\+Balance}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a6f5af3c930b1b0c5e6304bfaf1a799e4}{initial()}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/home/davi/project/c++/\+Buff\+Detect/general/\+Gx\+Camera/\mbox{\hyperlink{GxCamera_8h}{Gx\+Camera.\+h}}\item 
+/home/davi/project/c++/\+Buff\+Detect/general/\+Gx\+Camera/\mbox{\hyperlink{GxCamera_8cpp}{Gx\+Camera.\+cpp}}\end{DoxyCompactItemize}

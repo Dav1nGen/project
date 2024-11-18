@@ -1,0 +1,1268 @@
+\doxysection{/home/davi/project/c++/\+Buff\+Detect/general/\+Gx\+Camera/include/\+Dx\+Image\+Proc.h 文件参考}
+\hypertarget{DxImageProc_8h}{}\label{DxImageProc_8h}\index{/home/davi/project/c++/BuffDetect/general/GxCamera/include/DxImageProc.h@{/home/davi/project/c++/BuffDetect/general/GxCamera/include/DxImageProc.h}}
+
+
+Image Processing Library  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Dx\+Image\+Proc.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{DxImageProc_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{DxImageProc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMONO__IMG__PROCESS}{MONO\+\_\+\+IMG\+\_\+\+PROCESS}}
+\begin{DoxyCompactList}\small\item\em mono8 image process struct \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structCOLOR__IMG__PROCESS}{COLOR\+\_\+\+IMG\+\_\+\+PROCESS}}
+\begin{DoxyCompactList}\small\item\em Raw8 Image process struct \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{DxImageProc_8h_a520f0893767c305921c8b9e9f87eb498}{\+\_\+\+DXIMAGEPROC\+\_\+H}}
+\begin{DoxyCompactList}\small\item\em pre-\/compiled macro define \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((visibility("{}default"{})))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \mbox{\hyperlink{DxImageProc_8h_ac87c6dc543c60cfb0350e4ebb4655254}{Vx\+Int8}}
+\item 
+typedef short \mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{Vx\+Int16}}
+\item 
+typedef int \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}}
+\item 
+typedef long long \mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{Vx\+Int64}}
+\item 
+typedef unsigned char \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}}
+\item 
+typedef unsigned short \mbox{\hyperlink{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973}{Vx\+Uint16}}
+\item 
+typedef unsigned int \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}
+\item 
+typedef enum \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21}{tag\+DX\+\_\+\+STATUS}} \mbox{\hyperlink{DxImageProc_8h_a640a39da7ecf311154476a1cf9f674e3}{DX\+\_\+\+STATUS}}
+\begin{DoxyCompactList}\small\item\em status definition \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350}{tag\+DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}} \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}}
+\begin{DoxyCompactList}\small\item\em Bayer layout \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28}{tag\+DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}} \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}}
+\begin{DoxyCompactList}\small\item\em image interpolation method \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bb}{tag\+DX\+\_\+\+VALID\+\_\+\+BIT}} \mbox{\hyperlink{DxImageProc_8h_a829a8775cc522c0d3ffefbcad05686cd}{DX\+\_\+\+VALID\+\_\+\+BIT}}
+\begin{DoxyCompactList}\small\item\em image valid bit \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83ed}{tag\+DX\+\_\+\+ACTUAL\+\_\+\+BITS}} \mbox{\hyperlink{DxImageProc_8h_a843824c2d44a7ca3b00c307631f4f2a1}{DX\+\_\+\+ACTUAL\+\_\+\+BITS}}
+\begin{DoxyCompactList}\small\item\em image actual bits \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705}{DX\+\_\+\+IMAGE\+\_\+\+MIRROR\+\_\+\+MODE}} \mbox{\hyperlink{DxImageProc_8h_a38fad1a70077acbd56f9e2746b65ae77}{DX\+\_\+\+IMAGE\+\_\+\+MIRROR\+\_\+\+MODE}}
+\begin{DoxyCompactList}\small\item\em image mirror method \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\+\_\+\+RGB\+\_\+\+CHANNEL\+\_\+\+ORDER}} \mbox{\hyperlink{DxImageProc_8h_ae7c045e66774acc5c488eb8d2d9e4c4e}{DX\+\_\+\+RGB\+\_\+\+CHANNEL\+\_\+\+ORDER}}
+\begin{DoxyCompactList}\small\item\em RGB channel order \end{DoxyCompactList}\item 
+typedef struct MONO\+\_\+\+IMG\+\_\+\+PROCESS \mbox{\hyperlink{DxImageProc_8h_a0d2bc0ece4716e473bf5158c36bb420c}{MONO\+\_\+\+IMG\+\_\+\+PROCESS}}
+\begin{DoxyCompactList}\small\item\em mono8 image process struct \end{DoxyCompactList}\item 
+typedef struct COLOR\+\_\+\+IMG\+\_\+\+PROCESS \mbox{\hyperlink{DxImageProc_8h_a41667409fb949a2a4033ba27df9708a0}{COLOR\+\_\+\+IMG\+\_\+\+PROCESS}}
+\begin{DoxyCompactList}\small\item\em Raw8 Image process struct \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21}{tag\+DX\+\_\+\+STATUS}} \{ \newline
+\mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a455d746c7a8480b5568609c314ebe4f8}{DX\+\_\+\+OK}} = 0
+, \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a030a87958a49b108fb4070234074328d}{DX\+\_\+\+PARAMETER\+\_\+\+INVALID}} = -\/101
+, \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21ac412733620c7d166507cfea57e508781}{DX\+\_\+\+PARAMETER\+\_\+\+OUT\+\_\+\+OF\+\_\+\+BOUND}} = -\/102
+, \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a7ad8f683c0e8bb64de9f41f26ef78f97}{DX\+\_\+\+NOT\+\_\+\+ENOUGH\+\_\+\+SYSTEM\+\_\+\+MEMORY}} = -\/103
+, \newline
+\mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a403a69ee1fcafbf665f290cd36523823}{DX\+\_\+\+NOT\+\_\+\+FIND\+\_\+\+DEVICE}} = -\/104
+, \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21ad685b044bddeedcbc1a71c9ef47001ed}{DX\+\_\+\+STATUS\+\_\+\+NOT\+\_\+\+SUPPORTED}} = -\/105
+, \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21af6d34e7cd2bf5027efb4c8f29e038544}{DX\+\_\+\+CPU\+\_\+\+NOT\+\_\+\+SUPPORT\+\_\+\+ACCELERATE}} = -\/106
+ \}
+\begin{DoxyCompactList}\small\item\em status definition \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350}{tag\+DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}} \{ \newline
+\mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}} = 0
+, \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ab05599415c328964c231560cd751f4d3}{BAYERRG}} = 1
+, \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ae7ebab116c3130884aaf5d0168ce2214}{BAYERGB}} = 2
+, \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350aa71e628554c8678919b505547501c175}{BAYERGR}} = 3
+, \newline
+\mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350aec44e0244d26e5f4a09d640bb9228e30}{BAYERBG}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Bayer layout \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28}{tag\+DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}} \{ \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28ac84388ebeefecd120741da0fef012e96}{RAW2\+RGB\+\_\+\+NEIGHBOUR}} = 0
+, \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28a981281bcac6722e78166945c1fce5a29}{RAW2\+RGB\+\_\+\+ADAPTIVE}} = 1
+, \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28ad5e57880035ae57aa827060a939d8f79}{RAW2\+RGB\+\_\+\+NEIGHBOUR3}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em image interpolation method \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bb}{tag\+DX\+\_\+\+VALID\+\_\+\+BIT}} \{ \newline
+\mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba21d4c851c5569748f517a4daa331d45f}{DX\+\_\+\+BIT\+\_\+0\+\_\+7}} = 0
+, \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba9da89be4706b08a073819280719cb987}{DX\+\_\+\+BIT\+\_\+1\+\_\+8}} = 1
+, \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba1e33d57b50653e6834710d2f4dd77929}{DX\+\_\+\+BIT\+\_\+2\+\_\+9}} = 2
+, \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bbad344bb2f7b0585feedf9f5f010e8d38f}{DX\+\_\+\+BIT\+\_\+3\+\_\+10}} = 3
+, \newline
+\mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba48ac71952ae967b909acd5c630f064f4}{DX\+\_\+\+BIT\+\_\+4\+\_\+11}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em image valid bit \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83ed}{tag\+DX\+\_\+\+ACTUAL\+\_\+\+BITS}} \{ \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda45280026da721103bc4a4bc9d539f958}{DX\+\_\+\+ACTUAL\+\_\+\+BITS\+\_\+10}} = 10
+, \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda12aec5c49d97735d82bd47d9d1ba877e}{DX\+\_\+\+ACTUAL\+\_\+\+BITS\+\_\+12}} = 12
+, \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda4dfc5261b982fbf28c709429b81e5a1e}{DX\+\_\+\+ACTUAL\+\_\+\+BITS\+\_\+14}} = 14
+, \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83edad08b09f7787e0aff2643edc9c2b994db}{DX\+\_\+\+ACTUAL\+\_\+\+BITS\+\_\+16}} = 16
+ \}
+\begin{DoxyCompactList}\small\item\em image actual bits \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705}{DX\+\_\+\+IMAGE\+\_\+\+MIRROR\+\_\+\+MODE}} \{ \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705afa0aa79d610cb5d3f95fbe13f51bbbde}{HORIZONTAL\+\_\+\+MIRROR}} = 0
+, \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705a0717afdea081c6220fac321aeac9fbc2}{VERTICAL\+\_\+\+MIRROR}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em image mirror method \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\+\_\+\+RGB\+\_\+\+CHANNEL\+\_\+\+ORDER}} \{ \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106facb593cdf97ab194689e707ddef2f9b5f}{DX\+\_\+\+ORDER\+\_\+\+RGB}} = 0
+, \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106faa3e1709bd8205fb2c3db13358d734007}{DX\+\_\+\+ORDER\+\_\+\+BGR}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em RGB channel order \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a5f348d7923ab6d77c4b4c71001c916b8}{Dx\+Raw8to\+RGB24}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}} cvtype, \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}} n\+Bayer\+Type, bool b\+Flip)
+\begin{DoxyCompactList}\small\item\em Convert Raw8 to Rgb24 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a5826252b82ac0ae2d0cfdf1183878f21}{Dx\+Raw8to\+RGB24\+Ex}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}} cvtype, \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}} n\+Bayer\+Type, bool b\+Flip, \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\+\_\+\+RGB\+\_\+\+CHANNEL\+\_\+\+ORDER}} em\+Channel\+Order)
+\begin{DoxyCompactList}\small\item\em Convert Raw8 to Rgb24 with choosen RGB channel order \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a21a070a61fd7f20c0fd60763f1027599}{Dx\+Raw12\+Packed\+To\+Raw16}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height)
+\begin{DoxyCompactList}\small\item\em Convert Raw12\+Packed to Raw16 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a9b9ffe639b51b4cca8cd13fdd0cb9884}{Dx\+Raw10\+Packed\+To\+Raw16}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height)
+\begin{DoxyCompactList}\small\item\em Convert Raw10\+Packed to Raw16 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_aa7774971b119e9498a6e8e5ac7b29315}{Dx\+Rotate90\+CW8B}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height)
+\begin{DoxyCompactList}\small\item\em To rotate the 8-\/bit image clockwise by 90 degrees \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_ae23324341fa417a05af91f5a629c0bf2}{Dx\+Rotate90\+CCW8B}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height)
+\begin{DoxyCompactList}\small\item\em To rotate the 8-\/bit image counter clockwise by 90 degrees \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_ac0d59025302e5e800988182471657613}{Dx\+Brightness}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Imagesize, \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} n\+Factor)
+\begin{DoxyCompactList}\small\item\em Brightness adjustment (RGB24 or gray image of 8-\/bit) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a044ad18a1927ca348cf59d7f1cc63ada}{Dx\+Contrast}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Imagesize, \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} n\+Factor)
+\begin{DoxyCompactList}\small\item\em Contrast adjustment(RGB24 or gray image of 8-\/bit) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a61c11f87195b56ddbd129f36f380a821}{Dx\+Sharpen24B}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, float f\+Factor)
+\begin{DoxyCompactList}\small\item\em Sharpen adjustment (RGB24) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a16f6ee89c49768099e7435bda85ffe3c}{Dx\+Saturation}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Imagesize, \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} n\+Factor)
+\begin{DoxyCompactList}\small\item\em Saturation adjustment (RGB24) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_ac1a81815abc8a490dfb4ed266d8f3c15}{Dx\+Get\+White\+Balance\+Ratio}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, double \texorpdfstring{$\ast$}{*}d\+RatioR, double \texorpdfstring{$\ast$}{*}d\+RatioG, double \texorpdfstring{$\ast$}{*}d\+RatioB)
+\begin{DoxyCompactList}\small\item\em Get white balance ratios(\+RGB24), In order to calculate accurately, the camera should shoot objective "{}white"{} area,or input image is white area. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a8121cdae0eef22eabeddedb7d3b8fb58}{Dx\+Auto\+Raw\+Defective\+Pixel\+Correct}} (void \texorpdfstring{$\ast$}{*}p\+Raw\+Img\+Buf, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} n\+Bit\+Num)
+\begin{DoxyCompactList}\small\item\em Auto raw defective pixel correct,Support image from Raw8 to Raw16, the bit number is actual bit number, when it is more than 8, the actual bit can be every number between 9 to 16. And if image format is packed, you need convert it to Raw16.\+This function should be used in each frame. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a9794af81fccb52454c8cefe5f37e777a}{Dx\+Raw16to\+Raw8}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{DxImageProc_8h_a829a8775cc522c0d3ffefbcad05686cd}{DX\+\_\+\+VALID\+\_\+\+BIT}} n\+Valid\+Bits)
+\begin{DoxyCompactList}\small\item\em Convert Raw16 to Raw8 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_af7d5cc47a6d5e1559d9f3726f7f0f4ff}{Dx\+RGB48to\+RGB24}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{DxImageProc_8h_a829a8775cc522c0d3ffefbcad05686cd}{DX\+\_\+\+VALID\+\_\+\+BIT}} n\+Valid\+Bits)
+\begin{DoxyCompactList}\small\item\em Convert RGB48 to RGB24 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a2a10ddaa3e2bb7a98d71858ab4fb5924}{Dx\+Raw16to\+RGB48}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{DxImageProc_8h_a843824c2d44a7ca3b00c307631f4f2a1}{DX\+\_\+\+ACTUAL\+\_\+\+BITS}} n\+Actual\+Bits, \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}} cvtype, \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}} n\+Bayer\+Type, bool b\+Flip)
+\begin{DoxyCompactList}\small\item\em Convert Raw16 to RGB48 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a7491a802d20fe18c50af00e4a79c5775}{Dx\+Raw8to\+ARGB32}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, int n\+Stride, \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}} cvtype, \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}} n\+Bayer\+Type, bool b\+Flip, \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}} n\+Alpha)
+\begin{DoxyCompactList}\small\item\em Convert Raw8 to ARGB32 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_ab0c98f764d78e823728007f4a6ec98b6}{Dx\+Get\+Contrast\+Lut}} (int n\+Contrast\+Param, void \texorpdfstring{$\ast$}{*}p\+Contrast\+Lut, int \texorpdfstring{$\ast$}{*}p\+Lut\+Length)
+\begin{DoxyCompactList}\small\item\em calculating contrast lookup table (RGB24) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_abca721405588cda2e3db80e94aca1e41}{Dx\+Get\+Gammat\+Lut}} (double d\+Gamma\+Param, void \texorpdfstring{$\ast$}{*}p\+Gamma\+Lut, int \texorpdfstring{$\ast$}{*}p\+Lut\+Length)
+\begin{DoxyCompactList}\small\item\em calculating gamma lookup table (RGB24) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a56fd2cdc7b80a84219782ec56d2a08e2}{Dx\+Image\+Improvment}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{Vx\+Int64}} n\+Color\+Correction\+Param, void \texorpdfstring{$\ast$}{*}p\+Contrast\+Lut, void \texorpdfstring{$\ast$}{*}p\+Gamma\+Lut)
+\begin{DoxyCompactList}\small\item\em image quality improvement (RGB24) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_af09adf346253a4a495ac510fa4c46c22}{Dx\+ARGBImage\+Improvment}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{Vx\+Int64}} n\+Color\+Correction\+Param, void \texorpdfstring{$\ast$}{*}p\+Contrast\+Lut, void \texorpdfstring{$\ast$}{*}p\+Gamma\+Lut)
+\begin{DoxyCompactList}\small\item\em image quality improvement (ARGB32) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_ac9e7adeaeed3c1fed2d6b143ba615011}{Dx\+Image\+Improvment\+Ex}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{Vx\+Int64}} n\+Color\+Correction\+Param, void \texorpdfstring{$\ast$}{*}p\+Contrast\+Lut, void \texorpdfstring{$\ast$}{*}p\+Gamma\+Lut, \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\+\_\+\+RGB\+\_\+\+CHANNEL\+\_\+\+ORDER}} em\+Channel\+Order)
+\begin{DoxyCompactList}\small\item\em image quality improvement (RGB24 \& BGR24) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a4b9278bebee46c1984fa80a29a03e9d4}{Dx\+Image\+Mirror}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buffer, void \texorpdfstring{$\ast$}{*}p\+Output\+Buffer, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705}{DX\+\_\+\+IMAGE\+\_\+\+MIRROR\+\_\+\+MODE}} em\+Mirror\+Mode)
+\begin{DoxyCompactList}\small\item\em image mirror(\+Raw8 or 8bit image) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_adf26f5eb58bb71ae1d906d1cd294697d}{Dx\+Get\+Lut}} (\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} n\+Contrast\+Param, double d\+Gamma, \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} n\+Lightness, \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}} \texorpdfstring{$\ast$}{*}p\+Lut, \mbox{\hyperlink{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973}{Vx\+Uint16}} \texorpdfstring{$\ast$}{*}p\+Lut\+Length)
+\begin{DoxyCompactList}\small\item\em calculating lookup table of 8bit image \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_ac491b54c69c41c128cb1ba544d7afa2f}{Dx\+Calc\+CCParam}} (\mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{Vx\+Int64}} n\+Color\+Correction\+Param, \mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{Vx\+Int16}} n\+Saturation, \mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{Vx\+Int16}} \texorpdfstring{$\ast$}{*}parr\+CC, \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}} n\+Length)
+\begin{DoxyCompactList}\small\item\em calculating array of image processing color adjustment \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a962e76118b8997228527f6d6d3bcb809}{Dx\+Raw8\+Img\+Process}} (void \texorpdfstring{$\ast$}{*}p\+Raw8\+Buf, void \texorpdfstring{$\ast$}{*}p\+Rgb24\+Buf, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{structCOLOR__IMG__PROCESS}{COLOR\+\_\+\+IMG\+\_\+\+PROCESS}} \texorpdfstring{$\ast$}{*}pst\+Clr\+Img\+Proc)
+\begin{DoxyCompactList}\small\item\em Raw8 image process \end{DoxyCompactList}\item 
+\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} \mbox{\hyperlink{DxImageProc_8h_a00588ad58dcc60e78c00c0cdd47c6235}{Dx\+Mono8\+Img\+Process}} (void \texorpdfstring{$\ast$}{*}p\+Input\+Buf, void \texorpdfstring{$\ast$}{*}p\+Output\+Buf, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Width, \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}} n\+Height, \mbox{\hyperlink{structMONO__IMG__PROCESS}{MONO\+\_\+\+IMG\+\_\+\+PROCESS}} \texorpdfstring{$\ast$}{*}pst\+Gray\+Img\+Proc)
+\begin{DoxyCompactList}\small\item\em Mono8 image process \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Image Processing Library 
+
+\begin{DoxyVersion}{版本}
+v1.\+0.\+2010.\+9291 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2020-\/10-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{作者}
+Software Department 
+\end{DoxyAuthor}
+Copyright (c) 2012-\/2019 and all right reserved.
+
+\doxysubsection{宏定义说明}
+\Hypertarget{DxImageProc_8h_a520f0893767c305921c8b9e9f87eb498}\label{DxImageProc_8h_a520f0893767c305921c8b9e9f87eb498} 
+\index{DxImageProc.h@{DxImageProc.h}!\_DXIMAGEPROC\_H@{\_DXIMAGEPROC\_H}}
+\index{\_DXIMAGEPROC\_H@{\_DXIMAGEPROC\_H}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{\_DXIMAGEPROC\_H}{\_DXIMAGEPROC\_H}}
+{\footnotesize\ttfamily \#define \+\_\+\+DXIMAGEPROC\+\_\+H}
+
+
+
+pre-\/compiled macro define 
+
+\Hypertarget{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}\label{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b} 
+\index{DxImageProc.h@{DxImageProc.h}!DHDECL@{DHDECL}}
+\index{DHDECL@{DHDECL}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DHDECL}{DHDECL}}
+{\footnotesize\ttfamily \#define DHDECL~\+\_\+\+\_\+attribute\+\_\+\+\_\+((visibility("{}default"{})))}
+
+
+
+\doxysubsection{类型定义说明}
+\Hypertarget{DxImageProc_8h_a41667409fb949a2a4033ba27df9708a0}\label{DxImageProc_8h_a41667409fb949a2a4033ba27df9708a0} 
+\index{DxImageProc.h@{DxImageProc.h}!COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}}
+\index{COLOR\_IMG\_PROCESS@{COLOR\_IMG\_PROCESS}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_IMG\_PROCESS}{COLOR\_IMG\_PROCESS}}
+{\footnotesize\ttfamily typedef struct COLOR\+\_\+\+IMG\+\_\+\+PROCESS COLOR\+\_\+\+IMG\+\_\+\+PROCESS}
+
+
+
+Raw8 Image process struct 
+
+\Hypertarget{DxImageProc_8h_a843824c2d44a7ca3b00c307631f4f2a1}\label{DxImageProc_8h_a843824c2d44a7ca3b00c307631f4f2a1} 
+\index{DxImageProc.h@{DxImageProc.h}!DX\_ACTUAL\_BITS@{DX\_ACTUAL\_BITS}}
+\index{DX\_ACTUAL\_BITS@{DX\_ACTUAL\_BITS}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DX\_ACTUAL\_BITS}{DX\_ACTUAL\_BITS}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83ed}{tag\+DX\+\_\+\+ACTUAL\+\_\+\+BITS}} \mbox{\hyperlink{DxImageProc_8h_a843824c2d44a7ca3b00c307631f4f2a1}{DX\+\_\+\+ACTUAL\+\_\+\+BITS}}}
+
+
+
+image actual bits 
+
+\Hypertarget{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}\label{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137} 
+\index{DxImageProc.h@{DxImageProc.h}!DX\_BAYER\_CONVERT\_TYPE@{DX\_BAYER\_CONVERT\_TYPE}}
+\index{DX\_BAYER\_CONVERT\_TYPE@{DX\_BAYER\_CONVERT\_TYPE}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DX\_BAYER\_CONVERT\_TYPE}{DX\_BAYER\_CONVERT\_TYPE}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28}{tag\+DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}} \mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}}}
+
+
+
+image interpolation method 
+
+\Hypertarget{DxImageProc_8h_a38fad1a70077acbd56f9e2746b65ae77}\label{DxImageProc_8h_a38fad1a70077acbd56f9e2746b65ae77} 
+\index{DxImageProc.h@{DxImageProc.h}!DX\_IMAGE\_MIRROR\_MODE@{DX\_IMAGE\_MIRROR\_MODE}}
+\index{DX\_IMAGE\_MIRROR\_MODE@{DX\_IMAGE\_MIRROR\_MODE}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DX\_IMAGE\_MIRROR\_MODE}{DX\_IMAGE\_MIRROR\_MODE}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705}{DX\+\_\+\+IMAGE\+\_\+\+MIRROR\+\_\+\+MODE}} \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705}{DX\+\_\+\+IMAGE\+\_\+\+MIRROR\+\_\+\+MODE}}}
+
+
+
+image mirror method 
+
+\Hypertarget{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}\label{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7} 
+\index{DxImageProc.h@{DxImageProc.h}!DX\_PIXEL\_COLOR\_FILTER@{DX\_PIXEL\_COLOR\_FILTER}}
+\index{DX\_PIXEL\_COLOR\_FILTER@{DX\_PIXEL\_COLOR\_FILTER}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DX\_PIXEL\_COLOR\_FILTER}{DX\_PIXEL\_COLOR\_FILTER}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350}{tag\+DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}} \mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}}}
+
+
+
+Bayer layout 
+
+\Hypertarget{DxImageProc_8h_ae7c045e66774acc5c488eb8d2d9e4c4e}\label{DxImageProc_8h_ae7c045e66774acc5c488eb8d2d9e4c4e} 
+\index{DxImageProc.h@{DxImageProc.h}!DX\_RGB\_CHANNEL\_ORDER@{DX\_RGB\_CHANNEL\_ORDER}}
+\index{DX\_RGB\_CHANNEL\_ORDER@{DX\_RGB\_CHANNEL\_ORDER}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DX\_RGB\_CHANNEL\_ORDER}{DX\_RGB\_CHANNEL\_ORDER}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\+\_\+\+RGB\+\_\+\+CHANNEL\+\_\+\+ORDER}} \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\+\_\+\+RGB\+\_\+\+CHANNEL\+\_\+\+ORDER}}}
+
+
+
+RGB channel order 
+
+\Hypertarget{DxImageProc_8h_a640a39da7ecf311154476a1cf9f674e3}\label{DxImageProc_8h_a640a39da7ecf311154476a1cf9f674e3} 
+\index{DxImageProc.h@{DxImageProc.h}!DX\_STATUS@{DX\_STATUS}}
+\index{DX\_STATUS@{DX\_STATUS}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DX\_STATUS}{DX\_STATUS}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21}{tag\+DX\+\_\+\+STATUS}} \mbox{\hyperlink{DxImageProc_8h_a640a39da7ecf311154476a1cf9f674e3}{DX\+\_\+\+STATUS}}}
+
+
+
+status definition 
+
+\Hypertarget{DxImageProc_8h_a829a8775cc522c0d3ffefbcad05686cd}\label{DxImageProc_8h_a829a8775cc522c0d3ffefbcad05686cd} 
+\index{DxImageProc.h@{DxImageProc.h}!DX\_VALID\_BIT@{DX\_VALID\_BIT}}
+\index{DX\_VALID\_BIT@{DX\_VALID\_BIT}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DX\_VALID\_BIT}{DX\_VALID\_BIT}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bb}{tag\+DX\+\_\+\+VALID\+\_\+\+BIT}} \mbox{\hyperlink{DxImageProc_8h_a829a8775cc522c0d3ffefbcad05686cd}{DX\+\_\+\+VALID\+\_\+\+BIT}}}
+
+
+
+image valid bit 
+
+\Hypertarget{DxImageProc_8h_a0d2bc0ece4716e473bf5158c36bb420c}\label{DxImageProc_8h_a0d2bc0ece4716e473bf5158c36bb420c} 
+\index{DxImageProc.h@{DxImageProc.h}!MONO\_IMG\_PROCESS@{MONO\_IMG\_PROCESS}}
+\index{MONO\_IMG\_PROCESS@{MONO\_IMG\_PROCESS}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{MONO\_IMG\_PROCESS}{MONO\_IMG\_PROCESS}}
+{\footnotesize\ttfamily typedef struct MONO\+\_\+\+IMG\+\_\+\+PROCESS MONO\+\_\+\+IMG\+\_\+\+PROCESS}
+
+
+
+mono8 image process struct 
+
+\Hypertarget{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}\label{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030} 
+\index{DxImageProc.h@{DxImageProc.h}!VxInt16@{VxInt16}}
+\index{VxInt16@{VxInt16}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{VxInt16}{VxInt16}}
+{\footnotesize\ttfamily typedef short \mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{Vx\+Int16}}}
+
+\Hypertarget{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}\label{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420} 
+\index{DxImageProc.h@{DxImageProc.h}!VxInt32@{VxInt32}}
+\index{VxInt32@{VxInt32}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{VxInt32}{VxInt32}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}}}
+
+\Hypertarget{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}\label{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451} 
+\index{DxImageProc.h@{DxImageProc.h}!VxInt64@{VxInt64}}
+\index{VxInt64@{VxInt64}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{VxInt64}{VxInt64}}
+{\footnotesize\ttfamily typedef long long \mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{Vx\+Int64}}}
+
+\Hypertarget{DxImageProc_8h_ac87c6dc543c60cfb0350e4ebb4655254}\label{DxImageProc_8h_ac87c6dc543c60cfb0350e4ebb4655254} 
+\index{DxImageProc.h@{DxImageProc.h}!VxInt8@{VxInt8}}
+\index{VxInt8@{VxInt8}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{VxInt8}{VxInt8}}
+{\footnotesize\ttfamily typedef char \mbox{\hyperlink{DxImageProc_8h_ac87c6dc543c60cfb0350e4ebb4655254}{Vx\+Int8}}}
+
+\Hypertarget{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973}\label{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973} 
+\index{DxImageProc.h@{DxImageProc.h}!VxUint16@{VxUint16}}
+\index{VxUint16@{VxUint16}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{VxUint16}{VxUint16}}
+{\footnotesize\ttfamily typedef unsigned short \mbox{\hyperlink{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973}{Vx\+Uint16}}}
+
+\Hypertarget{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}\label{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f} 
+\index{DxImageProc.h@{DxImageProc.h}!VxUint32@{VxUint32}}
+\index{VxUint32@{VxUint32}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{VxUint32}{VxUint32}}
+{\footnotesize\ttfamily typedef unsigned int \mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}
+
+\Hypertarget{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}\label{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca} 
+\index{DxImageProc.h@{DxImageProc.h}!VxUint8@{VxUint8}}
+\index{VxUint8@{VxUint8}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{VxUint8}{VxUint8}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}}}
+
+
+
+\doxysubsection{枚举类型说明}
+\Hypertarget{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705}\label{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705} 
+\index{DxImageProc.h@{DxImageProc.h}!DX\_IMAGE\_MIRROR\_MODE@{DX\_IMAGE\_MIRROR\_MODE}}
+\index{DX\_IMAGE\_MIRROR\_MODE@{DX\_IMAGE\_MIRROR\_MODE}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DX\_IMAGE\_MIRROR\_MODE}{DX\_IMAGE\_MIRROR\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705}{DX\+\_\+\+IMAGE\+\_\+\+MIRROR\+\_\+\+MODE}}}
+
+
+
+image mirror method 
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HORIZONTAL\_MIRROR@{HORIZONTAL\_MIRROR}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!HORIZONTAL\_MIRROR@{HORIZONTAL\_MIRROR}}}\Hypertarget{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705afa0aa79d610cb5d3f95fbe13f51bbbde}\label{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705afa0aa79d610cb5d3f95fbe13f51bbbde} 
+HORIZONTAL\+\_\+\+MIRROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VERTICAL\_MIRROR@{VERTICAL\_MIRROR}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!VERTICAL\_MIRROR@{VERTICAL\_MIRROR}}}\Hypertarget{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705a0717afdea081c6220fac321aeac9fbc2}\label{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705a0717afdea081c6220fac321aeac9fbc2} 
+VERTICAL\+\_\+\+MIRROR&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}\label{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f} 
+\index{DxImageProc.h@{DxImageProc.h}!DX\_RGB\_CHANNEL\_ORDER@{DX\_RGB\_CHANNEL\_ORDER}}
+\index{DX\_RGB\_CHANNEL\_ORDER@{DX\_RGB\_CHANNEL\_ORDER}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DX\_RGB\_CHANNEL\_ORDER}{DX\_RGB\_CHANNEL\_ORDER}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\+\_\+\+RGB\+\_\+\+CHANNEL\+\_\+\+ORDER}}}
+
+
+
+RGB channel order 
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_ORDER\_RGB@{DX\_ORDER\_RGB}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_ORDER\_RGB@{DX\_ORDER\_RGB}}}\Hypertarget{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106facb593cdf97ab194689e707ddef2f9b5f}\label{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106facb593cdf97ab194689e707ddef2f9b5f} 
+DX\+\_\+\+ORDER\+\_\+\+RGB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_ORDER\_BGR@{DX\_ORDER\_BGR}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_ORDER\_BGR@{DX\_ORDER\_BGR}}}\Hypertarget{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106faa3e1709bd8205fb2c3db13358d734007}\label{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106faa3e1709bd8205fb2c3db13358d734007} 
+DX\+\_\+\+ORDER\+\_\+\+BGR&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83ed}\label{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83ed} 
+\index{DxImageProc.h@{DxImageProc.h}!tagDX\_ACTUAL\_BITS@{tagDX\_ACTUAL\_BITS}}
+\index{tagDX\_ACTUAL\_BITS@{tagDX\_ACTUAL\_BITS}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{tagDX\_ACTUAL\_BITS}{tagDX\_ACTUAL\_BITS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83ed}{tag\+DX\+\_\+\+ACTUAL\+\_\+\+BITS}}}
+
+
+
+image actual bits 
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_ACTUAL\_BITS\_10@{DX\_ACTUAL\_BITS\_10}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_ACTUAL\_BITS\_10@{DX\_ACTUAL\_BITS\_10}}}\Hypertarget{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda45280026da721103bc4a4bc9d539f958}\label{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda45280026da721103bc4a4bc9d539f958} 
+DX\+\_\+\+ACTUAL\+\_\+\+BITS\+\_\+10&10bit \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_ACTUAL\_BITS\_12@{DX\_ACTUAL\_BITS\_12}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_ACTUAL\_BITS\_12@{DX\_ACTUAL\_BITS\_12}}}\Hypertarget{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda12aec5c49d97735d82bd47d9d1ba877e}\label{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda12aec5c49d97735d82bd47d9d1ba877e} 
+DX\+\_\+\+ACTUAL\+\_\+\+BITS\+\_\+12&12bit \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_ACTUAL\_BITS\_14@{DX\_ACTUAL\_BITS\_14}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_ACTUAL\_BITS\_14@{DX\_ACTUAL\_BITS\_14}}}\Hypertarget{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda4dfc5261b982fbf28c709429b81e5a1e}\label{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83eda4dfc5261b982fbf28c709429b81e5a1e} 
+DX\+\_\+\+ACTUAL\+\_\+\+BITS\+\_\+14&14bit \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_ACTUAL\_BITS\_16@{DX\_ACTUAL\_BITS\_16}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_ACTUAL\_BITS\_16@{DX\_ACTUAL\_BITS\_16}}}\Hypertarget{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83edad08b09f7787e0aff2643edc9c2b994db}\label{DxImageProc_8h_a4ae39510d9d8586b23c4bf73cebd83edad08b09f7787e0aff2643edc9c2b994db} 
+DX\+\_\+\+ACTUAL\+\_\+\+BITS\+\_\+16&16bit \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28}\label{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28} 
+\index{DxImageProc.h@{DxImageProc.h}!tagDX\_BAYER\_CONVERT\_TYPE@{tagDX\_BAYER\_CONVERT\_TYPE}}
+\index{tagDX\_BAYER\_CONVERT\_TYPE@{tagDX\_BAYER\_CONVERT\_TYPE}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{tagDX\_BAYER\_CONVERT\_TYPE}{tagDX\_BAYER\_CONVERT\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28}{tag\+DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}}}
+
+
+
+image interpolation method 
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RAW2RGB\_NEIGHBOUR@{RAW2RGB\_NEIGHBOUR}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!RAW2RGB\_NEIGHBOUR@{RAW2RGB\_NEIGHBOUR}}}\Hypertarget{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28ac84388ebeefecd120741da0fef012e96}\label{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28ac84388ebeefecd120741da0fef012e96} 
+RAW2\+RGB\+\_\+\+NEIGHBOUR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RAW2RGB\_ADAPTIVE@{RAW2RGB\_ADAPTIVE}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!RAW2RGB\_ADAPTIVE@{RAW2RGB\_ADAPTIVE}}}\Hypertarget{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28a981281bcac6722e78166945c1fce5a29}\label{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28a981281bcac6722e78166945c1fce5a29} 
+RAW2\+RGB\+\_\+\+ADAPTIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RAW2RGB\_NEIGHBOUR3@{RAW2RGB\_NEIGHBOUR3}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!RAW2RGB\_NEIGHBOUR3@{RAW2RGB\_NEIGHBOUR3}}}\Hypertarget{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28ad5e57880035ae57aa827060a939d8f79}\label{DxImageProc_8h_afb0d0657dd1213aaf58b35d3d0858b28ad5e57880035ae57aa827060a939d8f79} 
+RAW2\+RGB\+\_\+\+NEIGHBOUR3&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350}\label{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350} 
+\index{DxImageProc.h@{DxImageProc.h}!tagDX\_PIXEL\_COLOR\_FILTER@{tagDX\_PIXEL\_COLOR\_FILTER}}
+\index{tagDX\_PIXEL\_COLOR\_FILTER@{tagDX\_PIXEL\_COLOR\_FILTER}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{tagDX\_PIXEL\_COLOR\_FILTER}{tagDX\_PIXEL\_COLOR\_FILTER}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350}{tag\+DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}}}
+
+
+
+Bayer layout 
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!NONE@{NONE}}}\Hypertarget{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ac157bdf0b85a40d2619cbc8bc1ae5fe2}\label{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ac157bdf0b85a40d2619cbc8bc1ae5fe2} 
+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAYERRG@{BAYERRG}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!BAYERRG@{BAYERRG}}}\Hypertarget{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ab05599415c328964c231560cd751f4d3}\label{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ab05599415c328964c231560cd751f4d3} 
+BAYERRG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAYERGB@{BAYERGB}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!BAYERGB@{BAYERGB}}}\Hypertarget{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ae7ebab116c3130884aaf5d0168ce2214}\label{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350ae7ebab116c3130884aaf5d0168ce2214} 
+BAYERGB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAYERGR@{BAYERGR}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!BAYERGR@{BAYERGR}}}\Hypertarget{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350aa71e628554c8678919b505547501c175}\label{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350aa71e628554c8678919b505547501c175} 
+BAYERGR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAYERBG@{BAYERBG}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!BAYERBG@{BAYERBG}}}\Hypertarget{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350aec44e0244d26e5f4a09d640bb9228e30}\label{DxImageProc_8h_a5e4a4ba02dda68a87ead17d8a15e5350aec44e0244d26e5f4a09d640bb9228e30} 
+BAYERBG&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21}\label{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21} 
+\index{DxImageProc.h@{DxImageProc.h}!tagDX\_STATUS@{tagDX\_STATUS}}
+\index{tagDX\_STATUS@{tagDX\_STATUS}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{tagDX\_STATUS}{tagDX\_STATUS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21}{tag\+DX\+\_\+\+STATUS}}}
+
+
+
+status definition 
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_OK@{DX\_OK}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_OK@{DX\_OK}}}\Hypertarget{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a455d746c7a8480b5568609c314ebe4f8}\label{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a455d746c7a8480b5568609c314ebe4f8} 
+DX\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_PARAMETER\_INVALID@{DX\_PARAMETER\_INVALID}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_PARAMETER\_INVALID@{DX\_PARAMETER\_INVALID}}}\Hypertarget{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a030a87958a49b108fb4070234074328d}\label{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a030a87958a49b108fb4070234074328d} 
+DX\+\_\+\+PARAMETER\+\_\+\+INVALID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_PARAMETER\_OUT\_OF\_BOUND@{DX\_PARAMETER\_OUT\_OF\_BOUND}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_PARAMETER\_OUT\_OF\_BOUND@{DX\_PARAMETER\_OUT\_OF\_BOUND}}}\Hypertarget{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21ac412733620c7d166507cfea57e508781}\label{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21ac412733620c7d166507cfea57e508781} 
+DX\+\_\+\+PARAMETER\+\_\+\+OUT\+\_\+\+OF\+\_\+\+BOUND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_NOT\_ENOUGH\_SYSTEM\_MEMORY@{DX\_NOT\_ENOUGH\_SYSTEM\_MEMORY}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_NOT\_ENOUGH\_SYSTEM\_MEMORY@{DX\_NOT\_ENOUGH\_SYSTEM\_MEMORY}}}\Hypertarget{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a7ad8f683c0e8bb64de9f41f26ef78f97}\label{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a7ad8f683c0e8bb64de9f41f26ef78f97} 
+DX\+\_\+\+NOT\+\_\+\+ENOUGH\+\_\+\+SYSTEM\+\_\+\+MEMORY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_NOT\_FIND\_DEVICE@{DX\_NOT\_FIND\_DEVICE}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_NOT\_FIND\_DEVICE@{DX\_NOT\_FIND\_DEVICE}}}\Hypertarget{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a403a69ee1fcafbf665f290cd36523823}\label{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21a403a69ee1fcafbf665f290cd36523823} 
+DX\+\_\+\+NOT\+\_\+\+FIND\+\_\+\+DEVICE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_STATUS\_NOT\_SUPPORTED@{DX\_STATUS\_NOT\_SUPPORTED}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_STATUS\_NOT\_SUPPORTED@{DX\_STATUS\_NOT\_SUPPORTED}}}\Hypertarget{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21ad685b044bddeedcbc1a71c9ef47001ed}\label{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21ad685b044bddeedcbc1a71c9ef47001ed} 
+DX\+\_\+\+STATUS\+\_\+\+NOT\+\_\+\+SUPPORTED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_CPU\_NOT\_SUPPORT\_ACCELERATE@{DX\_CPU\_NOT\_SUPPORT\_ACCELERATE}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_CPU\_NOT\_SUPPORT\_ACCELERATE@{DX\_CPU\_NOT\_SUPPORT\_ACCELERATE}}}\Hypertarget{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21af6d34e7cd2bf5027efb4c8f29e038544}\label{DxImageProc_8h_a071fff98bf9feb9211aaa66f0de2dd21af6d34e7cd2bf5027efb4c8f29e038544} 
+DX\+\_\+\+CPU\+\_\+\+NOT\+\_\+\+SUPPORT\+\_\+\+ACCELERATE&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bb}\label{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bb} 
+\index{DxImageProc.h@{DxImageProc.h}!tagDX\_VALID\_BIT@{tagDX\_VALID\_BIT}}
+\index{tagDX\_VALID\_BIT@{tagDX\_VALID\_BIT}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{tagDX\_VALID\_BIT}{tagDX\_VALID\_BIT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bb}{tag\+DX\+\_\+\+VALID\+\_\+\+BIT}}}
+
+
+
+image valid bit 
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_BIT\_0\_7@{DX\_BIT\_0\_7}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_BIT\_0\_7@{DX\_BIT\_0\_7}}}\Hypertarget{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba21d4c851c5569748f517a4daa331d45f}\label{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba21d4c851c5569748f517a4daa331d45f} 
+DX\+\_\+\+BIT\+\_\+0\+\_\+7&bit 0\texorpdfstring{$\sim$}{\string~}7 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_BIT\_1\_8@{DX\_BIT\_1\_8}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_BIT\_1\_8@{DX\_BIT\_1\_8}}}\Hypertarget{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba9da89be4706b08a073819280719cb987}\label{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba9da89be4706b08a073819280719cb987} 
+DX\+\_\+\+BIT\+\_\+1\+\_\+8&bit 1\texorpdfstring{$\sim$}{\string~}8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_BIT\_2\_9@{DX\_BIT\_2\_9}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_BIT\_2\_9@{DX\_BIT\_2\_9}}}\Hypertarget{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba1e33d57b50653e6834710d2f4dd77929}\label{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba1e33d57b50653e6834710d2f4dd77929} 
+DX\+\_\+\+BIT\+\_\+2\+\_\+9&bit 2\texorpdfstring{$\sim$}{\string~}9 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_BIT\_3\_10@{DX\_BIT\_3\_10}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_BIT\_3\_10@{DX\_BIT\_3\_10}}}\Hypertarget{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bbad344bb2f7b0585feedf9f5f010e8d38f}\label{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bbad344bb2f7b0585feedf9f5f010e8d38f} 
+DX\+\_\+\+BIT\+\_\+3\+\_\+10&bit 3\texorpdfstring{$\sim$}{\string~}10 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX\_BIT\_4\_11@{DX\_BIT\_4\_11}!DxImageProc.h@{DxImageProc.h}}\index{DxImageProc.h@{DxImageProc.h}!DX\_BIT\_4\_11@{DX\_BIT\_4\_11}}}\Hypertarget{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba48ac71952ae967b909acd5c630f064f4}\label{DxImageProc_8h_aa23609bbbc92d096a1cc5d1f34ab76bba48ac71952ae967b909acd5c630f064f4} 
+DX\+\_\+\+BIT\+\_\+4\+\_\+11&bit 4\texorpdfstring{$\sim$}{\string~}11 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{函数说明}
+\Hypertarget{DxImageProc_8h_af09adf346253a4a495ac510fa4c46c22}\label{DxImageProc_8h_af09adf346253a4a495ac510fa4c46c22} 
+\index{DxImageProc.h@{DxImageProc.h}!DxARGBImageImprovment@{DxARGBImageImprovment}}
+\index{DxARGBImageImprovment@{DxARGBImageImprovment}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxARGBImageImprovment()}{DxARGBImageImprovment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+ARGBImage\+Improvment (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{Vx\+Int64}}}]{n\+Color\+Correction\+Param,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Contrast\+Lut,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Gamma\+Lut }\end{DoxyParamCaption})}
+
+
+
+image quality improvement (ARGB32) 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em n\+Color\+Correction\+Param} & \mbox{[}in\mbox{]} color correction param address(get from camera) \\
+\hline
+{\em p\+Contrast\+Lut} & \mbox{[}in\mbox{]} contrast lookup table \\
+\hline
+{\em p\+Gamma\+Lut} & \mbox{[}in\mbox{]} gamma lookup table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a8121cdae0eef22eabeddedb7d3b8fb58}\label{DxImageProc_8h_a8121cdae0eef22eabeddedb7d3b8fb58} 
+\index{DxImageProc.h@{DxImageProc.h}!DxAutoRawDefectivePixelCorrect@{DxAutoRawDefectivePixelCorrect}}
+\index{DxAutoRawDefectivePixelCorrect@{DxAutoRawDefectivePixelCorrect}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxAutoRawDefectivePixelCorrect()}{DxAutoRawDefectivePixelCorrect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Auto\+Raw\+Defective\+Pixel\+Correct (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Raw\+Img\+Buf,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}}}]{n\+Bit\+Num }\end{DoxyParamCaption})}
+
+
+
+Auto raw defective pixel correct,Support image from Raw8 to Raw16, the bit number is actual bit number, when it is more than 8, the actual bit can be every number between 9 to 16. And if image format is packed, you need convert it to Raw16.\+This function should be used in each frame. 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Raw\+Img\+Buf} & \mbox{[}in,out\mbox{]}Raw image buffer \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]}image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]}image height \\
+\hline
+{\em n\+Bit\+Num} & \mbox{[}in\mbox{]}image bit number (for example\+:if image 10bit, n\+Bit\+Num = 10, if image 12bit,n\+Bit\+Num = 12,range\+:8 \texorpdfstring{$\sim$}{\string~} 16)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_ac0d59025302e5e800988182471657613}\label{DxImageProc_8h_ac0d59025302e5e800988182471657613} 
+\index{DxImageProc.h@{DxImageProc.h}!DxBrightness@{DxBrightness}}
+\index{DxBrightness@{DxBrightness}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxBrightness()}{DxBrightness()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Brightness (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Imagesize,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}}}]{n\+Factor }\end{DoxyParamCaption})}
+
+
+
+Brightness adjustment (RGB24 or gray image of 8-\/bit) 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer \\
+\hline
+{\em n\+Imagesize} & \mbox{[}in\mbox{]} image size,unit\+:byte(\+RGB\+:width \texorpdfstring{$\ast$}{*} height \texorpdfstring{$\ast$}{*} 3) \\
+\hline
+{\em n\+Factor} & \mbox{[}in\mbox{]} factor,range(-\/150\texorpdfstring{$\sim$}{\string~}150)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_ac491b54c69c41c128cb1ba544d7afa2f}\label{DxImageProc_8h_ac491b54c69c41c128cb1ba544d7afa2f} 
+\index{DxImageProc.h@{DxImageProc.h}!DxCalcCCParam@{DxCalcCCParam}}
+\index{DxCalcCCParam@{DxCalcCCParam}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxCalcCCParam()}{DxCalcCCParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Calc\+CCParam (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{Vx\+Int64}}}]{n\+Color\+Correction\+Param,  }\item[{\mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{Vx\+Int16}}}]{n\+Saturation,  }\item[{\mbox{\hyperlink{DxImageProc_8h_aa84e4a09a0987d97e89c571f3386f030}{Vx\+Int16}} \texorpdfstring{$\ast$}{*}}]{parr\+CC,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}}}]{n\+Length }\end{DoxyParamCaption})}
+
+
+
+calculating array of image processing color adjustment 
+
+
+\begin{DoxyParams}{参数}
+{\em n\+Color\+Correction\+Param} & \mbox{[}in\mbox{]} color correction param address(get from camera) \\
+\hline
+{\em n\+Saturation} & \mbox{[}in\mbox{]} saturation factor,Range(0\texorpdfstring{$\sim$}{\string~}128) \\
+\hline
+{\em parr\+CC} & \mbox{[}out\mbox{]}array address \\
+\hline
+{\em n\+Length} & \mbox{[}in\mbox{]} length(sizeof(\+Vx\+Int16)\texorpdfstring{$\ast$}{*}9)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a044ad18a1927ca348cf59d7f1cc63ada}\label{DxImageProc_8h_a044ad18a1927ca348cf59d7f1cc63ada} 
+\index{DxImageProc.h@{DxImageProc.h}!DxContrast@{DxContrast}}
+\index{DxContrast@{DxContrast}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxContrast()}{DxContrast()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Contrast (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Imagesize,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}}}]{n\+Factor }\end{DoxyParamCaption})}
+
+
+
+Contrast adjustment(RGB24 or gray image of 8-\/bit) 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer ~\newline
+ \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer \\
+\hline
+{\em n\+Imagesize} & \mbox{[}in\mbox{]} image size,unit\+:byte(\+RGB\+:width \texorpdfstring{$\ast$}{*} height \texorpdfstring{$\ast$}{*} 3) \\
+\hline
+{\em n\+Factor} & \mbox{[}in\mbox{]} factor,range(-\/50\texorpdfstring{$\sim$}{\string~}100)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_ab0c98f764d78e823728007f4a6ec98b6}\label{DxImageProc_8h_ab0c98f764d78e823728007f4a6ec98b6} 
+\index{DxImageProc.h@{DxImageProc.h}!DxGetContrastLut@{DxGetContrastLut}}
+\index{DxGetContrastLut@{DxGetContrastLut}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxGetContrastLut()}{DxGetContrastLut()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Get\+Contrast\+Lut (\begin{DoxyParamCaption}\item[{int}]{n\+Contrast\+Param,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Contrast\+Lut,  }\item[{int \texorpdfstring{$\ast$}{*}}]{p\+Lut\+Length }\end{DoxyParamCaption})}
+
+
+
+calculating contrast lookup table (RGB24) 
+
+
+\begin{DoxyParams}{参数}
+{\em n\+Contrast\+Param} & \mbox{[}in\mbox{]} contrast param,range(-\/50 \texorpdfstring{$\sim$}{\string~} 100) \\
+\hline
+{\em p\+Contrast\+Lut} & \mbox{[}out\mbox{]}contrast lookup table \\
+\hline
+{\em p\+Lut\+Length} & \mbox{[}out\mbox{]}contrast lookup table length(unit\+:byte)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_abca721405588cda2e3db80e94aca1e41}\label{DxImageProc_8h_abca721405588cda2e3db80e94aca1e41} 
+\index{DxImageProc.h@{DxImageProc.h}!DxGetGammatLut@{DxGetGammatLut}}
+\index{DxGetGammatLut@{DxGetGammatLut}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxGetGammatLut()}{DxGetGammatLut()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Get\+Gammat\+Lut (\begin{DoxyParamCaption}\item[{double}]{d\+Gamma\+Param,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Gamma\+Lut,  }\item[{int \texorpdfstring{$\ast$}{*}}]{p\+Lut\+Length }\end{DoxyParamCaption})}
+
+
+
+calculating gamma lookup table (RGB24) 
+
+
+\begin{DoxyParams}{参数}
+{\em d\+Gamma\+Param} & \mbox{[}in\mbox{]} gamma param,range(0.\+1 \texorpdfstring{$\sim$}{\string~} 10) \\
+\hline
+{\em p\+Gamma\+Lut} & \mbox{[}out\mbox{]}gamma lookup table \\
+\hline
+{\em p\+Lut\+Length} & \mbox{[}out\mbox{]}gamma lookup table length(unit\+:byte)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_adf26f5eb58bb71ae1d906d1cd294697d}\label{DxImageProc_8h_adf26f5eb58bb71ae1d906d1cd294697d} 
+\index{DxImageProc.h@{DxImageProc.h}!DxGetLut@{DxGetLut}}
+\index{DxGetLut@{DxGetLut}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxGetLut()}{DxGetLut()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Get\+Lut (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}}}]{n\+Contrast\+Param,  }\item[{double}]{d\+Gamma,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}}}]{n\+Lightness,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}} \texorpdfstring{$\ast$}{*}}]{p\+Lut,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a0b8bf6195ef04b39934984d3553b1973}{Vx\+Uint16}} \texorpdfstring{$\ast$}{*}}]{p\+Lut\+Length }\end{DoxyParamCaption})}
+
+
+
+calculating lookup table of 8bit image 
+
+
+\begin{DoxyParams}{参数}
+{\em n\+Contrast\+Param} & \mbox{[}in\mbox{]} contrast param,range(-\/50\texorpdfstring{$\sim$}{\string~}100) \\
+\hline
+{\em d\+Gamma} & \mbox{[}in\mbox{]} gamma param,range(0.\+1\texorpdfstring{$\sim$}{\string~}10) \\
+\hline
+{\em n\+Lightness} & \mbox{[}in\mbox{]} lightness param,range(-\/150\texorpdfstring{$\sim$}{\string~}150) \\
+\hline
+{\em p\+Lut} & \mbox{[}out\mbox{]}lookup table \\
+\hline
+{\em p\+Lut\+Length} & \mbox{[}in\mbox{]} lookup table length(unit\+:byte)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_ac1a81815abc8a490dfb4ed266d8f3c15}\label{DxImageProc_8h_ac1a81815abc8a490dfb4ed266d8f3c15} 
+\index{DxImageProc.h@{DxImageProc.h}!DxGetWhiteBalanceRatio@{DxGetWhiteBalanceRatio}}
+\index{DxGetWhiteBalanceRatio@{DxGetWhiteBalanceRatio}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxGetWhiteBalanceRatio()}{DxGetWhiteBalanceRatio()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Get\+White\+Balance\+Ratio (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{double \texorpdfstring{$\ast$}{*}}]{d\+RatioR,  }\item[{double \texorpdfstring{$\ast$}{*}}]{d\+RatioG,  }\item[{double \texorpdfstring{$\ast$}{*}}]{d\+RatioB }\end{DoxyParamCaption})}
+
+
+
+Get white balance ratios(\+RGB24), In order to calculate accurately, the camera should shoot objective "{}white"{} area,or input image is white area. 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em d\+RatioR} & \mbox{[}out\mbox{]}R ratio \\
+\hline
+{\em d\+RatioG} & \mbox{[}out\mbox{]}G ratio \\
+\hline
+{\em d\+RatioB} & \mbox{[}out\mbox{]}B ratio\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a56fd2cdc7b80a84219782ec56d2a08e2}\label{DxImageProc_8h_a56fd2cdc7b80a84219782ec56d2a08e2} 
+\index{DxImageProc.h@{DxImageProc.h}!DxImageImprovment@{DxImageImprovment}}
+\index{DxImageImprovment@{DxImageImprovment}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxImageImprovment()}{DxImageImprovment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Image\+Improvment (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{Vx\+Int64}}}]{n\+Color\+Correction\+Param,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Contrast\+Lut,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Gamma\+Lut }\end{DoxyParamCaption})}
+
+
+
+image quality improvement (RGB24) 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em n\+Color\+Correction\+Param} & \mbox{[}in\mbox{]} color correction param address(get from camera) \\
+\hline
+{\em p\+Contrast\+Lut} & \mbox{[}in\mbox{]} contrast lookup table \\
+\hline
+{\em p\+Gamma\+Lut} & \mbox{[}in\mbox{]} gamma lookup table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_ac9e7adeaeed3c1fed2d6b143ba615011}\label{DxImageProc_8h_ac9e7adeaeed3c1fed2d6b143ba615011} 
+\index{DxImageProc.h@{DxImageProc.h}!DxImageImprovmentEx@{DxImageImprovmentEx}}
+\index{DxImageImprovmentEx@{DxImageImprovmentEx}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxImageImprovmentEx()}{DxImageImprovmentEx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Image\+Improvment\+Ex (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a69d510604b4a6b5278be121fde8e3451}{Vx\+Int64}}}]{n\+Color\+Correction\+Param,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Contrast\+Lut,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Gamma\+Lut,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\+\_\+\+RGB\+\_\+\+CHANNEL\+\_\+\+ORDER}}}]{em\+Channel\+Order }\end{DoxyParamCaption})}
+
+
+
+image quality improvement (RGB24 \& BGR24) 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em n\+Color\+Correction\+Param} & \mbox{[}in\mbox{]} color correction param address(get from camera) \\
+\hline
+{\em p\+Contrast\+Lut} & \mbox{[}in\mbox{]} contrast lookup table \\
+\hline
+{\em p\+Gamma\+Lut} & \mbox{[}in\mbox{]} gamma lookup table \\
+\hline
+{\em em\+Channel\+Order} & \mbox{[}in\mbox{]} RGB channel order of output image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a4b9278bebee46c1984fa80a29a03e9d4}\label{DxImageProc_8h_a4b9278bebee46c1984fa80a29a03e9d4} 
+\index{DxImageProc.h@{DxImageProc.h}!DxImageMirror@{DxImageMirror}}
+\index{DxImageMirror@{DxImageMirror}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxImageMirror()}{DxImageMirror()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Image\+Mirror (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{DxImageProc_8h_abf062683ec754b0918bb88696ccb5705}{DX\+\_\+\+IMAGE\+\_\+\+MIRROR\+\_\+\+MODE}}}]{em\+Mirror\+Mode }\end{DoxyParamCaption})}
+
+
+
+image mirror(\+Raw8 or 8bit image) 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buff} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Output\+Buf} & \mbox{[}out\mbox{]}output buffer \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em em\+Mirror\+Mode} & \mbox{[}in\mbox{]} mirror mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a00588ad58dcc60e78c00c0cdd47c6235}\label{DxImageProc_8h_a00588ad58dcc60e78c00c0cdd47c6235} 
+\index{DxImageProc.h@{DxImageProc.h}!DxMono8ImgProcess@{DxMono8ImgProcess}}
+\index{DxMono8ImgProcess@{DxMono8ImgProcess}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxMono8ImgProcess()}{DxMono8ImgProcess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Mono8\+Img\+Process (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buf,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buf,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{structMONO__IMG__PROCESS}{MONO\+\_\+\+IMG\+\_\+\+PROCESS}} \texorpdfstring{$\ast$}{*}}]{pst\+Gray\+Img\+Proc }\end{DoxyParamCaption})}
+
+
+
+Mono8 image process 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buf} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Output\+Buf} & \mbox{[}out\mbox{]}output buffer(new buffer) \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em pst\+Gray\+Img\+Proc} & \mbox{[}in\mbox{]} mono8 image process struct pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a9b9ffe639b51b4cca8cd13fdd0cb9884}\label{DxImageProc_8h_a9b9ffe639b51b4cca8cd13fdd0cb9884} 
+\index{DxImageProc.h@{DxImageProc.h}!DxRaw10PackedToRaw16@{DxRaw10PackedToRaw16}}
+\index{DxRaw10PackedToRaw16@{DxRaw10PackedToRaw16}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxRaw10PackedToRaw16()}{DxRaw10PackedToRaw16()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Raw10\+Packed\+To\+Raw16 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height }\end{DoxyParamCaption})}
+
+
+
+Convert Raw10\+Packed to Raw16 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer(new buffer) \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a21a070a61fd7f20c0fd60763f1027599}\label{DxImageProc_8h_a21a070a61fd7f20c0fd60763f1027599} 
+\index{DxImageProc.h@{DxImageProc.h}!DxRaw12PackedToRaw16@{DxRaw12PackedToRaw16}}
+\index{DxRaw12PackedToRaw16@{DxRaw12PackedToRaw16}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxRaw12PackedToRaw16()}{DxRaw12PackedToRaw16()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Raw12\+Packed\+To\+Raw16 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height }\end{DoxyParamCaption})}
+
+
+
+Convert Raw12\+Packed to Raw16 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input Buffer \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output Buffer(new buffer) \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height ~\newline
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a9794af81fccb52454c8cefe5f37e777a}\label{DxImageProc_8h_a9794af81fccb52454c8cefe5f37e777a} 
+\index{DxImageProc.h@{DxImageProc.h}!DxRaw16toRaw8@{DxRaw16toRaw8}}
+\index{DxRaw16toRaw8@{DxRaw16toRaw8}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxRaw16toRaw8()}{DxRaw16toRaw8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Raw16to\+Raw8 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a829a8775cc522c0d3ffefbcad05686cd}{DX\+\_\+\+VALID\+\_\+\+BIT}}}]{n\+Valid\+Bits }\end{DoxyParamCaption})}
+
+
+
+Convert Raw16 to Raw8 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer(size\+:width \texorpdfstring{$\ast$}{*} height \texorpdfstring{$\ast$}{*}2) \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer(new buffer,size\+:width \texorpdfstring{$\ast$}{*} height) \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em n\+Valid\+Bits} & \mbox{[}in\mbox{]} valid bits\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a2a10ddaa3e2bb7a98d71858ab4fb5924}\label{DxImageProc_8h_a2a10ddaa3e2bb7a98d71858ab4fb5924} 
+\index{DxImageProc.h@{DxImageProc.h}!DxRaw16toRGB48@{DxRaw16toRGB48}}
+\index{DxRaw16toRGB48@{DxRaw16toRGB48}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxRaw16toRGB48()}{DxRaw16toRGB48()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Raw16to\+RGB48 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a843824c2d44a7ca3b00c307631f4f2a1}{DX\+\_\+\+ACTUAL\+\_\+\+BITS}}}]{n\+Actual\+Bits,  }\item[{\mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}}}]{cvtype,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}}}]{n\+Bayer\+Type,  }\item[{bool}]{b\+Flip }\end{DoxyParamCaption})}
+
+
+
+Convert Raw16 to RGB48 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer(size\+:width \texorpdfstring{$\ast$}{*} height \texorpdfstring{$\ast$}{*} 2) \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer(new buffer,size\+:width \texorpdfstring{$\ast$}{*} height \texorpdfstring{$\ast$}{*} 3 \texorpdfstring{$\ast$}{*} 2) \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em n\+Actual\+Bits} & \mbox{[}in\mbox{]} image actual bits \\
+\hline
+{\em cvtype} & \mbox{[}in\mbox{]} Bayer convert type \\
+\hline
+{\em n\+Bayer\+Type} & \mbox{[}in\mbox{]} pixel color filter \\
+\hline
+{\em b\+Flip} & \mbox{[}in\mbox{]} image flip or not, true\+:flip false\+:not flip\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a962e76118b8997228527f6d6d3bcb809}\label{DxImageProc_8h_a962e76118b8997228527f6d6d3bcb809} 
+\index{DxImageProc.h@{DxImageProc.h}!DxRaw8ImgProcess@{DxRaw8ImgProcess}}
+\index{DxRaw8ImgProcess@{DxRaw8ImgProcess}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxRaw8ImgProcess()}{DxRaw8ImgProcess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Raw8\+Img\+Process (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Raw8\+Buf,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Rgb24\+Buf,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{structCOLOR__IMG__PROCESS}{COLOR\+\_\+\+IMG\+\_\+\+PROCESS}} \texorpdfstring{$\ast$}{*}}]{pst\+Clr\+Img\+Proc }\end{DoxyParamCaption})}
+
+
+
+Raw8 image process 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Raw8\+Buf} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Rgb24\+Buf} & \mbox{[}out\mbox{]}output buffer(new buffer) \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em pst\+Clr\+Img\+Proc} & \mbox{[}in\mbox{]} Raw8 image process struct pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a7491a802d20fe18c50af00e4a79c5775}\label{DxImageProc_8h_a7491a802d20fe18c50af00e4a79c5775} 
+\index{DxImageProc.h@{DxImageProc.h}!DxRaw8toARGB32@{DxRaw8toARGB32}}
+\index{DxRaw8toARGB32@{DxRaw8toARGB32}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxRaw8toARGB32()}{DxRaw8toARGB32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Raw8to\+ARGB32 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{int}]{n\+Stride,  }\item[{\mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}}}]{cvtype,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}}}]{n\+Bayer\+Type,  }\item[{bool}]{b\+Flip,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a62b59c658ef6a711f387f05d9b720cca}{Vx\+Uint8}}}]{n\+Alpha }\end{DoxyParamCaption})}
+
+
+
+Convert Raw8 to ARGB32 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer(size\+:width \texorpdfstring{$\ast$}{*} height) \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer(new buffer,size\+:width \texorpdfstring{$\ast$}{*} height \texorpdfstring{$\ast$}{*} 4 \texorpdfstring{$\ast$}{*} 2) \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em n\+Stride} & \mbox{[}in\mbox{]} Android surface stride \\
+\hline
+{\em n\+Actual\+Bits} & \mbox{[}in\mbox{]} image actual bits \\
+\hline
+{\em cvtype} & \mbox{[}in\mbox{]} Bayer convert type \\
+\hline
+{\em n\+Bayer\+Type} & \mbox{[}in\mbox{]} pixel color filter \\
+\hline
+{\em b\+Flip} & \mbox{[}in\mbox{]} image flip or not, true\+:flip false\+:not flip \\
+\hline
+{\em n\+Alpha} & \mbox{[}in\mbox{]} value of channal Alpha\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a5f348d7923ab6d77c4b4c71001c916b8}\label{DxImageProc_8h_a5f348d7923ab6d77c4b4c71001c916b8} 
+\index{DxImageProc.h@{DxImageProc.h}!DxRaw8toRGB24@{DxRaw8toRGB24}}
+\index{DxRaw8toRGB24@{DxRaw8toRGB24}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxRaw8toRGB24()}{DxRaw8toRGB24()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Raw8to\+RGB24 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}}}]{cvtype,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}}}]{n\+Bayer\+Type,  }\item[{bool}]{b\+Flip }\end{DoxyParamCaption})}
+
+
+
+Convert Raw8 to Rgb24 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer(new buffer) \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em cvtype} & \mbox{[}in\mbox{]} Bayer convert type \\
+\hline
+{\em n\+Bayer\+Type} & \mbox{[}in\mbox{]} pixel color filter \\
+\hline
+{\em b\+Flip} & \mbox{[}in\mbox{]} output image flip or not, true\+:flip false\+:not flip\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6}{Gx\+Camera\+::read()}}.
+
+\Hypertarget{DxImageProc_8h_a5826252b82ac0ae2d0cfdf1183878f21}\label{DxImageProc_8h_a5826252b82ac0ae2d0cfdf1183878f21} 
+\index{DxImageProc.h@{DxImageProc.h}!DxRaw8toRGB24Ex@{DxRaw8toRGB24Ex}}
+\index{DxRaw8toRGB24Ex@{DxRaw8toRGB24Ex}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxRaw8toRGB24Ex()}{DxRaw8toRGB24Ex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Raw8to\+RGB24\+Ex (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{DxImageProc_8h_ad3c4a1208b226a95ba6ec16bf1270137}{DX\+\_\+\+BAYER\+\_\+\+CONVERT\+\_\+\+TYPE}}}]{cvtype,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a15add0d67fc754473a50033b23d5a1c7}{DX\+\_\+\+PIXEL\+\_\+\+COLOR\+\_\+\+FILTER}}}]{n\+Bayer\+Type,  }\item[{bool}]{b\+Flip,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a1afcc9ef0ba3201649777eea8145106f}{DX\+\_\+\+RGB\+\_\+\+CHANNEL\+\_\+\+ORDER}}}]{em\+Channel\+Order }\end{DoxyParamCaption})}
+
+
+
+Convert Raw8 to Rgb24 with choosen RGB channel order 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer(new buffer) \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em cvtype} & \mbox{[}in\mbox{]} Bayer convert type \\
+\hline
+{\em n\+Bayer\+Type} & \mbox{[}in\mbox{]} pixel color filter \\
+\hline
+{\em b\+Flip} & \mbox{[}in\mbox{]} output image flip or not, true\+:flip false\+:not flip \\
+\hline
+{\em em\+Channel\+Order} & \mbox{[}in\mbox{]} RGB channel order of output image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_af7d5cc47a6d5e1559d9f3726f7f0f4ff}\label{DxImageProc_8h_af7d5cc47a6d5e1559d9f3726f7f0f4ff} 
+\index{DxImageProc.h@{DxImageProc.h}!DxRGB48toRGB24@{DxRGB48toRGB24}}
+\index{DxRGB48toRGB24@{DxRGB48toRGB24}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxRGB48toRGB24()}{DxRGB48toRGB24()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+RGB48to\+RGB24 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a829a8775cc522c0d3ffefbcad05686cd}{DX\+\_\+\+VALID\+\_\+\+BIT}}}]{n\+Valid\+Bits }\end{DoxyParamCaption})}
+
+
+
+Convert RGB48 to RGB24 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer(size\+:width \texorpdfstring{$\ast$}{*} height \texorpdfstring{$\ast$}{*} 3 \texorpdfstring{$\ast$}{*}2) \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer(new buffer,size\+:width \texorpdfstring{$\ast$}{*} height \texorpdfstring{$\ast$}{*} 3) \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em n\+Valid\+Bits} & \mbox{[}in\mbox{]} valid bits\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_ae23324341fa417a05af91f5a629c0bf2}\label{DxImageProc_8h_ae23324341fa417a05af91f5a629c0bf2} 
+\index{DxImageProc.h@{DxImageProc.h}!DxRotate90CCW8B@{DxRotate90CCW8B}}
+\index{DxRotate90CCW8B@{DxRotate90CCW8B}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxRotate90CCW8B()}{DxRotate90CCW8B()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Rotate90\+CCW8B (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height }\end{DoxyParamCaption})}
+
+
+
+To rotate the 8-\/bit image counter clockwise by 90 degrees 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer(new buffer) \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_aa7774971b119e9498a6e8e5ac7b29315}\label{DxImageProc_8h_aa7774971b119e9498a6e8e5ac7b29315} 
+\index{DxImageProc.h@{DxImageProc.h}!DxRotate90CW8B@{DxRotate90CW8B}}
+\index{DxRotate90CW8B@{DxRotate90CW8B}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxRotate90CW8B()}{DxRotate90CW8B()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Rotate90\+CW8B (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height }\end{DoxyParamCaption})}
+
+
+
+To rotate the 8-\/bit image clockwise by 90 degrees 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer(new buffer) ~\newline
+ \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a16f6ee89c49768099e7435bda85ffe3c}\label{DxImageProc_8h_a16f6ee89c49768099e7435bda85ffe3c} 
+\index{DxImageProc.h@{DxImageProc.h}!DxSaturation@{DxSaturation}}
+\index{DxSaturation@{DxSaturation}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxSaturation()}{DxSaturation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Saturation (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Imagesize,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}}}]{n\+Factor }\end{DoxyParamCaption})}
+
+
+
+Saturation adjustment (RGB24) 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer ~\newline
+ \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer \\
+\hline
+{\em n\+Image\+Size} & \mbox{[}in\mbox{]} image size (width \texorpdfstring{$\ast$}{*} height) \\
+\hline
+{\em n\+Factor} & \mbox{[}in\mbox{]} factor,range(0 \texorpdfstring{$\sim$}{\string~} 128)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{DxImageProc_8h_a61c11f87195b56ddbd129f36f380a821}\label{DxImageProc_8h_a61c11f87195b56ddbd129f36f380a821} 
+\index{DxImageProc.h@{DxImageProc.h}!DxSharpen24B@{DxSharpen24B}}
+\index{DxSharpen24B@{DxSharpen24B}!DxImageProc.h@{DxImageProc.h}}
+\doxysubsubsection{\texorpdfstring{DxSharpen24B()}{DxSharpen24B()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DxImageProc_8h_a6397102ebb2ca8b11c0a95f9f607b420}{Vx\+Int32}} \mbox{\hyperlink{DxImageProc_8h_afe21f6edc26a81a10a69dd3ae0fbfc0b}{DHDECL}} Dx\+Sharpen24B (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Input\+Buffer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Output\+Buffer,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Width,  }\item[{\mbox{\hyperlink{DxImageProc_8h_a8b57bb6b8c3d4c8f36199a9b6561244f}{Vx\+Uint32}}}]{n\+Height,  }\item[{float}]{f\+Factor }\end{DoxyParamCaption})}
+
+
+
+Sharpen adjustment (RGB24) 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Input\+Buffer} & \mbox{[}in\mbox{]} input buffer ~\newline
+ \\
+\hline
+{\em p\+Output\+Buffer} & \mbox{[}out\mbox{]}output buffer \\
+\hline
+{\em n\+Width} & \mbox{[}in\mbox{]} image width \\
+\hline
+{\em n\+Height} & \mbox{[}in\mbox{]} image height \\
+\hline
+{\em f\+Factor} & \mbox{[}in\mbox{]} factor,range(0.\+1\texorpdfstring{$\sim$}{\string~}5.0)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+em\+Status 
+\end{DoxyReturn}

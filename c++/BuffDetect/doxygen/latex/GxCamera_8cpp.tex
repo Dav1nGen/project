@@ -1,0 +1,92 @@
+\doxysection{/home/davi/project/c++/\+Buff\+Detect/general/\+Gx\+Camera/\+Gx\+Camera.cpp 文件参考}
+\hypertarget{GxCamera_8cpp}{}\label{GxCamera_8cpp}\index{/home/davi/project/c++/BuffDetect/general/GxCamera/GxCamera.cpp@{/home/davi/project/c++/BuffDetect/general/GxCamera/GxCamera.cpp}}
+
+
+\doxylink{classGxCamera}{Gx\+Camera} class defination  
+
+
+{\ttfamily \#include "{}Gx\+Camera.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Gx\+Camera.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GxCamera_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{GxCamera_8cpp_a5e9a7655747743a3e0deaa5f5a80d58a}{Get\+Error\+String}} (\mbox{\hyperlink{GxIAPI_8h_a024157349dab0f7a113c5ff7267672ea}{GX\+\_\+\+STATUS}} em\+Error\+Status)
+\begin{DoxyCompactList}\small\item\em Get description of input error code \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{GxCamera_8cpp_a9420ee15b53e0017a58cbfc86632364b}{Globalmutex}}
+\item 
+pthread\+\_\+cond\+\_\+t \mbox{\hyperlink{GxCamera_8cpp_a8d47fbe53ec641a23a401c857b0d61b5}{Global\+Cond\+CV}}
+\item 
+bool \mbox{\hyperlink{GxCamera_8cpp_a285bd89b5c861ba3be4a996d03e44753}{image\+Readable}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\doxylink{classGxCamera}{Gx\+Camera} class defination 
+
+\begin{DoxyDate}{日期}
+2020-\/05-\/14 
+\end{DoxyDate}
+\begin{DoxyAuthor}{作者}
+Mountain 
+\end{DoxyAuthor}
+
+
+\doxysubsection{函数说明}
+\Hypertarget{GxCamera_8cpp_a5e9a7655747743a3e0deaa5f5a80d58a}\label{GxCamera_8cpp_a5e9a7655747743a3e0deaa5f5a80d58a} 
+\index{GxCamera.cpp@{GxCamera.cpp}!GetErrorString@{GetErrorString}}
+\index{GetErrorString@{GetErrorString}!GxCamera.cpp@{GxCamera.cpp}}
+\doxysubsubsection{\texorpdfstring{GetErrorString()}{GetErrorString()}}
+{\footnotesize\ttfamily void Get\+Error\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{GxIAPI_8h_a024157349dab0f7a113c5ff7267672ea}{GX\+\_\+\+STATUS}}}]{em\+Error\+Status }\end{DoxyParamCaption})}
+
+
+
+Get description of input error code 
+
+
+\begin{DoxyParams}{参数}
+{\em em\+Error\+Status} & error code\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+
+
+引用了 \mbox{\hyperlink{GxIAPI_8h_a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a}{GX\+\_\+\+STATUS\+\_\+\+SUCCESS}} , 以及 \mbox{\hyperlink{GxIAPI_8h_a1e092cc1ad7cf9d56ee22ba468cc2c55}{GXGet\+Last\+Error()}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6}{Gx\+Camera\+::read()}}.
+
+
+
+\doxysubsection{变量说明}
+\Hypertarget{GxCamera_8cpp_a8d47fbe53ec641a23a401c857b0d61b5}\label{GxCamera_8cpp_a8d47fbe53ec641a23a401c857b0d61b5} 
+\index{GxCamera.cpp@{GxCamera.cpp}!GlobalCondCV@{GlobalCondCV}}
+\index{GlobalCondCV@{GlobalCondCV}!GxCamera.cpp@{GxCamera.cpp}}
+\doxysubsubsection{\texorpdfstring{GlobalCondCV}{GlobalCondCV}}
+{\footnotesize\ttfamily pthread\+\_\+cond\+\_\+t Global\+Cond\+CV\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{GxCamera_8cpp_a9420ee15b53e0017a58cbfc86632364b}\label{GxCamera_8cpp_a9420ee15b53e0017a58cbfc86632364b} 
+\index{GxCamera.cpp@{GxCamera.cpp}!Globalmutex@{Globalmutex}}
+\index{Globalmutex@{Globalmutex}!GxCamera.cpp@{GxCamera.cpp}}
+\doxysubsubsection{\texorpdfstring{Globalmutex}{Globalmutex}}
+{\footnotesize\ttfamily pthread\+\_\+mutex\+\_\+t Globalmutex\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{GxCamera_8cpp_a285bd89b5c861ba3be4a996d03e44753}\label{GxCamera_8cpp_a285bd89b5c861ba3be4a996d03e44753} 
+\index{GxCamera.cpp@{GxCamera.cpp}!imageReadable@{imageReadable}}
+\index{imageReadable@{imageReadable}!GxCamera.cpp@{GxCamera.cpp}}
+\doxysubsubsection{\texorpdfstring{imageReadable}{imageReadable}}
+{\footnotesize\ttfamily bool image\+Readable\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,234 @@
+\doxysection{/home/davi/project/c++/\+Buff\+Detect/general/\+Gx\+Camera/\+Gx\+Camera.h 文件参考}
+\hypertarget{GxCamera_8h}{}\label{GxCamera_8h}\index{/home/davi/project/c++/BuffDetect/general/GxCamera/GxCamera.h@{/home/davi/project/c++/BuffDetect/general/GxCamera/GxCamera.h}}
+
+
+\doxylink{classGxCamera}{Gx\+Camera} class declare  
+
+
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include "{}./include/\+Gx\+IAPI.\+h"{}}\newline
+{\ttfamily \#include "{}./include/\+Dx\+Image\+Proc.\+h"{}}\newline
+Gx\+Camera.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GxCamera_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{GxCamera_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structRoi}{Roi}}
+\begin{DoxyCompactList}\small\item\em \doxylink{structRoi}{Roi} and resolution Param \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structExposureGain}{Exposure\+Gain}}
+\begin{DoxyCompactList}\small\item\em Exposure and Gain Param struct 曝光和图像通道增益 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWhiteBalance}{White\+Balance}}
+\begin{DoxyCompactList}\small\item\em \doxylink{structWhiteBalance}{White\+Balance} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classGxCamera}{Gx\+Camera}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{GxCamera_8h_a51434da017b167ebdb567ae763b70183}{ACQ\+\_\+\+BUFFER\+\_\+\+NUM}}~5
+\begin{DoxyCompactList}\small\item\em Acquisition Buffer Qty. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{GxCamera_8h_a389092fcf9e398e3647b1222a155df11}{ACQ\+\_\+\+TRANSFER\+\_\+\+SIZE}}~(64 \texorpdfstring{$\ast$}{*} 1024)
+\begin{DoxyCompactList}\small\item\em Size of data transfer block \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{GxCamera_8h_aab46c1a79de9a350c49212f46af6ecd9}{ACQ\+\_\+\+TRANSFER\+\_\+\+NUMBER\+\_\+\+URB}}~64
+\begin{DoxyCompactList}\small\item\em Qty. of data transfer block \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{GxCamera_8h_a965c352a909cb594b74a91c7730fcd35}{GX\+\_\+\+VER}}(em\+Status)
+\item 
+\#define \mbox{\hyperlink{GxCamera_8h_ab5b38bf6f8a20174ebcb8f03cc50d04b}{GX\+\_\+\+VERIFY}}(em\+Status)
+\item 
+\#define \mbox{\hyperlink{GxCamera_8h_a5d30266edf63d17aa7629e54e92336a2}{GX\+\_\+\+VERIFY\+\_\+\+EXIT}}(em\+Status)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Roi \mbox{\hyperlink{GxCamera_8h_aa2309e113c8af637c41e33f877e53f97}{Roi}}
+\begin{DoxyCompactList}\small\item\em \doxylink{structRoi}{Roi} and resolution Param \end{DoxyCompactList}\item 
+typedef struct Exposure\+Gain \mbox{\hyperlink{GxCamera_8h_ab651e28802e5694b605afa4a23caaa38}{Exposure\+Gain}}
+\begin{DoxyCompactList}\small\item\em Exposure and Gain Param struct 曝光和图像通道增益 \end{DoxyCompactList}\item 
+typedef struct White\+Balance \mbox{\hyperlink{GxCamera_8h_a8d9ccaa2d6b5f9429f799d9a9d628392}{White\+Balance}}
+\begin{DoxyCompactList}\small\item\em \doxylink{structWhiteBalance}{White\+Balance} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{GxCamera_8h_a5e9a7655747743a3e0deaa5f5a80d58a}{Get\+Error\+String}} (\mbox{\hyperlink{GxIAPI_8h_a024157349dab0f7a113c5ff7267672ea}{GX\+\_\+\+STATUS}} em\+Error\+Status)
+\begin{DoxyCompactList}\small\item\em Get description of input error code \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{GxCamera_8h_ac07653d7837e6264e0472a8899eaa4a8}{Proc\+Get\+Image}} (void \texorpdfstring{$\ast$}{*}p\+Acquisition\+Thread)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\doxylink{classGxCamera}{Gx\+Camera} class declare 
+
+\begin{DoxyDate}{日期}
+2020-\/05-\/14 
+\end{DoxyDate}
+\begin{DoxyAuthor}{作者}
+Qunshan He,\href{mailto:mountain.he@qq.com}{\texttt{ mountain.\+he@qq.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{宏定义说明}
+\Hypertarget{GxCamera_8h_a51434da017b167ebdb567ae763b70183}\label{GxCamera_8h_a51434da017b167ebdb567ae763b70183} 
+\index{GxCamera.h@{GxCamera.h}!ACQ\_BUFFER\_NUM@{ACQ\_BUFFER\_NUM}}
+\index{ACQ\_BUFFER\_NUM@{ACQ\_BUFFER\_NUM}!GxCamera.h@{GxCamera.h}}
+\doxysubsubsection{\texorpdfstring{ACQ\_BUFFER\_NUM}{ACQ\_BUFFER\_NUM}}
+{\footnotesize\ttfamily \#define ACQ\+\_\+\+BUFFER\+\_\+\+NUM~5}
+
+
+
+Acquisition Buffer Qty. 
+
+\Hypertarget{GxCamera_8h_aab46c1a79de9a350c49212f46af6ecd9}\label{GxCamera_8h_aab46c1a79de9a350c49212f46af6ecd9} 
+\index{GxCamera.h@{GxCamera.h}!ACQ\_TRANSFER\_NUMBER\_URB@{ACQ\_TRANSFER\_NUMBER\_URB}}
+\index{ACQ\_TRANSFER\_NUMBER\_URB@{ACQ\_TRANSFER\_NUMBER\_URB}!GxCamera.h@{GxCamera.h}}
+\doxysubsubsection{\texorpdfstring{ACQ\_TRANSFER\_NUMBER\_URB}{ACQ\_TRANSFER\_NUMBER\_URB}}
+{\footnotesize\ttfamily \#define ACQ\+\_\+\+TRANSFER\+\_\+\+NUMBER\+\_\+\+URB~64}
+
+
+
+Qty. of data transfer block 
+
+\Hypertarget{GxCamera_8h_a389092fcf9e398e3647b1222a155df11}\label{GxCamera_8h_a389092fcf9e398e3647b1222a155df11} 
+\index{GxCamera.h@{GxCamera.h}!ACQ\_TRANSFER\_SIZE@{ACQ\_TRANSFER\_SIZE}}
+\index{ACQ\_TRANSFER\_SIZE@{ACQ\_TRANSFER\_SIZE}!GxCamera.h@{GxCamera.h}}
+\doxysubsubsection{\texorpdfstring{ACQ\_TRANSFER\_SIZE}{ACQ\_TRANSFER\_SIZE}}
+{\footnotesize\ttfamily \#define ACQ\+\_\+\+TRANSFER\+\_\+\+SIZE~(64 \texorpdfstring{$\ast$}{*} 1024)}
+
+
+
+Size of data transfer block 
+
+\Hypertarget{GxCamera_8h_a965c352a909cb594b74a91c7730fcd35}\label{GxCamera_8h_a965c352a909cb594b74a91c7730fcd35} 
+\index{GxCamera.h@{GxCamera.h}!GX\_VER@{GX\_VER}}
+\index{GX\_VER@{GX\_VER}!GxCamera.h@{GxCamera.h}}
+\doxysubsubsection{\texorpdfstring{GX\_VER}{GX\_VER}}
+{\footnotesize\ttfamily \#define GX\+\_\+\+VER(\begin{DoxyParamCaption}\item[{}]{em\+Status }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (emStatus\ !=\ \mbox{\hyperlink{GxIAPI_8h_a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a}{GX\_STATUS\_SUCCESS}})\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}error"{}}<<endl;\ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{GxCamera_8h_ab5b38bf6f8a20174ebcb8f03cc50d04b}\label{GxCamera_8h_ab5b38bf6f8a20174ebcb8f03cc50d04b} 
+\index{GxCamera.h@{GxCamera.h}!GX\_VERIFY@{GX\_VERIFY}}
+\index{GX\_VERIFY@{GX\_VERIFY}!GxCamera.h@{GxCamera.h}}
+\doxysubsubsection{\texorpdfstring{GX\_VERIFY}{GX\_VERIFY}}
+{\footnotesize\ttfamily \#define GX\+\_\+\+VERIFY(\begin{DoxyParamCaption}\item[{}]{em\+Status }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (emStatus\ !=\ \mbox{\hyperlink{GxIAPI_8h_a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a}{GX\_STATUS\_SUCCESS}})\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ GetErrorString(emStatus);\ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ emStatus;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{GxCamera_8h_a5d30266edf63d17aa7629e54e92336a2}\label{GxCamera_8h_a5d30266edf63d17aa7629e54e92336a2} 
+\index{GxCamera.h@{GxCamera.h}!GX\_VERIFY\_EXIT@{GX\_VERIFY\_EXIT}}
+\index{GX\_VERIFY\_EXIT@{GX\_VERIFY\_EXIT}!GxCamera.h@{GxCamera.h}}
+\doxysubsubsection{\texorpdfstring{GX\_VERIFY\_EXIT}{GX\_VERIFY\_EXIT}}
+{\footnotesize\ttfamily \#define GX\+\_\+\+VERIFY\+\_\+\+EXIT(\begin{DoxyParamCaption}\item[{}]{em\+Status }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (emStatus\ !=\ \mbox{\hyperlink{GxIAPI_8h_a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a}{GX\_STATUS\_SUCCESS}})\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ GetErrorString(emStatus);\ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ GXCloseDevice(g\_hDevice);\ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ g\_hDevice\ =\ NULL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ GXCloseLib();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}<App\ Exit!>\(\backslash\)n"{}});\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ exit(emStatus);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a6f5af3c930b1b0c5e6304bfaf1a799e4}{Gx\+Camera\+::initial()}} , 以及 \mbox{\hyperlink{classGxCamera_af2737ac031096690e6ee033171062725}{Gx\+Camera\+::open\+Device()}}.
+
+
+
+\doxysubsection{类型定义说明}
+\Hypertarget{GxCamera_8h_ab651e28802e5694b605afa4a23caaa38}\label{GxCamera_8h_ab651e28802e5694b605afa4a23caaa38} 
+\index{GxCamera.h@{GxCamera.h}!ExposureGain@{ExposureGain}}
+\index{ExposureGain@{ExposureGain}!GxCamera.h@{GxCamera.h}}
+\doxysubsubsection{\texorpdfstring{ExposureGain}{ExposureGain}}
+{\footnotesize\ttfamily typedef struct Exposure\+Gain Exposure\+Gain}
+
+
+
+Exposure and Gain Param struct 曝光和图像通道增益 
+
+\Hypertarget{GxCamera_8h_aa2309e113c8af637c41e33f877e53f97}\label{GxCamera_8h_aa2309e113c8af637c41e33f877e53f97} 
+\index{GxCamera.h@{GxCamera.h}!Roi@{Roi}}
+\index{Roi@{Roi}!GxCamera.h@{GxCamera.h}}
+\doxysubsubsection{\texorpdfstring{Roi}{Roi}}
+{\footnotesize\ttfamily typedef struct Roi Roi}
+
+
+
+\doxylink{structRoi}{Roi} and resolution Param 
+
+\Hypertarget{GxCamera_8h_a8d9ccaa2d6b5f9429f799d9a9d628392}\label{GxCamera_8h_a8d9ccaa2d6b5f9429f799d9a9d628392} 
+\index{GxCamera.h@{GxCamera.h}!WhiteBalance@{WhiteBalance}}
+\index{WhiteBalance@{WhiteBalance}!GxCamera.h@{GxCamera.h}}
+\doxysubsubsection{\texorpdfstring{WhiteBalance}{WhiteBalance}}
+{\footnotesize\ttfamily typedef struct White\+Balance White\+Balance}
+
+
+
+\doxylink{structWhiteBalance}{White\+Balance} 
+
+
+
+\doxysubsection{函数说明}
+\Hypertarget{GxCamera_8h_a5e9a7655747743a3e0deaa5f5a80d58a}\label{GxCamera_8h_a5e9a7655747743a3e0deaa5f5a80d58a} 
+\index{GxCamera.h@{GxCamera.h}!GetErrorString@{GetErrorString}}
+\index{GetErrorString@{GetErrorString}!GxCamera.h@{GxCamera.h}}
+\doxysubsubsection{\texorpdfstring{GetErrorString()}{GetErrorString()}}
+{\footnotesize\ttfamily void Get\+Error\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{GxIAPI_8h_a024157349dab0f7a113c5ff7267672ea}{GX\+\_\+\+STATUS}}}]{em\+Error\+Status }\end{DoxyParamCaption})}
+
+
+
+Get description of input error code 
+
+
+\begin{DoxyParams}{参数}
+{\em em\+Error\+Status} & error code\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+
+
+引用了 \mbox{\hyperlink{GxIAPI_8h_a8cd2067c476aa79382e9593eb1398204ac96a295287278deb4d330ff496fd297a}{GX\+\_\+\+STATUS\+\_\+\+SUCCESS}} , 以及 \mbox{\hyperlink{GxIAPI_8h_a1e092cc1ad7cf9d56ee22ba468cc2c55}{GXGet\+Last\+Error()}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6}{Gx\+Camera\+::read()}}.
+
+\Hypertarget{GxCamera_8h_ac07653d7837e6264e0472a8899eaa4a8}\label{GxCamera_8h_ac07653d7837e6264e0472a8899eaa4a8} 
+\index{GxCamera.h@{GxCamera.h}!ProcGetImage@{ProcGetImage}}
+\index{ProcGetImage@{ProcGetImage}!GxCamera.h@{GxCamera.h}}
+\doxysubsubsection{\texorpdfstring{ProcGetImage()}{ProcGetImage()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} Proc\+Get\+Image (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Acquisition\+Thread }\end{DoxyParamCaption})}
+

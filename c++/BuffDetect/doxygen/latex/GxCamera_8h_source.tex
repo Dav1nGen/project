@@ -1,0 +1,183 @@
+\doxysection{Gx\+Camera.\+h}
+\hypertarget{GxCamera_8h_source}{}\label{GxCamera_8h_source}\index{/home/davi/project/c++/BuffDetect/general/GxCamera/GxCamera.h@{/home/davi/project/c++/BuffDetect/general/GxCamera/GxCamera.h}}
+\mbox{\hyperlink{GxCamera_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GxIAPI_8h}{./include/GxIAPI.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DxImageProc_8h}{./include/DxImageProc.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\#include\ "{}../General/General.h"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ ACQ\_BUFFER\_NUM\ \ \ \ \ \ \ \ \ \ 5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ ACQ\_TRANSFER\_SIZE\ \ \ \ \ \ \ (64\ *\ 1024)\ \ \ \ \ }}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ ACQ\_TRANSFER\_NUMBER\_URB\ 64\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{GxCamera_8h_a5e9a7655747743a3e0deaa5f5a80d58a}{GetErrorString}}(\mbox{\hyperlink{GxIAPI_8h_a024157349dab0f7a113c5ff7267672ea}{GX\_STATUS}}\ emErrorStatus);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{GxCamera_8h_ac07653d7837e6264e0472a8899eaa4a8}{ProcGetImage}}(\textcolor{keywordtype}{void}*\ pAcquisitionThread);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ GX\_VER(emStatus)\(\backslash\)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ \ \ if\ (emStatus\ !=\ GX\_STATUS\_SUCCESS)\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ std::cout<<"{}error"{}<<endl;\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ break;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//Show\ error\ message}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ GX\_VERIFY(emStatus)\ \(\backslash\)}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\ \ \ \ if\ (emStatus\ !=\ GX\_STATUS\_SUCCESS)\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GetErrorString(emStatus);\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ return\ emStatus;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{//Show\ error\ message,\ close\ device\ and\ lib}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ GX\_VERIFY\_EXIT(emStatus)\ \(\backslash\)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\ \ \ \ if\ (emStatus\ !=\ GX\_STATUS\_SUCCESS)\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GetErrorString(emStatus);\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GXCloseDevice(g\_hDevice);\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ g\_hDevice\ =\ NULL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GXCloseLib();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ printf("{}<App\ Exit!>\(\backslash\)n"{});\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ exit(emStatus);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structRoi}{Roi}}}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ int64\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structRoi_ac30e2622afe4971678f0359d252c874f}{m\_i64Width}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ int64\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structRoi_a69eb5203019664984895a163bebfb9e0}{m\_i64Height}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ int64\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structRoi_a9927c534e881f98546fe820b06fbbc42}{m\_i64OffsetX}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ int64\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structRoi_a3eeed4b05b18df0112786c34b014bc91}{m\_i64OffsetY}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{structRoi_abc48174ce19b7437798ecbaf64c870bb}{Roi}}()}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//default\ roi\ is\ a\ 640*480\ area\ in\ the\ center\ \ \ \ \ 默认的roi是640*480的中心区域\ }}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structRoi_ac30e2622afe4971678f0359d252c874f}{m\_i64Width}}\ =\ 640;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structRoi_a69eb5203019664984895a163bebfb9e0}{m\_i64Height}}\ =\ 480;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structRoi_a9927c534e881f98546fe820b06fbbc42}{m\_i64OffsetX}}\ =\ 80;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structRoi_a3eeed4b05b18df0112786c34b014bc91}{m\_i64OffsetY}}\ =\ 60;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \}\mbox{\hyperlink{GxCamera_8h_aa2309e113c8af637c41e33f877e53f97}{Roi}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structExposureGain}{ExposureGain}}}
+\DoxyCodeLine{00072\ \{}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_a333bd43c182caeae98bdb1469ef1bd7e}{m\_bAutoExposure}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_a3f1e77a836addab0efa1f2432db851c8}{m\_bAutoGain}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_a96ead067b1b93d338019d94d160c95f0}{m\_dExposureTime}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_aeea8e1fda7390bc1b8b038f44e805367}{m\_dAutoExposureTimeMax}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_a89e80bc712066e4ac237506e03a74b01}{m\_dAutoExposureTimeMin}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_ad8b99936814a736a504d91872eaaa498}{m\_dGain}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_ac012d2dcd3d8699ee5ff828c3b58992d}{m\_dAutoGainMax}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_adc91d88e430c7a9e035b19c74f55ffb6}{m\_dAutoGainMin}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ int64\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_adf5fbb6b60d6a8ee9ad13c4dc3326903}{m\_i64GrayValue}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{structExposureGain_ac6014a33726881ddedf1dfe1618c105f}{ExposureGain}}()}
+\DoxyCodeLine{00089\ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_a333bd43c182caeae98bdb1469ef1bd7e}{m\_bAutoExposure}}\ =\ \textcolor{keyword}{true};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_a3f1e77a836addab0efa1f2432db851c8}{m\_bAutoGain}}\ =\ \textcolor{keyword}{true};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_a96ead067b1b93d338019d94d160c95f0}{m\_dExposureTime}}\ =\ 2000;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_aeea8e1fda7390bc1b8b038f44e805367}{m\_dAutoExposureTimeMax}}\ =\ 10000;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_a89e80bc712066e4ac237506e03a74b01}{m\_dAutoExposureTimeMin}}\ =\ 500;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_ad8b99936814a736a504d91872eaaa498}{m\_dGain}}\ =\ 6;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_ac012d2dcd3d8699ee5ff828c3b58992d}{m\_dAutoGainMax}}\ =\ 10;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_adc91d88e430c7a9e035b19c74f55ffb6}{m\_dAutoGainMin}}\ =\ 5;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structExposureGain_adf5fbb6b60d6a8ee9ad13c4dc3326903}{m\_i64GrayValue}}\ =\ 200;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \}\mbox{\hyperlink{GxCamera_8h_ab651e28802e5694b605afa4a23caaa38}{ExposureGain}};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structWhiteBalance}{WhiteBalance}}}
+\DoxyCodeLine{00107\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structWhiteBalance_ac37b43333344081122c7b8432543bdca}{m\_bWhiteBalance}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{GxIAPI_8h_ad9805db4f9f6c0a6d9e0bb6fefdd84ad}{GX\_AWB\_LAMP\_HOUSE\_ENTRY}}\ \mbox{\hyperlink{structWhiteBalance_a0fd222e56218ed83993690bc46f8daae}{lightSource}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{structWhiteBalance_a84fca47e214fb40d86e2255b4ee022ac}{WhiteBalance}}()}
+\DoxyCodeLine{00111\ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structWhiteBalance_ac37b43333344081122c7b8432543bdca}{m\_bWhiteBalance}}\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structWhiteBalance_a0fd222e56218ed83993690bc46f8daae}{lightSource}}\ =\ \mbox{\hyperlink{GxIAPI_8h_ad9805db4f9f6c0a6d9e0bb6fefdd84ada2b38b2da23ea16bb713f74ba7afba91d}{GX\_AWB\_LAMP\_HOUSE\_ADAPTIVE}};\ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \}\mbox{\hyperlink{GxCamera_8h_a8d9ccaa2d6b5f9429f799d9a9d628392}{WhiteBalance}};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGxCamera}{GxCamera}}}
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//friend\ void\ *ProcGetImage(void*\ pMatImage);}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{classGxCamera_a02c50cc2d16aa8681a73a321ab0df1d8}{GxCamera}}();}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{classGxCamera_a47caaeeb6090105cc185a2ebca0f304f}{\string~GxCamera}}();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGxCamera_a6f5af3c930b1b0c5e6304bfaf1a799e4}{initial}}();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGxCamera_ac4298120e9ef0484c06056ce095aac4d}{isOpen}}();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGxCamera_af61afe2f0f130108e4bb50806cdd0d81}{close}}();\ }
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGxCamera_aa96bdd2586c6013f9d22f9e45aaecd67}{get\_exposure\_us}}(\textcolor{keywordtype}{double}*\ us);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//\ Capture\ single\ picture}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGxCamera_a413afeb31f44dfe16d7efa18b41140d6}{read}}(cv::Mat*\ targetMatImg,\ \textcolor{keywordtype}{float}*\ timestamp);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGxCamera_af2737ac031096690e6ee033171062725}{openDevice}}(\textcolor{keywordtype}{bool}\ useSN,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ CameraSN);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGxCamera_aa77c4292bf8a86127ea3d90722c69b84}{setTriggerParam}}(\textcolor{keywordtype}{bool}\ useHardTrigger);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGxCamera_aa444f2eb5658476c41f5a875775094f9}{setExposureGainParam}}(\ \textcolor{keywordtype}{bool}\ AutoExposure,}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ AutoGain,}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ ExposureTime,}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ AutoExposureTimeMin,}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ AutoExposureTimeMax,}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ Gain,}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ AutoGainMin,}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ AutoGainMax,}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int64\_t\ GrayValue);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGxCamera_a3a2e4b253fa1d796375cf937e24a901d}{setRoiParam}}(\ int64\_t\ Width,}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int64\_t\ Height,}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int64\_t\ OffsetX,}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int64\_t\ OffsetY);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGxCamera_aefaf0f843ff3459b34c96f8c09cd96e8}{setWhiteBalanceParam}}(\ \textcolor{keywordtype}{bool}\ WhiteBalanceOn,}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{GxIAPI_8h_ad9805db4f9f6c0a6d9e0bb6fefdd84ad}{GX\_AWB\_LAMP\_HOUSE\_ENTRY}}\ lightSource);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00170\ \ \ \ \ \mbox{\hyperlink{GxIAPI_8h_a024157349dab0f7a113c5ff7267672ea}{GX\_STATUS}}\ setRoi();}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{GxIAPI_8h_a024157349dab0f7a113c5ff7267672ea}{GX\_STATUS}}\ setExposureGain();}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{GxIAPI_8h_a024157349dab0f7a113c5ff7267672ea}{GX\_STATUS}}\ setWhiteBalance();}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \mbox{\hyperlink{GxIAPI_8h_a024157349dab0f7a113c5ff7267672ea}{GX\_STATUS}}\ setTrigger();}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{GxIAPI_8h_a024157349dab0f7a113c5ff7267672ea}{GX\_STATUS}}\ setBufferSize();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{GxIAPI_8h_a8e9793aaf704936a037db9c3548a096a}{GX\_DEV\_HANDLE}}\ g\_hDevice;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{char}*\ g\_pDeviceSN;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00185\ \ \ \ \ int64\_t\ g\_i64ColorFilter;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00186\ \ \ \ \ int64\_t\ g\_nPayloadSize\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00187\ \ \ \ \ uint32\_t\ ui32DeviceNum\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{bool}\ g\_bTriggerMode;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{bool}\ g\_bColorFilter;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{bool}\ g\_bExposure;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{bool}\ g\_bGain;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{bool}\ g\_bImgImprovement;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{bool}\ g\_bRoi;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{bool}\ g\_bWhiteBalance;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \mbox{\hyperlink{structExposureGain}{ExposureGain}}\ exposure\_gain;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00198\ \ \ \ \ \mbox{\hyperlink{structRoi}{Roi}}\ roi;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00199\ \ \ \ \ \mbox{\hyperlink{structWhiteBalance}{WhiteBalance}}\ white\_balance;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00200\ \};}
+\DoxyCodeLine{00201\ }
+
+\end{DoxyCode}
