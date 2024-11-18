@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -rdynamic CMakeFiles/NBUT_test.dir/yolov5/main.cpp.o -o NBUT_test 

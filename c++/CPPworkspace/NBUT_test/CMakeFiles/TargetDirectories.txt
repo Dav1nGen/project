@@ -1,0 +1,3 @@
+/home/davi/CPPworkspace/NBUT_test/CMakeFiles/NBUT_test.dir
+/home/davi/CPPworkspace/NBUT_test/CMakeFiles/edit_cache.dir
+/home/davi/CPPworkspace/NBUT_test/CMakeFiles/rebuild_cache.dir
