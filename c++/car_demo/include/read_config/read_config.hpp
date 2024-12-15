@@ -41,4 +41,4 @@ void FileRead::getConfig(const char *config_name, T &config, T default_value) {
   return;
 }
 
-#endif // !INCLUDE__READ_CONFIG_HPP=
+#endif // !INCLUDE__READ_CONFIG_HPP

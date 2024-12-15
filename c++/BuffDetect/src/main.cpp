@@ -1,3 +1,12 @@
+/**
+ * @file buff_detector.hpp
+ * @author Dav1nGen(davicheng1114@gmail.com)
+ * @brief 能量机关识别代码
+ * @version 0.1
+ * @date 2023-05-08
+ * @copyright Copyright (c) 2023
+ */
+
 #include "../include/BuffDetect_new.hpp"
 #include <iostream>
 // #include "../general/GxCamera/GxCamera.h"       // import Galaxy Camera

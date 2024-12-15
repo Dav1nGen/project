@@ -1,0 +1,54 @@
+{
+    find_program = {
+        gcc = "/usr/bin/gcc",
+        ["/usr/bin/gcc"] = "/usr/bin/gcc",
+        git = "/usr/bin/git",
+        nim = false,
+        ping = "/usr/bin/ping",
+        zig = false
+    },
+    ["lib.detect.has_flags"] = {
+        ["linux_x86_64_/usr/bin/gcc_14.2.1_cxx_cxflags_-m64_-fvisibility-inlines-hidden"] = true,
+        ["linux_x86_64_/usr/bin/gcc_14.2.1_cxx__-m64_-fPIC"] = true,
+        ["linux_x86_64_/usr/bin/gcc_14.2.1_cxx__-m64_-O0"] = true
+    },
+    ["detect.tools.gcc.has_cflags"] = {
+        ["/usr/bin/gcc_14.2.1"] = {
+            ["-time"] = true,
+            ["-print-sysroot-headers-suffix"] = true,
+            ["-print-multi-os-directory"] = true,
+            ["-Xassembler"] = true,
+            ["-dumpmachine"] = true,
+            ["-o"] = true,
+            ["-x"] = true,
+            ["-print-multi-directory"] = true,
+            ["--version"] = true,
+            ["-print-search-dirs"] = true,
+            ["-v"] = true,
+            ["-Xpreprocessor"] = true,
+            ["-pipe"] = true,
+            ["-dumpspecs"] = true,
+            ["-print-sysroot"] = true,
+            ["-save-temps"] = true,
+            ["-c"] = true,
+            ["-dumpversion"] = true,
+            ["-print-multiarch"] = true,
+            ["-shared"] = true,
+            ["-S"] = true,
+            ["-Xlinker"] = true,
+            ["-no-canonical-prefixes"] = true,
+            ["-pass-exit-codes"] = true,
+            ["-print-multi-lib"] = true,
+            ["-B"] = true,
+            ["-E"] = true,
+            ["-pie"] = true,
+            ["--param"] = true,
+            ["--target-help"] = true,
+            ["-print-libgcc-file-name"] = true,
+            ["--help"] = true
+        }
+    },
+    find_programver = {
+        ["/usr/bin/gcc"] = "14.2.1"
+    }
+}

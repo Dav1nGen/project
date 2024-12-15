@@ -1,0 +1,11 @@
+{
+    cmdlines = {
+        "xmake l /home/dav1ngen/.vscode/extensions/tboox.xmake-vscode-2.3.9/assets/config.lua",
+        "xmake l /home/dav1ngen/.vscode/extensions/tboox.xmake-vscode-2.3.9/assets/explorer.lua",
+        "xmake check",
+        "xmake l /home/dav1ngen/.vscode/extensions/tboox.xmake-vscode-2.3.9/assets/explorer.lua",
+        "xmake l /home/dav1ngen/.vscode/extensions/tboox.xmake-vscode-2.3.9/assets/explorer.lua",
+        "xmake l /home/dav1ngen/.vscode/extensions/tboox.xmake-vscode-2.3.9/assets/explorer.lua",
+        "xmake l /home/dav1ngen/.vscode/extensions/tboox.xmake-vscode-2.3.9/assets/config.lua"
+    }
+}

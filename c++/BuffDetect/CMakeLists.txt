@@ -36,6 +36,4 @@ target_link_libraries(
   pthread
   Python3::Python
   pybind11::pybind11
-  
-  # gxiapi
 )

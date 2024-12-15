@@ -1,6 +1,6 @@
 /**
  * @file buff_detector.hpp
- * @author davi(1224802565@qq.com)
+ * @author Dav1nGen(davicheng1114@gmail.com)
  * @brief 能量机关识别代码
  * @version 0.1
  * @date 2023-05-08
