@@ -15,7 +15,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_executable(
   ${PROJECT_NAME}
   ./src/main.cpp 
-  ./include/BuffDetect_new.hpp
+  ./include/BuffDetect.hpp
   # ./general/GxCamera/GxCamera.cpp
   # ./general/GxCamera/GxCamera.h
   # ./general/GxCamera/include/GxIAPI.h

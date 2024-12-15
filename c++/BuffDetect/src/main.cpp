@@ -7,7 +7,7 @@
  * @copyright Copyright (c) 2023
  */
 
-#include "../include/BuffDetect_new.hpp"
+#include "../include/BuffDetect.hpp"
 #include <iostream>
 // #include "../general/GxCamera/GxCamera.h"       // import Galaxy Camera
 
@@ -16,7 +16,7 @@
 int main() {
     Buff buff(2);
 #ifdef USING_VEDIO
-    cv::VideoCapture capture("../12mm_red_dark.mp4");
+    cv::VideoCapture capture("../EnergyOrgan_red.mp4");
 #else
     GxCamera camera;
     camera.initial();               // 设置曝光、白平衡、触发模式等参数
@@ -60,7 +60,7 @@ int main() {
 
         // cv::imshow("src", src);
 
-        if (cv::waitKey(1) == 27)
+        if (cv::waitKey(10) == 27)
             return 0;
     }
 }

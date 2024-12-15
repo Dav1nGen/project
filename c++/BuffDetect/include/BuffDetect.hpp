@@ -57,7 +57,7 @@ class Buff
 private:
     //**************参数区START**************//
     uint color; // RED==2,BLUE==3
-    double minArea;
+    double minArea=1400;
     //**************参数区END****************//
 
     const std::vector<cv::Point3f> objectPoints = {{-165, 183, 0}, {-165, 49, 0}, {165, 183, 0}, {165, 49, 0}}; // 物体世界坐标系的坐标点(左上，左下，右上，右下)
@@ -80,6 +80,11 @@ public:
     std::vector<cv::Point2f> predict_points; // 预测用的点数据
     double FPS;
     float small_energy = 20 * 3.14159265358979323846 / 60; // 小能量机关角速度(rad/s)
+    
+    Buff(uint init_color)
+    {
+        color = init_color;
+    }
 
     Buff(uint init_color, double init_minArea)
     {
@@ -262,6 +267,7 @@ public:
             this->angle_Energy_organ_center2armor_center = angle;
 
             cv::circle(clone_img, armor_center, 5, cv::Scalar(255, 255, 255), 1, 8, 0); // 画出装甲板中心
+            cv::imshow("img",clone_img);
         }
         if (armor_data.empty())
         {
