@@ -1,6 +1,6 @@
 /**
  * @file detector.hpp
- * @author 戴炜程(1224802565@qq.com)
+ * @author Dav1nGen(davicheng1114@gmail.com)
  * @version 0.1
  * @date 2023-06-28
  * @copyright Copyright (c) 2023

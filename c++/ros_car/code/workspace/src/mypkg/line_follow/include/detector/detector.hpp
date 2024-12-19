@@ -1,3 +1,14 @@
+/**
+ * @file detector.hpp
+ * @author Dav1nGen (davicheng1114@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2024-05-26
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #ifndef DETECTOR_HPP_
 #define DETECTOR_HPP_
 

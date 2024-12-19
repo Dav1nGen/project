@@ -1,6 +1,6 @@
 /**
- * @file robot_describtion.cpp
- * @author davi (davicheng1114@gmail.com)
+ * @file robot_describtion.hpp
+ * @author Dav1nGen (davicheng1114@gmail.com)
  * @brief 
  * @version 0.1
  * @date 2024-05-24

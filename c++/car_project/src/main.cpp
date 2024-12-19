@@ -1,3 +1,11 @@
+/**
+ * @file main.cpp
+ * @author Dav1nGen(davicheng1114@gmail.com)
+ * @version 0.1
+ * @date 2023-06-28
+ * @copyright Copyright (c) 2023
+ */
+
 #include<iostream>
 #include"../include/serial/serial_port.hpp"
 #include"../include/serial/serial.hpp"

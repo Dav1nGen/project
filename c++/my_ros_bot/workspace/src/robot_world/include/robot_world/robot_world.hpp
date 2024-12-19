@@ -1,6 +1,6 @@
 /**
  * @file robot_world.hpp
- * @author davi (davicheng1114@gmail.com)
+ * @author Dav1nGen (davicheng1114@gmail.com)
  * @brief 
  * @version 0.1
  * @date 2024-05-26

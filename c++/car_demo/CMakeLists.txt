@@ -9,8 +9,8 @@ find_package(OpenCV REQUIRED)
 
 include_directories(
         include
-        # include/*.hpp
-        # include/*.h
+        include/*.hpp
+        include/*.h
         ${OpenCV_INCLUDE_DIRS}
 )
 

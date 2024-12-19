@@ -7,7 +7,7 @@ use_camera: -1
 show_src_img: 0
 show_red_img: 0
 show_green_img: 0
-show_binary_img: 0
+show_binary_img: 0s
 show_result_img: 1
 # this is cilcle config
 min_threshold: 50

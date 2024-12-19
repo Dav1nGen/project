@@ -1,4 +1,14 @@
-// Copyright[2024] <davi>
+/**
+ * @file obstacle_avoidance.hpp
+ * @author Dav1nGen (davicheng1114@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2024-05-26
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #ifndef _ROOT_WORKSPACE_SRC_MYPKG_OBSTACLE_AVOIDANCE_INCLUDE_OBSTACLE_AVOIDANCE_HPP_
 #define _ROOT_WORKSPACE_SRC_MYPKG_OBSTACLE_AVOIDANCE_INCLUDE_OBSTACLE_AVOIDANCE_HPP_
 #include <iostream>

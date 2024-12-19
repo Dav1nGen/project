@@ -15,8 +15,8 @@
 #include <memory>
 // opencv
 #include <opencv2/core.hpp>
-#include <opencv2/core/persistence.hpp>
-// include
+#include <opencv2/persistence.hpp>
+
 #include "detector/detector.hpp"
 #include "read_config/read_config.hpp"
 
