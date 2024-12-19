@@ -3,7 +3,7 @@
 # 项目介绍
 此项目参考fishros的[foshbot项目](https://github.com/fishros/fishbot)编写，用于学习ROS2，并实现一个简单的机器人仿真环境。
 
-目前已完成机器人结构定义以及仿真世界的创建，并可以通过luanch文件启动RobotDescribtion节点和RobotWorld节点
+目前已完成机器人结构定义以及仿真世界的创建，并可以通过launch文件启动RobotDescribtion节点和RobotWorld节点
 
 ## 文件树
 ```
