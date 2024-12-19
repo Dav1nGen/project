@@ -5,7 +5,10 @@
 
 目前已完成机器人结构定义以及仿真世界的创建，并可以通过launch文件启动RobotDescribtion节点和RobotWorld节点
 
-## 文件树
+## 特性
+CmakeLists.txt文件使用了[ament_cmake_auto](https://github.com/ament/ament_cmake/tree/master/ament_cmake_auto)自动查找依赖包，简化了传统ament_cmake的繁琐配置
+
+## 项目文件树
 ```
 my_ros_bot
 ├── README

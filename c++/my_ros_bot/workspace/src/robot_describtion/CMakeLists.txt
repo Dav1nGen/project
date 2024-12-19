@@ -1,3 +1,5 @@
+# 此CmakeLists.txt 框架参考自luoyebai（https://github.com/luoyebai）
+
 # ####====================================####
 # ####====set project basic properties====####
 # ####====================================####
