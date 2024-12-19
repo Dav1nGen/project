@@ -1,5 +1,5 @@
 /**
- * @file buff_detector.hpp
+ * @file main.cpp
  * @author Dav1nGen(davicheng1114@gmail.com)
  * @brief 能量机关识别代码
  * @version 0.1
@@ -7,24 +7,26 @@
  * @copyright Copyright (c) 2023
  */
 
-#include "../include/BuffDetect.hpp"
 #include <iostream>
+
+#include "../include/BuffDetect.hpp"
 // #include "../general/GxCamera/GxCamera.h"       // import Galaxy Camera
 
 #define USING_VEDIO
 
-int main() {
+int main()
+{
     Buff buff(2);
 #ifdef USING_VEDIO
     cv::VideoCapture capture("../EnergyOrgan_red.mp4");
 #else
     GxCamera camera;
-    camera.initial();               // 设置曝光、白平衡、触发模式等参数
-    camera.openDevice(false, "SN"); // 打开设备 false意味着打开第一个接入的设备
+    camera.initial();  // 设置曝光、白平衡、触发模式等参数
+    camera.openDevice(false, "SN");  // 打开设备 false意味着打开第一个接入的设备
 #endif
-    while (true) {
-
-        double start_time = cv::getTickCount(); // 开始计时（计算FPS值）
+    while (true)
+    {
+        double start_time = cv::getTickCount();  // 开始计时（计算FPS值）
         cv::Mat src;
         float timestamp;
 
@@ -34,14 +36,16 @@ int main() {
 
 #else
         // 采集一张图片
-        if (!camera.read(&src, &timestamp)) {
+        if (!camera.read(&src, &timestamp))
+        {
             camera
-                .close(); // 如果无法读取图片，就重启一边相机驱动（插拔情况除外）
+                .close();  // 如果无法读取图片，就重启一边相机驱动（插拔情况除外）
             break;
         }
 #endif
 #ifdef USING_VEDIO
-        if (src.data == nullptr) {
+        if (src.data == nullptr)
+        {
             main();
         }
 #endif
@@ -52,15 +56,14 @@ int main() {
         // buff.Predict(threshold_img,buff.energy_organ_center,buff.armor_center,buff.radius_armor_center);
 
         // 计算FPS值
-        double end_time = cv::getTickCount(); // 结束计时
+        double end_time     = cv::getTickCount();  // 结束计时
         double elapsed_time = (end_time - start_time) / cv::getTickFrequency();
-        double FPS = 1 / elapsed_time;
-        buff.FPS = FPS;
+        double FPS          = 1 / elapsed_time;
+        buff.FPS            = FPS;
         // std::cout<<"FPS= "<<buff.FPS<<"\n";
 
         // cv::imshow("src", src);
 
-        if (cv::waitKey(10) == 27)
-            return 0;
+        if (cv::waitKey(10) == 27) return 0;
     }
 }

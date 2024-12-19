@@ -23,22 +23,23 @@
  * @param serial_port 串口号
  * @param required_stop 是否停止
  */
-void robot_cmd_loop(SerialPort &serial_port,const bool &required_stop,VisionData vision_data)
+void robot_cmd_loop(SerialPort &serial_port, const bool &required_stop,
+                    VisionData vision_data)
 {
     time_t start_time;
     time_t end_time;
     uint32_t frame_count = 0;
     // 订阅解算结果
-    //Subscriber<VisionData> robot_cmd_sub("robot_cmd",0); // robocmd 放在general里面
+    // Subscriber<VisionData> robot_cmd_sub("robot_cmd",0); // robocmd
+    // 放在general里面
     while (!required_stop)
     {
-
         if (!frame_count)
         {
             time(&start_time);
         }
 
-        //auto vdata = robot_cmd_sub.pop();
+        // auto vdata = robot_cmd_sub.pop();
         serial_port.TransformData(vision_data);
         // send_port.TransformData(VisionData{0.0,0.0,0.0,0,2,0});
         // //视觉可以发送手拟的数据给电控，查看串口是不是通的
@@ -51,10 +52,10 @@ void robot_cmd_loop(SerialPort &serial_port,const bool &required_stop,VisionData
         frame_count++;
         time(&end_time);
         if (end_time - start_time >= 1)
-        {   
-           printf("<SerialSend: FrameCount: %u>\n\n", frame_count);
+        {
+            printf("<SerialSend: FrameCount: %u>\n\n", frame_count);
             // std::cout << std::endl;
-     
+
             frame_count = 0;
         }
     }
@@ -74,7 +75,7 @@ bool robot_io_usb()
     send_port.OpenPort();
 
     bool robot_cmd_required_stop = false;
-    bool robot_cmd_is_ok = true;
+    bool robot_cmd_is_ok         = true;
     // auto seq_data = std::queue<Stm32Data>();
 
     // 这是发送数据给电控的线程
@@ -83,7 +84,7 @@ bool robot_io_usb()
     // robot_cmd_thread.detach();
 
     // 传给图像采集
-    //Publisher<Stm32Data> seq_data("stm32_data");
+    // Publisher<Stm32Data> seq_data("stm32_data");
 
     time_t start_time;
     time_t end_time;
@@ -91,24 +92,24 @@ bool robot_io_usb()
 
     while (robot_cmd_is_ok)
     {
-
         if (!frame_count)
         {
             time(&start_time);
         }
 
-        //Stm32Data sdata;
-        //sdata = send_port.Receive(); // 收到电控的数据(包括 IsHave mode color speed imu)
-        // if (sdata.IsHave)
-        // {
-        //     std::cout<<"color": <<sdata.color <<" ";
-        //     std::cout << "mode: " << sdata.mode << " ";
-        //     std::cout << "speed: " << sdata.speed << " ";
-        //     std::cout << "pitch: " << sdata.imu.pitch << " ";
-        //     std::cout << "yaw: " << sdata.imu.yaw << " ";
-        //     std::cout << "\n\n";
-        // }
-        //seq_data.push(sdata);
+        // Stm32Data sdata;
+        // sdata = send_port.Receive(); // 收到电控的数据(包括 IsHave mode color
+        // speed imu)
+        //  if (sdata.IsHave)
+        //  {
+        //      std::cout<<"color": <<sdata.color <<" ";
+        //      std::cout << "mode: " << sdata.mode << " ";
+        //      std::cout << "speed: " << sdata.speed << " ";
+        //      std::cout << "pitch: " << sdata.imu.pitch << " ";
+        //      std::cout << "yaw: " << sdata.imu.yaw << " ";
+        //      std::cout << "\n\n";
+        //  }
+        // seq_data.push(sdata);
 
         // if (sdata.IsHave)
         //     frame_count++;
@@ -116,11 +117,11 @@ bool robot_io_usb()
         time(&end_time);
         if (end_time - start_time >= 1)
         {
-                if(frame_count ==0)
+            if (frame_count == 0)
             {
-                puts("can't receive serial" );
-                //exit(0);
-            }   
+                puts("can't receive serial");
+                // exit(0);
+            }
             printf("<Serial: FrameCount: %u>\n\n", frame_count);
             frame_count = 0;
         }
@@ -143,4 +144,4 @@ void SerialTalking()
     }
 }
 
-#endif //! _SERIAL_HPP_
+#endif  //! _SERIAL_HPP_

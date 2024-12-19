@@ -16,21 +16,22 @@
 #define _SERIAL_PORT_HPP_
 
 // std
-#include <chrono>
-#include <cstdlib>
 #include <fcntl.h>
-#include <queue>
 #include <sys/ioctl.h>
 #include <sys/select.h>
 #include <termios.h>
-#include <thread>
 #include <unistd.h>
 
-#include"../detector/detector.hpp"
+#include <chrono>
+#include <cstdlib>
+#include <queue>
+#include <thread>
 
-#define ECHOFLAGS (ECHO | ECHOE | ECHOK | ECHONL)
-#define DATA_LENGTH 16      // 接受的数据位数
-#define ONCE_READ_LENGTH 31 // 一次读多少数据
+#include "../detector/detector.hpp"
+
+#define ECHOFLAGS        (ECHO | ECHOE | ECHOK | ECHONL)
+#define DATA_LENGTH      16  // 接受的数据位数
+#define ONCE_READ_LENGTH 31  // 一次读多少数据
 
 struct timeval tv;
 
@@ -41,21 +42,21 @@ struct timeval tv;
 class SerialPort
 {
 private:
-    const speed_t baud_rate_ = 115200;              // 波特率
-    const std::string uart_device_ = "/dev/ttyUSB"; // 串口/名
+    const speed_t baud_rate_       = 115200;         // 波特率
+    const std::string uart_device_ = "/dev/ttyUSB";  // 串口/名
     // const char *uart_device_ = "/dev/pts/17"; // 串口名
-    int serial_port_number_; // 串口号
-    char parit_ = 'N';
-    char data_bit_ = 8;      // 数据位
-    char stop_bit_ = 1;      // 停止位
-    bool is_synchronizable_; // 是否同步
+    int serial_port_number_;  // 串口号
+    char parit_    = 'N';
+    char data_bit_ = 8;       // 数据位
+    char stop_bit_ = 1;       // 停止位
+    bool is_synchronizable_;  // 是否同步
     // unsigned char rdata[255]; // raw_data 原始数据
-    unsigned char t_data_[30]; // transfrom data 转换数据
+    unsigned char t_data_[30];  // transfrom data 转换数据
     bool SetBaudRate();
     bool SetBit();
 
 public:
-    SerialPort() = default;
+    SerialPort()  = default;
     ~SerialPort() = default;
 
     /**
@@ -95,9 +96,12 @@ bool SerialPort::OpenPort()
     // }
     for (size_t i = 0; i < 6; ++i)
     {
-        const std::string uart_path = std::string(uart_device_) + std::to_string(i);
-        serial_port_number_ = open(uart_path.c_str(), O_RDWR | O_NOCTTY |
-                                                          O_NDELAY); // O_NDELAY 不关心另一端是否在使用串口
+        const std::string uart_path =
+            std::string(uart_device_) + std::to_string(i);
+        serial_port_number_ =
+            open(uart_path.c_str(),
+                 O_RDWR | O_NOCTTY |
+                     O_NDELAY);  // O_NDELAY 不关心另一端是否在使用串口
 
         if (serial_port_number_ == -1)
         {
@@ -114,7 +118,7 @@ bool SerialPort::OpenPort()
     }
 
     puts("Opening...\n");
-    SetBaudRate(); // 设置波特率
+    SetBaudRate();  // 设置波特率
 
     // if (SetBit() == false)
     // {
@@ -140,11 +144,11 @@ bool SerialPort::SetBaudRate()
     {
         if (baud_rate_ == name_arr[i])
         {
-            tcflush(serial_port_number_, TCIOFLUSH); // 清空缓冲区的内容
-            cfsetispeed(&Opt, speed_arr[i]);         // 设置接受和发送的波特率
+            tcflush(serial_port_number_, TCIOFLUSH);  // 清空缓冲区的内容
+            cfsetispeed(&Opt, speed_arr[i]);  // 设置接受和发送的波特率
             cfsetospeed(&Opt, speed_arr[i]);
-            status =
-                tcsetattr(serial_port_number_, TCSANOW, &Opt); // 使设置立即生效
+            status = tcsetattr(serial_port_number_, TCSANOW,
+                               &Opt);  // 使设置立即生效
 
             if (status != 0)
             {
@@ -168,22 +172,16 @@ bool SerialPort::SetBit()
         return false;
     }
 
-    termios_p.c_cflag |= (CLOCAL | CREAD); // 接受数据
-    termios_p.c_cflag &= ~CSIZE;           // 设置数据位数
+    termios_p.c_cflag |= (CLOCAL | CREAD);  // 接受数据
+    termios_p.c_cflag &= ~CSIZE;            // 设置数据位数
 
     switch (data_bit_)
     {
-    case 7:
-        termios_p.c_cflag |= CS7;
-        break;
+    case 7: termios_p.c_cflag |= CS7; break;
 
-    case 8:
-        termios_p.c_cflag |= CS8;
-        break;
+    case 8: termios_p.c_cflag |= CS8; break;
 
-    default:
-        fprintf(stderr, "Unsupported data size\n");
-        return false;
+    default: fprintf(stderr, "Unsupported data size\n"); return false;
     }
 
     // 设置奇偶校验位double
@@ -214,34 +212,29 @@ bool SerialPort::SetBit()
         termios_p.c_cflag &= ~CSTOPB;
         break;
 
-    default:
-        fprintf(stderr, "Unsupported parity\n");
-        return false;
+    default: fprintf(stderr, "Unsupported parity\n"); return false;
     }
 
     /* 设置停止位*/
     switch (stop_bit_)
     {
     case 1:
-        termios_p.c_cflag &= ~CSTOPB; // 一位停止位
+        termios_p.c_cflag &= ~CSTOPB;  // 一位停止位
         break;
 
     case 2:
-        termios_p.c_cflag |= CSTOPB; // 两位停止位
+        termios_p.c_cflag |= CSTOPB;  // 两位停止位
         break;
 
-    default:
-        fprintf(stderr, "Unsupported stop bits\n");
-        return false;
+    default: fprintf(stderr, "Unsupported stop bits\n"); return false;
     }
 
     /* Set input parity option */
-    if (parit_ != 'n')
-        termios_p.c_iflag |= INPCK;
+    if (parit_ != 'n') termios_p.c_iflag |= INPCK;
 
-    tcflush(serial_port_number_, TCIFLUSH);               // 清除输入缓存区
-    termios_p.c_cc[VTIME] = 150;                          /* 设置超时15 seconds*/
-    termios_p.c_cc[VMIN] = 0;                             // 最小接收字符
+    tcflush(serial_port_number_, TCIFLUSH);  // 清除输入缓存区
+    termios_p.c_cc[VTIME] = 150;             /* 设置超时15 seconds*/
+    termios_p.c_cc[VMIN]  = 0;               // 最小接收字符
     termios_p.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG); /*Input原始输入*/
     termios_p.c_iflag &= ~(BRKINT | ICRNL | INPCK | ISTRIP | IXON);
     termios_p.c_iflag &= ~(ICRNL | IGNCR);
@@ -268,6 +261,4 @@ void SerialPort::TransformData(const VisionData data)
     return;
 }
 
-
-
-#endif //! _SERIAL_PORT_HPP_
+#endif  //! _SERIAL_PORT_HPP_

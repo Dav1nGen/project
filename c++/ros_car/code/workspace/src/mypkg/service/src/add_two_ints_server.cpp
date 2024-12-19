@@ -5,7 +5,8 @@
 // insterfaces
 #include <example_interfaces/srv/add_two_ints.hpp>
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
     rclcpp::init(argc, argv);
     auto node = rclcpp::Node::make_shared("add_two_ints_service");
     auto add =

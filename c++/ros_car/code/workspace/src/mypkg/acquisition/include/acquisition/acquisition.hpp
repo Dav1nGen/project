@@ -11,11 +11,12 @@
 
 #pragma once
 // ROS
+#include <cv_bridge/cv_bridge.h>  // NOLINT
+
 #include <rclcpp/rclcpp.hpp>
-#include <std_msgs/msg/string.hpp>
 #include <sensor_msgs/msg/camera_info.hpp>
 #include <sensor_msgs/msg/image.hpp>
-#include <cv_bridge/cv_bridge.h> // NOLINT
+#include <std_msgs/msg/string.hpp>
 // OpenCV
 #include <opencv2/opencv.hpp>
 
@@ -34,20 +35,20 @@ public:
     AcquisitionNode() : Node("acquisition")
     {
         // set log level
-        this->log_level_ = this->declare_parameter("rcl_log_level", 0);
+        this->log_level_     = this->declare_parameter("rcl_log_level", 0);
         this->auto_exposure_ = this->declare_parameter("auto_exposure", false);
-        this->gain_ = this->declare_parameter("gain", 40);
-        this->exposure_ = this->declare_parameter("exposure", 40);
-        this->brightness_ = this->declare_parameter("brightness", 40);
-        this->contrast_ = this->declare_parameter("contrast", 100);
-        this->saturtion_ = this->declare_parameter("saturation", 128);
+        this->gain_          = this->declare_parameter("gain", 40);
+        this->exposure_      = this->declare_parameter("exposure", 40);
+        this->brightness_    = this->declare_parameter("brightness", 40);
+        this->contrast_      = this->declare_parameter("contrast", 100);
+        this->saturtion_     = this->declare_parameter("saturation", 128);
         this->get_logger().set_level((rclcpp::Logger::Level)log_level_);
         param_sub_ = std::make_shared<rclcpp::ParameterEventHandler>(this);
 
-        param_cb_handle_ = param_sub_->add_parameter_callback("exposure", [this](const rclcpp::Parameter &p)
-                                                              { 
-            this->exposure_ = p.as_int();
-			camera_.set(cv::CAP_PROP_EXPOSURE,exposure_); 
+        param_cb_handle_ = param_sub_->add_parameter_callback(
+            "exposure", [this](const rclcpp::Parameter &p) {
+                this->exposure_ = p.as_int();
+                camera_.set(cv::CAP_PROP_EXPOSURE, exposure_);
             });
 
         // camera init
@@ -58,7 +59,9 @@ public:
         camera_.set(cv::CAP_PROP_BRIGHTNESS, this->brightness_);
         camera_.set(cv::CAP_PROP_CONTRAST, this->contrast_);
         camera_.set(cv::CAP_PROP_SATURATION, this->saturtion_);
-        RCLCPP_INFO(this->get_logger(), "contrast:%.0f;gain:%.0f;saturation:%.0f;exposure:%.0f;brightness:%.0f",
+        RCLCPP_INFO(this->get_logger(),
+                    "contrast:%.0f;gain:%.0f;saturation:%.0f;exposure:%.0f;"
+                    "brightness:%.0f",
                     camera_.get(cv::CAP_PROP_CONTRAST),
                     camera_.get(cv::CAP_PROP_GAIN),
                     camera_.get(cv::CAP_PROP_SATURATION),
@@ -72,8 +75,8 @@ public:
         }
         // publisher init
         RCLCPP_INFO(this->get_logger(), "acquisition node start");
-        image_publisher_ = this->create_publisher<sensor_msgs::msg::Image>(
-            "publish_image", 1);
+        image_publisher_ =
+            this->create_publisher<sensor_msgs::msg::Image>("publish_image", 1);
 
         // timer binding callback function
         timer_ = this->create_wall_timer(

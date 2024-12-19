@@ -1,31 +1,34 @@
 /**
  * @file detector.hpp
  * @author Dav1nGen (davicheng1114@gmail.com)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2024-05-26
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
-#ifndef DETECTOR_HPP_
-#define DETECTOR_HPP_
+#ifndef _ROOT_WORKSPACE_SRC_MYPKG_LINE_FOLLOW_INCLUDE_DETECTOR_HPP_
+#define _ROOT_WORKSPACE_SRC_MYPKG_LINE_FOLLOW_INCLUDE_DETECTOR_HPP_
 
 #include <algorithm>
 #include <opencv4/opencv2/opencv.hpp>
 #include <vector>
 
 // 比较函数，用于按照轮廓的面积大小进行排序
-bool compareContourAreas(const std::vector<cv::Point>& contour1,
-                         const std::vector<cv::Point>& contour2) {
+bool compareContourAreas(const std::vector<cv::Point> &contour1,
+                         const std::vector<cv::Point> &contour2)
+{
     double area1 = cv::contourArea(contour1);
     double area2 = cv::contourArea(contour2);
     return area1 > area2;  // 降序排列
 }
-class LineDetector {
- public:
-    LineDetector(cv::Mat src) {
+class LineDetector
+{
+public:
+    LineDetector(cv::Mat src)
+    {
         cv::Mat img =
             src(cv::Range(src.rows / 4, src.rows), cv::Range(0, src.cols));
         this->src_ = img.clone();
@@ -33,7 +36,7 @@ class LineDetector {
 
     ~LineDetector() = default;
 
- private:
+private:
     void parameterInit();       // 参数初始化函数
     cv::Mat imageProcessing();  // 图像处理函数
     cv::Point2f getTarget();    // 获取目标方向函数
@@ -45,22 +48,24 @@ class LineDetector {
     cv::Mat src_;
     cv::Mat binary_img_;
 
- public:
+public:
     uint getResult();  // 获取结果函数
-    cv::Mat debug_img = cv::Mat::zeros(100, 100, CV_8UC3);
+    cv::Mat debug_img  = cv::Mat::zeros(100, 100, CV_8UC3);
     cv::Mat result_img = cv::Mat::zeros(100, 100, CV_8UC3);
-    float spin_coef = 0.3;
+    float spin_coef    = 0.3;
 };
 
-void LineDetector::parameterInit() {
+void LineDetector::parameterInit()
+{
     this->direction_correction_ = 3;
-    this->target_point_.x = 0;
-    this->target_point_.y = 0;
+    this->target_point_.x       = 0;
+    this->target_point_.y       = 0;
     this->car_direction_ =
         cv::Point2f(this->src_.cols / 2, this->src_.rows / 2);
 }
 
-cv::Mat LineDetector::imageProcessing() {
+cv::Mat LineDetector::imageProcessing()
+{
     int src_w = src_.cols;
     int src_h = src_.rows;
     cv::Mat img =
@@ -86,10 +91,11 @@ cv::Mat LineDetector::imageProcessing() {
     cv::cvtColor(yellow_mask, debug_img, cv::COLOR_GRAY2BGR);
     return yellow_mask;
 }
-cv::Point2f LineDetector::getTarget() {
+cv::Point2f LineDetector::getTarget()
+{
     std::vector<std::vector<cv::Point>> contours;
     std::vector<std::vector<cv::Point>> result_contours;
-    cv::Mat binary_img = this->binary_img_.clone();
+    cv::Mat binary_img  = this->binary_img_.clone();
     this->target_point_ = cv::Point2f(0, 0);
 
     cv::findContours(binary_img, contours, cv::RETR_EXTERNAL,
@@ -100,20 +106,21 @@ cv::Point2f LineDetector::getTarget() {
 
     if (contours.empty()) return cv::Point2f(0, 0);
 
-    for (const auto& contour : contours) {
+    for (const auto &contour : contours)
+    {
         auto rect = minAreaRect(contour);
 
         // 计算矩形的长宽比
         float aspectRatio = std::max(rect.size.width / rect.size.height,
                                      rect.size.height / rect.size.width);
-        float area = rect.size.area();
-        float angle = rect.angle;
+        float area        = rect.size.area();
+        float angle       = rect.angle;
         // 设置长宽比的范围
         float minAspectRatio = 2;
         float maxAspectRatio = 10;
 
-        bool ratio = false;
-        bool area_judge = false;
+        bool ratio       = false;
+        bool area_judge  = false;
         bool angle_judge = false;
 
         if (aspectRatio >= minAspectRatio && aspectRatio <= maxAspectRatio)
@@ -122,9 +129,8 @@ cv::Point2f LineDetector::getTarget() {
 
         if (angle >= 60 && angle <= 80) angle_judge = true;
 
-//	if (ratio && area_judge && angle_judge)
-	if (area_judge && ratio)
-		result_contours.push_back(contour);
+        //	if (ratio && area_judge && angle_judge)
+        if (area_judge && ratio) result_contours.push_back(contour);
     }
     if (result_contours.empty()) return cv::Point2f(0, 0);
     std::sort(result_contours.begin(), result_contours.end(),
@@ -138,7 +144,8 @@ cv::Point2f LineDetector::getTarget() {
     // std::cout << rect.angle << "\n";
 
     // 绘制最小外接矩形
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 4; i++)
+    {
         line(src_, vertices[i], vertices[(i + 1) % 4],
              cv::Scalar(255, 255, 255), 2);
     }
@@ -147,21 +154,25 @@ cv::Point2f LineDetector::getTarget() {
     cv::Point2f center = rect.center;
     return center;
 }
-uint LineDetector::directControl() {
+uint LineDetector::directControl()
+{
     auto x_error = abs(this->car_direction_.x - this->target_point_.x);
-    if (this->target_point_.x == 0 && this->target_point_.y == 0) {
+    if (this->target_point_.x == 0 && this->target_point_.y == 0)
+    {
         return 3;
     }
 
     // 向右修正
-    if (this->car_direction_.x < this->target_point_.x && x_error > 5) {
+    if (this->car_direction_.x < this->target_point_.x && x_error > 5)
+    {
         spin_coef = x_error / (src_.cols / 2.0);
         return 2;
         // std::cout << "right fix!\n";
     }
 
     // 向左修正
-    if (this->car_direction_.x > this->target_point_.x && x_error > 5) {
+    if (this->car_direction_.x > this->target_point_.x && x_error > 5)
+    {
         spin_coef = x_error / (src_.cols / 2.0);
         return 1;
         // std::cout << "left fix!\n";
@@ -169,11 +180,12 @@ uint LineDetector::directControl() {
     return 0;
 }
 
-uint LineDetector::getResult() {
+uint LineDetector::getResult()
+{
     this->parameterInit();
-    this->binary_img_ = this->imageProcessing();
-    this->target_point_ = this->getTarget();
+    this->binary_img_           = this->imageProcessing();
+    this->target_point_         = this->getTarget();
     this->direction_correction_ = this->directControl();
     return this->direction_correction_;
 }
-#endif  // DETECTOR_HPP_
+#endif  // _ROOT_WORKSPACE_SRC_MYPKG_LINE_FOLLOW_INCLUDE_DETECTOR_HPP_

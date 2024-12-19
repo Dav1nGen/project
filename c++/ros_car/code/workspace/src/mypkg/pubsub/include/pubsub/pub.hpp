@@ -4,24 +4,28 @@
 
 using namespace std::chrono_literals;
 
-class Pub : public rclcpp::Node {
- public:
-    explicit Pub(const std::string& name) : Node(name) {
+class Pub : public rclcpp::Node
+{
+public:
+    explicit Pub(const std::string& name) : Node(name)
+    {
         RCLCPP_INFO(this->get_logger(), "%s开始运行", name.c_str());
 
         pub_ptr_ = this->create_publisher<std_msgs::msg::String>("/topic1", 1);
 
         auto callback_f = std::bind(&Pub::sayHelloCallBack, this);
-        timer_ptr_ = this->create_wall_timer(500ms, callback_f);
+        timer_ptr_      = this->create_wall_timer(500ms, callback_f);
     }
 
     ~Pub() = default;
 
- private:
-    void sayHelloCallBack() {
+private:
+    void sayHelloCallBack()
+    {
         std_msgs::msg::String msg;
         msg.data = "hello " + std::to_string(++count_);
-        if (count_ == 10) {
+        if (count_ == 10)
+        {
             msg.data = "kill";
             pub_ptr_->publish(msg);
             RCLCPP_INFO(this->get_logger(), "发布消息:'%s' ", msg.data.c_str());

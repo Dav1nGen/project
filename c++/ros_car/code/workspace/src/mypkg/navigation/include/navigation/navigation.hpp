@@ -18,26 +18,29 @@
  * @brief acquire image and publish it
  *
  */
-class NavigationNode : public rclcpp::Node {
- public:
+class NavigationNode : public rclcpp::Node
+{
+public:
     /**
      * @brief Construct a new Navigation Node object
      *
      * @param options
      */
-    NavigationNode() : Node("Navigation") {
+    NavigationNode() : Node("Navigation")
+    {
         // set log level
         this->declare_parameter("rcl_log_level", 0);
-	this->declare_parameter("is_debug",false);
+        this->declare_parameter("is_debug", false);
         this->get_parameter("rcl_log_level", log_level_);
         this->get_logger().set_level((rclcpp::Logger::Level)log_level_);
-	param_sub_ = std::make_shared<rclcpp::ParameterEventHandler>(this);
-	param_cb_handle_ = param_sub_->add_parameter_callback("is_debug",[this](const rclcpp::Parameter & p){ });
+        param_sub_ = std::make_shared<rclcpp::ParameterEventHandler>(this);
+        param_cb_handle_ = param_sub_->add_parameter_callback(
+            "is_debug", [this](const rclcpp::Parameter& p) {});
 
-	// publisher init
-	RCLCPP_INFO(this->get_logger(), "acquisition node start");
-	publisher_ = this->create_publisher<std_msgs::msg::String>(
-			"publish_image", 1);
+        // publisher init
+        RCLCPP_INFO(this->get_logger(), "acquisition node start");
+        publisher_ =
+            this->create_publisher<std_msgs::msg::String>("publish_image", 1);
 
         // timer binding callback function
         timer_ = this->create_wall_timer(
@@ -45,7 +48,7 @@ class NavigationNode : public rclcpp::Node {
             std::bind(&NavigationNode::TimerCallBack, this));
     }
 
- private:
+private:
     int log_level_;
     std::shared_ptr<rclcpp::ParameterEventHandler> param_sub_;
     std::shared_ptr<rclcpp::ParameterCallbackHandle> param_cb_handle_;
@@ -59,5 +62,4 @@ class NavigationNode : public rclcpp::Node {
     void TimerCallBack();
 };
 
-void NavigationNode::TimerCallBack() {
-}
+void NavigationNode::TimerCallBack() {}

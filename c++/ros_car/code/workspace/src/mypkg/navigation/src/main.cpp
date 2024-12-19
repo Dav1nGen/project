@@ -12,7 +12,8 @@
 // acquisition
 #include "navigation/navigation.hpp"
 
-int main(int argc, const char* argv[]) {
+int main(int argc, const char* argv[])
+{
     rclcpp::init(argc, argv);
     auto node = std::make_shared<NavigationNode>();
     rclcpp::spin(node);
