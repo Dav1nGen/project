@@ -1,12 +1,12 @@
+# pytorch
 import torch
 from torchvision import datasets, transforms
-import numpy as np
-import pickle
 import torch.nn as nn
 import torch.optim as optim
 
-# global data_path
-data_path='./'
+# custom
+from logger.logger import log
+
 
 class SimpleCNN(torch.nn.Module):
     def __init__(self):
@@ -20,44 +20,38 @@ class SimpleCNN(torch.nn.Module):
     def forward(self, x):
         x = self.pool(torch.relu(self.conv1(x)))
         x = self.pool(torch.relu(self.conv2(x)))
-        x = x.view(-1, 64 * 7 * 7)  # 将特征图展平为一维向量
+        # Convert to one dimension
+        x = x.view(-1, 64 * 7 * 7)
         x = torch.relu(self.fc1(x))
         x = self.fc2(x)
         return x
-    
-class Trainer():
+
+
+class Trainer:
     def __init__(self):
-        super(Trainer, self).__init__()
-    def Train(self,data_path):
-        # 定义数据预处理步骤,将输入的图片转化为tensor类型并进行归一化
-        transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5,), (0.5,))])
+        self.cnn = SimpleCNN()
 
-        trainset = datasets.MNIST(data_path,True,transform)
-        trainloader = torch.utils.data.DataLoader(trainset, batch_size=64, shuffle=True)
-
-        testset = datasets.MNIST(data_path,train=False,transform=transform)
-        testloader = torch.utils.data.DataLoader(testset, batch_size=64, shuffle=True)
-
-        cnn=SimpleCNN()
+    def train(self, trainloader):
         criterion = nn.CrossEntropyLoss()
-        optimizer = optim.Adam(cnn.parameters(), lr=0.001)
+        optimizer = optim.Adam(self.cnn.parameters(), lr=0.001)
 
-        # 训练模型
-        num_epochs = 50
+        # train
+        num_epochs = 5
         for epoch in range(num_epochs):
             running_loss = 0.0
             for i, data in enumerate(trainloader, 0):
                 inputs, labels = data
                 optimizer.zero_grad()
-                outputs = cnn(inputs)
+                outputs = self.cnn(inputs)
                 loss = criterion(outputs, labels)
                 loss.backward()
                 optimizer.step()
                 running_loss += loss.item()
                 if i % 100 == 99:
-                    print('[%d, %5d] loss: %.3f' %
-                        (epoch + 1, i + 1, running_loss / 100))
+                    log(f"[epoch:{epoch+1}/{i+1}] loss:{running_loss:.2f}%", "DEBUG")
                     running_loss = 0.0
+        log("Finished Training.", "DEBUG")
 
-        print('Finished Training')
-        torch.save(cnn, 'model.pth')
+    def saveModel(self, path="./model.pth"):
+        torch.save(self.cnn, path)
+        log(f"Save {path}", "DEBUG")
