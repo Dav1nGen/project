@@ -69,7 +69,7 @@ private:
     std::vector<cv::Point2f>
         imagePoints_;  // 物体在像素坐标系上的坐标点(左下，左上,右上，右下)
     std::vector<cv::Point2f>
-        imagePoints;  // 物体在像素坐标系上的不变坐标点(左上，左下,右上，右下)
+        imagePoints;  // 物体在像素坐标系上的不变(不随旋转矩形改变)坐标点(左上，左下,右上，右下)
     cv::Mat rvec;     // 旋转向量
     cv::Mat tvec;     // 平移向量
     float radius_armor_center;        // 到装甲板中心的半径(当前)
@@ -78,7 +78,7 @@ private:
     cv::Point2f armor_center;         // 待击打装甲板中心坐标
 
     double
-        angle_Energy_organ_center2armor_center;  // 能量机关中心只指向装甲板中心的向量的角度
+        angle_Energy_organ_center2armor_center;  // 能量机关中心指向装甲板中心的向量的角度
     cv::Mat processed_img;  // 经过ImageProcess()函数处理过得图像
 
 public:
@@ -138,7 +138,7 @@ public:
 
         // 选择目标颜色进行二值化
         cv::threshold(channel_img, threshold_img, 100, 255, cv::THRESH_BINARY);
-        // 开操作
+        // 开操作去除噪点
         cv::Mat element =
             cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
         cv::morphologyEx(threshold_img, mat, cv::MORPH_OPEN, element);
@@ -162,13 +162,14 @@ public:
         }
         cv::drawContours(black_img, contours, -1, cv::Scalar(255, 255, 255), 3,
                          4);
-        // 凸包检测
+        // 凸包
         std::vector<std::vector<cv::Point>> hull(contours.size());
         for (int i = 0; i < contours.size(); i++)
         {
             // 寻找凸包
             cv::convexHull(cv::Mat(contours[i]), hull[i], false);
         }
+
         for (int i = 0; i < contours.size(); i++)
         {
             cv::fillConvexPoly(black_img, hull[i], cv::Scalar(255, 255, 255),
@@ -215,12 +216,7 @@ public:
                            1);
                 armor_data.push_back(temp);
             }
-            // std::cout<<contours_len[0]<<" "<<contours_len[1]<<"
-            // "<<contours_len[2]<<" "<<contours_len[3]<<"\n";
             std::sort(armor_data.begin(), armor_data.end(), compare_radius);
-            // cv::Mat test = cv::Mat::zeros(img.size(), CV_8UC3);
-            // cv::drawContours(test,contours,0, cv::Scalar(255, 255, 255), 3,
-            // 4); this->img_debug=test;
             cv::RotatedRect rotrect;
             cv::Point2f
                 rect_points[4];  // point[0]左下:x最小 point[1]左上:y最小
@@ -247,6 +243,7 @@ public:
             imagePoint_temp.push_back(rect_points[3]);  // 右下
             this->imagePoints_ = imagePoint_temp;
         }
+
         // 如果识别到能量机关
         if (!armor_data.empty())
         {
@@ -300,7 +297,7 @@ public:
     }
 
     /**
-     * @brief
+     * @brief 能量机关运动预测（未完成）
      *
      * @param img
      * @param energy_organ_center
