@@ -7,8 +7,7 @@
   <maintainer email="davicheng1114@gmail.com">root</maintainer>
   <license>TODO: License declaration</license>
 
-  <!--Internal
-  References-->
+  <!--InternalReferences-->
   <!-- ROS -->
   <depend>rclcpp</depend>
   <depend>rclcpp_components</depend>
