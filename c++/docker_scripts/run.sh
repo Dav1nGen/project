@@ -7,8 +7,8 @@ docker run -p 8889:22 -p 8766:8765 \
 	--device /dev/video0 --device /dev/video1 \
 	--network=host \
 	-e DISPLAY="$DISPLAY" -v /tmp/.X11-unix:/tmp/.X11-unix \
-	--name="ros-jazzy" -it 8ea079870e70 bash
+	--name="Rizon4" -it 6275fe5bc093 bash
 # x转发
-# xhost +
+xhost +
 
 #--device /dev/video2 --device /dev/video3 \

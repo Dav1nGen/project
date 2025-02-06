@@ -1,0 +1,33 @@
+[0.005s] Invoking command in '/root/my_ros_bot/workspace/build/robot_describtion': /usr/bin/cmake /root/my_ros_bot/workspace/src/robot_describtion -DCMAKE_INSTALL_PREFIX=/root/my_ros_bot/workspace/install/robot_describtion
+[0.130s] -- The C compiler identification is GNU 11.4.0
+[0.192s] -- The CXX compiler identification is GNU 11.4.0
+[0.197s] -- Detecting C compiler ABI info
+[0.273s] -- Detecting C compiler ABI info - done
+[0.283s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.283s] -- Detecting C compile features
+[0.283s] -- Detecting C compile features - done
+[0.286s] -- Detecting CXX compiler ABI info
+[0.346s] -- Detecting CXX compiler ABI info - done
+[0.351s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.351s] -- Detecting CXX compile features
+[0.351s] -- Detecting CXX compile features - done
+[0.360s] [31mCMake Error at CMakeLists.txt:36 (find_package):
+[0.360s]   By not providing "Findament_cmake_auto.cmake" in CMAKE_MODULE_PATH this
+[0.360s]   project has asked CMake to find a package configuration file provided by
+[0.360s]   "ament_cmake_auto", but CMake did not find one.
+[0.360s] 
+[0.360s]   Could not find a package configuration file provided by "ament_cmake_auto"
+[0.360s]   with any of the following names:
+[0.360s] 
+[0.360s]     ament_cmake_autoConfig.cmake
+[0.360s]     ament_cmake_auto-config.cmake
+[0.360s] 
+[0.360s]   Add the installation prefix of "ament_cmake_auto" to CMAKE_PREFIX_PATH or
+[0.360s]   set "ament_cmake_auto_DIR" to a directory containing one of the above
+[0.360s]   files.  If "ament_cmake_auto" provides a separate development package or
+[0.360s]   SDK, be sure it has been installed.
+[0.360s] 
+[0.360s] [0m
+[0.360s] -- Configuring incomplete, errors occurred!
+[0.360s] See also "/root/my_ros_bot/workspace/build/robot_describtion/CMakeFiles/CMakeOutput.log".
+[0.363s] Invoked command in '/root/my_ros_bot/workspace/build/robot_describtion' returned '1': /usr/bin/cmake /root/my_ros_bot/workspace/src/robot_describtion -DCMAKE_INSTALL_PREFIX=/root/my_ros_bot/workspace/install/robot_describtion
