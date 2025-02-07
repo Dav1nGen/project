@@ -3,19 +3,36 @@
 # 项目介绍
 此项目参考fishros的[foshbot项目](https://github.com/fishros/fishbot)编写，用于学习ROS2，并实现一个简单的机器人仿真环境。
 
-目前已完成机器人结构定义以及仿真世界的创建，并可以通过launch文件启动RobotDescribtion节点和RobotWorld节点
-
 ## 特性
-CmakeLists.txt文件使用了[ament_cmake_auto](https://github.com/ament/ament_cmake/tree/master/ament_cmake_auto)自动查找依赖包，简化了传统ament_cmake的繁琐配置
+使用了[ament_cmake_auto](https://github.com/ament/ament_cmake/tree/master/ament_cmake_auto)自动查找依赖包，简化了传统ament_cmake的繁琐配置
 
-## 项目文件树
+## 项目运行
+运行前请运行以下代码安装项目所需依赖
+
+
+
+``` bash
+cd workspace
+rosdep install --from-paths src -y -r 
 ```
+
+编译以及运行
+``` bash
+# 编译构建
+colcon build
+
+# 运行机器人仿真
+ros2 launch robot_simulation launch.py
+```
+## 项目文件树
+``` bash
+
 my_ros_bot
-├── README
-├── document
+├── README.md
+├── models #模型文件 放置于 ~/.gazebo/ 文件夹下
 └── workspace
     └── src
-        ├── robot_describtion # 自定义机器人包
+        ├── robot_describtion # 机器人描述包
         │   ├── CMakeLists.txt
         │   ├── include
         │   │   └── robot_describtion
@@ -26,18 +43,20 @@ my_ros_bot
         │   ├── src
         │   │   └── robot_describtion.cpp
         │   └── urdf
-        │       └── robot.urdf #机器人结构定义文件
-        └── robot_world # 自定义世界包
+        │       └── robot.urdf
+        └── robot_simulation # 机器人仿真包
             ├── CMakeLists.txt
             ├── include
-            │   └── robot_world
-            │       └── robot_world.hpp
+            │   └── robot_simulation.hpp
             ├── launch
             │   └── launch.py
             ├── package.xml
             ├── src
-            │   └── robot_world.cpp
+            │   └── robot_simulation.cpp
+            ├── urdf
+            │   └── robot.urdf
             └── world
-                ├── robot.urdf # 机器人结构定义文件
-                └── world.sdf # 世界定义文件
+                ├── Dav1nGen_world
+                └── world.world
+
 ```

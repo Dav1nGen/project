@@ -1,2 +1,0 @@
-Invoking command in '/root/my_ros_bot/workspace/build/robot_describtion': /usr/bin/cmake /root/my_ros_bot/workspace/src/robot_describtion -DCMAKE_INSTALL_PREFIX=/root/my_ros_bot/workspace/install/robot_describtion
-Invoked command in '/root/my_ros_bot/workspace/build/robot_describtion' returned '1': /usr/bin/cmake /root/my_ros_bot/workspace/src/robot_describtion -DCMAKE_INSTALL_PREFIX=/root/my_ros_bot/workspace/install/robot_describtion
